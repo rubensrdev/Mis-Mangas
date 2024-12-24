@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		453EF64D2D1ACF23001E6478 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */; };
+		453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6492D1ACF23001E6478 /* Assets.xcassets */; };
+		453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */; };
+		453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF64B2D1ACF23001E6478 /* MisMangasApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		453EF6362D1ACE99001E6478 /* MisMangas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisMangas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		453EF6492D1ACF23001E6478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewIPhone.swift; sourceTree = "<group>"; };
+		453EF64B2D1ACF23001E6478 /* MisMangasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisMangasApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		453EF6382D1ACE99001E6478 /* MisMangas */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MisMangas;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		453EF6332D1ACE99001E6478 /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		453EF62D2D1ACE99001E6478 = {
 			isa = PBXGroup;
 			children = (
-				453EF6382D1ACE99001E6478 /* MisMangas */,
+				453EF64C2D1ACF23001E6478 /* MisMangas */,
 				453EF6372D1ACE99001E6478 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,33 @@
 				453EF6362D1ACE99001E6478 /* MisMangas.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		453EF6482D1ACF23001E6478 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		453EF64C2D1ACF23001E6478 /* MisMangas */ = {
+			isa = PBXGroup;
+			children = (
+				453EF6482D1ACF23001E6478 /* Preview Content */,
+				453EF6492D1ACF23001E6478 /* Assets.xcassets */,
+				453EF6512D1ACF59001E6478 /* View */,
+				453EF64B2D1ACF23001E6478 /* MisMangasApp.swift */,
+			);
+			path = MisMangas;
+			sourceTree = "<group>";
+		};
+		453EF6512D1ACF59001E6478 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +89,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				453EF6382D1ACE99001E6478 /* MisMangas */,
 			);
 			name = MisMangas;
 			packageProductDependencies = (
@@ -109,6 +136,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453EF64D2D1ACF23001E6478 /* Preview Assets.xcassets in Resources */,
+				453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
+				453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +216,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -240,6 +272,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -255,11 +288,12 @@
 				DEVELOPMENT_TEAM = 8MU6QHY59H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mis Mangas";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -267,8 +301,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ruben.MisMangas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -284,11 +322,12 @@
 				DEVELOPMENT_TEAM = 8MU6QHY59H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mis Mangas";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,8 +335,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ruben.MisMangas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct EntryViewIPhone: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "book.fill")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+			Text("Mis Mangas")
+				.font(.title)
+			Text("Proyecto SDP'24")
+				.font(.headline)
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    EntryViewIPhone()
 }

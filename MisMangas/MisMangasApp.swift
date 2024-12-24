@@ -11,7 +11,7 @@ import SwiftUI
 struct MisMangasApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EntryViewIPhone()
         }
     }
 }
