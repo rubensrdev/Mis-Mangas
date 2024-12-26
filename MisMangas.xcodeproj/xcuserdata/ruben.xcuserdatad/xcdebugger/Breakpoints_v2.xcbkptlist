@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BD0C3A53-DC6B-440E-8847-067466A2B3E8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABB49355-12F7-4377-A234-C46FF2802F37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MisMangas/Model/Response/PaginatedMangaResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "toDTO()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABB49355-12F7-4377-A234-C46FF2802F37 - ad7d6a01292782e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MisMangas.PaginatedMangaResponse.toDTO() -&gt; Swift.Optional&lt;MisMangas.PaginatedMangaResponseDTO&gt;"
+                  moduleName = "MisMangas.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ruben/Developer/2024%20-%20Swift%20Developer%20Program/7%20-%20Proyecto%20Final%20SDP%20-%20Mis%20Mangas/Xcode%20Project/MisMangas/MisMangas/Model/Response/PaginatedMangaResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17">
+               </Location>
+               <Location
+                  uuid = "ABB49355-12F7-4377-A234-C46FF2802F37 - 9767a8d5dc8f4b27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MisMangas.Manga) -&gt; Swift.Optional&lt;MisMangas.MangaDTO&gt; in MisMangas.PaginatedMangaResponse.toDTO() -&gt; Swift.Optional&lt;MisMangas.PaginatedMangaResponseDTO&gt;"
+                  moduleName = "MisMangas.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ruben/Developer/2024%20-%20Swift%20Developer%20Program/7%20-%20Proyecto%20Final%20SDP%20-%20Mis%20Mangas/Xcode%20Project/MisMangas/MisMangas/Model/Response/PaginatedMangaResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB0F045A-DA7B-4419-B468-3E42327FDCEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MisMangas/Repository/Remote/RepositoryRemote.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getMangas(page:itemsPerPage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

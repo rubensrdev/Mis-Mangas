@@ -31,6 +31,7 @@
 		453EF6842D1DCE51001E6478 /* RepositoryRemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6832D1DCE51001E6478 /* RepositoryRemoteProtocol.swift */; };
 		453EF6862D1DCF5A001E6478 /* RepositoryRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6852D1DCF5A001E6478 /* RepositoryRemote.swift */; };
 		453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6872D1DD3E7001E6478 /* MangasViewModel.swift */; };
+		453EF68D2D1DD6E6001E6478 /* MangasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF68C2D1DD6E6001E6478 /* MangasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		453EF6832D1DCE51001E6478 /* RepositoryRemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemoteProtocol.swift; sourceTree = "<group>"; };
 		453EF6852D1DCF5A001E6478 /* RepositoryRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemote.swift; sourceTree = "<group>"; };
 		453EF6872D1DD3E7001E6478 /* MangasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangasViewModel.swift; sourceTree = "<group>"; };
+		453EF68C2D1DD6E6001E6478 /* MangasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,7 @@
 		453EF6512D1ACF59001E6478 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */,
+				453EF6892D1DD69A001E6478 /* iPhone */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +217,31 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		453EF6892D1DD69A001E6478 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				453EF68B2D1DD6C2001E6478 /* Styles */,
+				453EF68A2D1DD6B3001E6478 /* Components */,
+				453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */,
+				453EF68C2D1DD6E6001E6478 /* MangasView.swift */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		453EF68A2D1DD6B3001E6478 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		453EF68B2D1DD6C2001E6478 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +318,7 @@
 				453EF6702D1D6837001E6478 /* AuthorDTO.swift in Sources */,
 				453EF66E2D1D6807001E6478 /* MangaDTO.swift in Sources */,
 				453EF6682D1D5FA1001E6478 /* Demographic.swift in Sources */,
+				453EF68D2D1DD6E6001E6478 /* MangasView.swift in Sources */,
 				453EF67E2D1DC706001E6478 /* URLSession.swift in Sources */,
 				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
 				453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */,

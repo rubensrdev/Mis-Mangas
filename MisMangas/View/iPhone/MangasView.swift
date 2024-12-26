@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct MangasView: View {
+	
+	@Environment(MangasViewModel.self) private var vm
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		
+		@Bindable var vm = vm
+		
+		List(vm.mangas) { manga in
+			Text(manga.title)
+		}
+		.task {
+			await vm.loadMangas()
+		}
     }
 }
 
 #Preview {
     MangasView()
+		.environment(MangasViewModel())
 }
