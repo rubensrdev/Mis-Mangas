@@ -159,14 +159,22 @@
 		453EF6642D1D5EBA001E6478 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				453EF6612D1D5E6A001E6478 /* Genre.swift */,
-				453EF6652D1D5ECA001E6478 /* Theme.swift */,
-				453EF6672D1D5FA1001E6478 /* Demographic.swift */,
+				453EF6732D1D70D9001E6478 /* Enum */,
 				453EF66D2D1D6807001E6478 /* MangaDTO.swift */,
 				453EF66F2D1D6837001E6478 /* AuthorDTO.swift */,
 				453EF6712D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		453EF6732D1D70D9001E6478 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				453EF6612D1D5E6A001E6478 /* Genre.swift */,
+				453EF6652D1D5ECA001E6478 /* Theme.swift */,
+				453EF6672D1D5FA1001E6478 /* Demographic.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
