@@ -6,3 +6,33 @@
 //
 
 import Foundation
+
+@Observable
+final class MangasViewModel {
+	let repository: RepositoryRemoteProtocol
+	
+	var response: PaginatedMangaResponseDTO?
+	var mangas: [MangaDTO] = []
+	var page = 1
+	var perPage = 6
+	
+	var showErrorAlert = false
+	var errorMessage = ""
+	
+	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
+		self.repository = repository
+	}
+	
+	@MainActor
+	func loadMangas() async {
+		do {
+			let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
+			self.response = response
+			mangas = response.items
+		} catch {
+			// TODO hacer el ALERT
+			print(error)
+		}
+	}
+	
+}
