@@ -11,6 +11,15 @@
 		453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6492D1ACF23001E6478 /* Assets.xcassets */; };
 		453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */; };
 		453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF64B2D1ACF23001E6478 /* MisMangasApp.swift */; };
+		453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF65D2D1D5DA9001E6478 /* Metadata.swift */; };
+		453EF6602D1D5DD7001E6478 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF65F2D1D5DD7001E6478 /* Author.swift */; };
+		453EF6622D1D5E6A001E6478 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6612D1D5E6A001E6478 /* Genre.swift */; };
+		453EF6662D1D5ECA001E6478 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6652D1D5ECA001E6478 /* Theme.swift */; };
+		453EF6682D1D5FA1001E6478 /* Demographic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6672D1D5FA1001E6478 /* Demographic.swift */; };
+		453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6692D1D5FCB001E6478 /* Manga.swift */; };
+		453EF66C2D1D634A001E6478 /* PaginatedMangaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF66B2D1D634A001E6478 /* PaginatedMangaResponse.swift */; };
+		453EF66E2D1D6807001E6478 /* MangaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF66D2D1D6807001E6478 /* MangaDTO.swift */; };
+		453EF6702D1D6837001E6478 /* AuthorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF66F2D1D6837001E6478 /* AuthorDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		453EF6492D1ACF23001E6478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewIPhone.swift; sourceTree = "<group>"; };
 		453EF64B2D1ACF23001E6478 /* MisMangasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisMangasApp.swift; sourceTree = "<group>"; };
+		453EF65D2D1D5DA9001E6478 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		453EF65F2D1D5DD7001E6478 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		453EF6612D1D5E6A001E6478 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		453EF6652D1D5ECA001E6478 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		453EF6672D1D5FA1001E6478 /* Demographic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demographic.swift; sourceTree = "<group>"; };
+		453EF6692D1D5FCB001E6478 /* Manga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manga.swift; sourceTree = "<group>"; };
+		453EF66B2D1D634A001E6478 /* PaginatedMangaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedMangaResponse.swift; sourceTree = "<group>"; };
+		453EF66D2D1D6807001E6478 /* MangaDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaDTO.swift; sourceTree = "<group>"; };
+		453EF66F2D1D6837001E6478 /* AuthorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,10 @@
 			children = (
 				453EF6482D1ACF23001E6478 /* Preview Content */,
 				453EF6492D1ACF23001E6478 /* Assets.xcassets */,
+				453EF6572D1D5845001E6478 /* Model */,
+				453EF6562D1D5824001E6478 /* Network */,
+				453EF6582D1D584C001E6478 /* Repository */,
+				453EF65B2D1D5868001E6478 /* ViewModel */,
 				453EF6512D1ACF59001E6478 /* View */,
 				453EF64B2D1ACF23001E6478 /* MisMangasApp.swift */,
 			);
@@ -73,6 +95,75 @@
 				453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		453EF6562D1D5824001E6478 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		453EF6572D1D5845001E6478 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				453EF6642D1D5EBA001E6478 /* DTO */,
+				453EF6632D1D5EB0001E6478 /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		453EF6582D1D584C001E6478 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				453EF65A2D1D585C001E6478 /* Local */,
+				453EF6592D1D5853001E6478 /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		453EF6592D1D5853001E6478 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		453EF65A2D1D585C001E6478 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		453EF65B2D1D5868001E6478 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		453EF6632D1D5EB0001E6478 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				453EF65D2D1D5DA9001E6478 /* Metadata.swift */,
+				453EF65F2D1D5DD7001E6478 /* Author.swift */,
+				453EF6692D1D5FCB001E6478 /* Manga.swift */,
+				453EF66B2D1D634A001E6478 /* PaginatedMangaResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		453EF6642D1D5EBA001E6478 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				453EF6612D1D5E6A001E6478 /* Genre.swift */,
+				453EF6652D1D5ECA001E6478 /* Theme.swift */,
+				453EF6672D1D5FA1001E6478 /* Demographic.swift */,
+				453EF66D2D1D6807001E6478 /* MangaDTO.swift */,
+				453EF66F2D1D6837001E6478 /* AuthorDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +239,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453EF6702D1D6837001E6478 /* AuthorDTO.swift in Sources */,
+				453EF66E2D1D6807001E6478 /* MangaDTO.swift in Sources */,
+				453EF6682D1D5FA1001E6478 /* Demographic.swift in Sources */,
 				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
+				453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */,
+				453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */,
+				453EF6602D1D5DD7001E6478 /* Author.swift in Sources */,
+				453EF6662D1D5ECA001E6478 /* Theme.swift in Sources */,
+				453EF66C2D1D634A001E6478 /* PaginatedMangaResponse.swift in Sources */,
 				453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */,
+				453EF6622D1D5E6A001E6478 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
