@@ -14,7 +14,7 @@ struct MangaDTO: Codable, Identifiable {
 	let titleEnglish: String?
 	let background: String
 	let mainPicture: URL?
-	let sypnosis: String
+	let sypnosis: String?
 	let startDate: Date
 	let endDate: Date?
 	let score: Double
