@@ -14,7 +14,7 @@ struct Manga: Codable, Identifiable {
 	let titleEnglish: String?
 	let background: String
 	let mainPicture: String?
-	let synopsis: String
+	let synopsis: String?
 	let startDate: String
 	let endDate: String?
 	let score: Double
