@@ -28,6 +28,9 @@
 		453EF67E2D1DC706001E6478 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF67D2D1DC706001E6478 /* URLSession.swift */; };
 		453EF6802D1DC75A001E6478 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF67F2D1DC75A001E6478 /* NetworkError.swift */; };
 		453EF6822D1DC9C8001E6478 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6812D1DC9C8001E6478 /* NetworkInteractor.swift */; };
+		453EF6842D1DCE51001E6478 /* RepositoryRemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6832D1DCE51001E6478 /* RepositoryRemoteProtocol.swift */; };
+		453EF6862D1DCF5A001E6478 /* RepositoryRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6852D1DCF5A001E6478 /* RepositoryRemote.swift */; };
+		453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6872D1DD3E7001E6478 /* MangasViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		453EF67D2D1DC706001E6478 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		453EF67F2D1DC75A001E6478 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		453EF6812D1DC9C8001E6478 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		453EF6832D1DCE51001E6478 /* RepositoryRemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemoteProtocol.swift; sourceTree = "<group>"; };
+		453EF6852D1DCF5A001E6478 /* RepositoryRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemote.swift; sourceTree = "<group>"; };
+		453EF6872D1DD3E7001E6478 /* MangasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangasViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,8 @@
 		453EF6592D1D5853001E6478 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				453EF6832D1DCE51001E6478 /* RepositoryRemoteProtocol.swift */,
+				453EF6852D1DCF5A001E6478 /* RepositoryRemote.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 		453EF65B2D1D5868001E6478 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				453EF6872D1DD3E7001E6478 /* MangasViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,11 +295,13 @@
 				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
 				453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */,
 				453EF6752D1D734F001E6478 /* URL.swift in Sources */,
+				453EF6842D1DCE51001E6478 /* RepositoryRemoteProtocol.swift in Sources */,
 				453EF6722D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift in Sources */,
 				453EF6822D1DC9C8001E6478 /* NetworkInteractor.swift in Sources */,
 				453EF67C2D1D7B3C001E6478 /* URLRequest.swift in Sources */,
 				453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */,
 				453EF67A2D1D7B18001E6478 /* HTTPMethod.swift in Sources */,
+				453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */,
 				453EF6602D1D5DD7001E6478 /* Author.swift in Sources */,
 				453EF6662D1D5ECA001E6478 /* Theme.swift in Sources */,
 				453EF6772D1D7786001E6478 /* Endpoints.swift in Sources */,
@@ -298,6 +309,7 @@
 				453EF6802D1DC75A001E6478 /* NetworkError.swift in Sources */,
 				453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */,
 				453EF6622D1D5E6A001E6478 /* Genre.swift in Sources */,
+				453EF6862D1DCF5A001E6478 /* RepositoryRemote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

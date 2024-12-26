@@ -1,0 +1,26 @@
+//
+//  RepositoryRemote.swift
+//  MisMangas
+//
+//  Created by Rubén Segura Romo on 26/12/24.
+//
+
+import Foundation
+
+struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
+	let session: URLSession
+	
+	init(session: URLSession = .shared) {
+		self.session = session
+	}
+	
+	func getMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponseDTO {
+		guard let dto = try await executeRequest(
+			request: .get(.mangas(page: page, itemsPerPage: itemsPerPage)),
+			type: PaginatedMangaResponse.self
+		).toDTO() else {
+			throw NetworkError.dataNotValid
+		}
+		return dto
+	}
+}

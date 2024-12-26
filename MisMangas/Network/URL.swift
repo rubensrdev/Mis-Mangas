@@ -15,10 +15,10 @@ extension URL {
 	///
 	/// - Parameter page: El número de la página a consultar.
 	/// - Returns: Una URL configurada para la solicitud de mangas.
-	static func mangas(page: String) -> URL {
+	static func mangas(page: String, itemsPerPage: String) -> URL {
 		mainURL
 			.appending(path: Endpoints.mangas.path)
-			.appending(queryItems: [.queryPage(page: page)])
+			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 }
 
@@ -29,5 +29,9 @@ extension URLQueryItem {
 	/// - Returns: Un objeto `URLQueryItem` con el nombre "page" y el valor correspondiente.
 	static func queryPage(page: String) -> URLQueryItem {
 		URLQueryItem(name: "page", value: page)
+	}
+	
+	static func queryItemsPerPage(itemsPerPage: String) -> URLQueryItem {
+		URLQueryItem(name: "per", value: itemsPerPage)
 	}
 }
