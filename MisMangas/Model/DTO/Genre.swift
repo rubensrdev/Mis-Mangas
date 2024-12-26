@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Genre: String, CaseIterable, Identifiable {
+enum Genre: String, CaseIterable, Identifiable, Codable {
 	case action = "Action"
 	case adventure = "Adventure"
 	case awardWinning = "Award Winning"

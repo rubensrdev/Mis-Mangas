@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MangaDTO: Identifiable {
+struct MangaDTO: Codable, Identifiable {
 	let id: Int
 		let title: String
 		let titleJapanese: String

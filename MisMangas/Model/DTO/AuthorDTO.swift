@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthorDTO: Identifiable {
+struct AuthorDTO: Codable, Identifiable {
 	let id: UUID
 	let role: String
 	let firstName: String

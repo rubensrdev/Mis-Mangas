@@ -20,6 +20,7 @@
 		453EF66C2D1D634A001E6478 /* PaginatedMangaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF66B2D1D634A001E6478 /* PaginatedMangaResponse.swift */; };
 		453EF66E2D1D6807001E6478 /* MangaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF66D2D1D6807001E6478 /* MangaDTO.swift */; };
 		453EF6702D1D6837001E6478 /* AuthorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF66F2D1D6837001E6478 /* AuthorDTO.swift */; };
+		453EF6722D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6712D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		453EF66B2D1D634A001E6478 /* PaginatedMangaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedMangaResponse.swift; sourceTree = "<group>"; };
 		453EF66D2D1D6807001E6478 /* MangaDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaDTO.swift; sourceTree = "<group>"; };
 		453EF66F2D1D6837001E6478 /* AuthorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDTO.swift; sourceTree = "<group>"; };
+		453EF6712D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedMangaResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				453EF6672D1D5FA1001E6478 /* Demographic.swift */,
 				453EF66D2D1D6807001E6478 /* MangaDTO.swift */,
 				453EF66F2D1D6837001E6478 /* AuthorDTO.swift */,
+				453EF6712D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				453EF6682D1D5FA1001E6478 /* Demographic.swift in Sources */,
 				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
 				453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */,
+				453EF6722D1D6C11001E6478 /* PaginatedMangaResponseDTO.swift in Sources */,
 				453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */,
 				453EF6602D1D5DD7001E6478 /* Author.swift in Sources */,
 				453EF6662D1D5ECA001E6478 /* Theme.swift in Sources */,

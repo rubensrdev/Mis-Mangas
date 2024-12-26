@@ -12,3 +12,16 @@ struct PaginatedMangaResponse: Codable {
 	let items: [Manga]
 }
 
+extension PaginatedMangaResponse {
+	func toDTO() -> PaginatedMangaResponseDTO? {
+		let mangasDTO = items.compactMap { $0.toDTO() }
+		guard !mangasDTO.isEmpty else { return nil }
+		
+		return PaginatedMangaResponseDTO(
+			page: metadata.page,
+			per: metadata.per,
+			total: metadata.total,
+			items: mangasDTO
+		)
+	}
+}
