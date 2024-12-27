@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct Author: Codable, Identifiable {
+struct Author: Codable, Identifiable, Hashable {
 	let id: UUID
 	let role: String
 	let firstName: String
 	let lastName: String
+}
+
+extension Author {
+	var fullName: String {
+		"\(firstName) \(lastName)"
+	}
 }

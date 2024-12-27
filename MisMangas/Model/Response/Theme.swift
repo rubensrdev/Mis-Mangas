@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Theme: Codable {
+struct Theme: Codable, Hashable {
 	let id: UUID
 	let theme: String
 }

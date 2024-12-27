@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Manga: Codable, Identifiable {
+struct Manga: Codable, Identifiable, Hashable {
 	let id: Int
 	let title: String
-	let titleJapanese: String
+	let titleJapanese: String?
 	let titleEnglish: String?
 	let background: String?
 	let mainPicture: String?
-	let synopsis: String?
+	let sypnosis: String?
 	let startDate: String
 	let endDate: String?
 	let score: Double
@@ -31,22 +31,69 @@ struct Manga: Codable, Identifiable {
 extension Manga {
 	var imageURL: URL? {
 		guard let mainPicture else { return nil }
-		// Limpieza inicial: eliminar comillas y caracteres escapados
 		var cleanedURLString = mainPicture
-			.trimmingCharacters(in: .init(charactersIn: "\"")) // Elimina comillas adicionales
-			.replacingOccurrences(of: "\\/", with: "/") // Reemplaza barras escapadas
-		// Validación del esquema: asegurarse de que la URL tenga "https://"
+			.trimmingCharacters(in: .init(charactersIn: "\""))
+			.replacingOccurrences(of: "\\/", with: "/")
 		if !cleanedURLString.hasPrefix("https://") && !cleanedURLString.hasPrefix("http://") {
 			cleanedURLString = "https://\(cleanedURLString)"
 		}
-		// Escapado de caracteres especiales
 		cleanedURLString = cleanedURLString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? cleanedURLString
-		// Validación adicional: longitud mínima de la URL y formato correcto
 		guard let url = URL(string: cleanedURLString),
-			  url.host != nil, // Asegurarse de que tenga un host válido
-			  url.scheme != nil else { // Verificar que tenga un esquema (https o http)
+			  url.host != nil,
+			  url.scheme != nil else {
 			return nil
 		}
 		return url
+	}
+	
+	var scoreFormatted: String {
+		score.formatted(.number.precision(.fractionLength(1)))
+	}
+	
+	var statusFormatted: StatusCases? {
+		StatusCases(rawValue: status)
+	}
+	
+	var demographicsFormatted: String {
+		guard !genres.isEmpty else { return "No demographics found" }
+		return demographics.map({ $0.demographic }).joined(separator: ", ")
+	}
+	
+	var publishedFormatted: String {
+		let formatter = DateFormatter()
+		formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+		let outputFormatter = DateFormatter()
+		outputFormatter.dateStyle = .medium
+		guard let start = formatter.date(from: startDate) else { return "Invalid Date" }
+		if let end = endDate, let endParsed = formatter.date(from: end) {
+			return "\(outputFormatter.string(from: start)) - \(outputFormatter.string(from: endParsed))"
+		} else {
+			return outputFormatter.string(from: start)
+		}
+	}
+	
+	var volumesFormatted: String {
+		guard let volumes else { return "No volumes" }
+		return String(volumes)
+	}
+	
+	var synopsisFormatted: String {
+		guard let sypnosis else { return "No synopsis text available" }
+		return sypnosis
+	}
+	
+	var authorsFormatted: String {
+		guard !authors.isEmpty else { return "No authors found" }
+		return authors.map({ "\($0.role): \($0.fullName)" }).joined(separator: ", ")
+	}
+	
+	var genresFormatted: String {
+		guard !genres.isEmpty else { return "No genres found" }
+		return genres.map({ $0.genre }).joined(separator: ", ")
+	}
+	
+	var themesFormatted: String {
+		guard !themes.isEmpty else { return "No themes found" }
+		return themes.map({ $0.theme }).joined(separator: ", ")
 	}
 }

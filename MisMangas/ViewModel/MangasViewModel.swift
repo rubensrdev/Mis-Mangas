@@ -19,6 +19,10 @@ final class MangasViewModel {
 	var showErrorAlert = false
 	var errorMessage = ""
 	
+	var showFilters = false
+	
+	var selectedManga: Manga?
+	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
 		self.repository = repository
 	}
@@ -30,7 +34,8 @@ final class MangasViewModel {
 			self.response = response
 			mangas = response.items
 		} catch {
-			// TODO hacer el ALERT
+			showErrorAlert.toggle()
+			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
 			print(error)
 		}
 	}
