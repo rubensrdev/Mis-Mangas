@@ -27,3 +27,13 @@ struct Manga: Codable, Identifiable {
 	let themes: [Theme]
 	let demographics: [Demographic]
 }
+
+extension Manga {
+	var imageURL: URL? {
+		guard let mainPicture else { return nil }
+		let mainPictureClean = mainPicture
+			.replacingOccurrences(of: "\\/", with: "/")
+			.trimmingCharacters(in: .init(charactersIn: "\""))
+		return URL(string: mainPictureClean)
+	}
+}
