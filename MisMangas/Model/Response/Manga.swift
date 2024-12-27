@@ -31,9 +31,22 @@ struct Manga: Codable, Identifiable {
 extension Manga {
 	var imageURL: URL? {
 		guard let mainPicture else { return nil }
-		let mainPictureClean = mainPicture
-			.replacingOccurrences(of: "\\/", with: "/")
-			.trimmingCharacters(in: .init(charactersIn: "\""))
-		return URL(string: mainPictureClean)
+		// Limpieza inicial: eliminar comillas y caracteres escapados
+		var cleanedURLString = mainPicture
+			.trimmingCharacters(in: .init(charactersIn: "\"")) // Elimina comillas adicionales
+			.replacingOccurrences(of: "\\/", with: "/") // Reemplaza barras escapadas
+		// Validación del esquema: asegurarse de que la URL tenga "https://"
+		if !cleanedURLString.hasPrefix("https://") && !cleanedURLString.hasPrefix("http://") {
+			cleanedURLString = "https://\(cleanedURLString)"
+		}
+		// Escapado de caracteres especiales
+		cleanedURLString = cleanedURLString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? cleanedURLString
+		// Validación adicional: longitud mínima de la URL y formato correcto
+		guard let url = URL(string: cleanedURLString),
+			  url.host != nil, // Asegurarse de que tenga un host válido
+			  url.scheme != nil else { // Verificar que tenga un esquema (https o http)
+			return nil
+		}
+		return url
 	}
 }

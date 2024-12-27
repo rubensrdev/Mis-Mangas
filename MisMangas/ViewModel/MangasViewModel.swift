@@ -14,7 +14,7 @@ final class MangasViewModel {
 	var response: PaginatedMangaResponse?
 	var mangas: [Manga] = []
 	var page = 1
-	var perPage = 16
+	var perPage = 50
 	
 	var showErrorAlert = false
 	var errorMessage = ""

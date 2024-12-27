@@ -22,16 +22,7 @@ struct MangasView: View {
 				LazyVGrid(columns: grid) {
 					ForEach(vm.mangas) { manga in
 						VStack {
-							AsyncImage(url: manga.imageURL) { image in
-								image
-									.resizable()
-									.scaledToFit()
-									.frame(width: 120, height: 160)
-									.cornerRadius(10)
-									.shadow(radius: 6)
-							} placeholder: {
-								ProgressView()
-							}
+							MangaGridCachedImageView(url: manga.imageURL)
 							Text(manga.title)
 								.font(.headline)
 								.multilineTextAlignment(.center)
@@ -41,6 +32,7 @@ struct MangasView: View {
 					}
 				}
 				.navigationTitle("Mangas")
+				// TODO PAGINACIÓN
 			}
 		}
 		.task {
@@ -52,5 +44,5 @@ struct MangasView: View {
 
 #Preview {
     MangasView()
-		.environment(MangasViewModel())
+		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
 }

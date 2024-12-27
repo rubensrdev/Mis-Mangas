@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		45059F5B2D1EBB7500D75D8E /* mangasPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45059F5A2D1EBB7500D75D8E /* mangasPreview.json */; };
 		45059F5D2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F5C2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift */; };
+		45059F5F2D1EBF2F00D75D8E /* CachedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F5E2D1EBF2F00D75D8E /* CachedImageViewModel.swift */; };
+		45059F612D1EBF4800D75D8E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F602D1EBF4800D75D8E /* ImageDownloader.swift */; };
+		45059F652D1EBFCF00D75D8E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F642D1EBFCF00D75D8E /* Image.swift */; };
+		45059F672D1EC53600D75D8E /* MangaGridCachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F662D1EC53600D75D8E /* MangaGridCachedImageView.swift */; };
+		45059F692D1EC61F00D75D8E /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F682D1EC61F00D75D8E /* PreviewData.swift */; };
 		453EF64D2D1ACF23001E6478 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */; };
 		453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6492D1ACF23001E6478 /* Assets.xcassets */; };
 		453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */; };
@@ -39,6 +44,11 @@
 /* Begin PBXFileReference section */
 		45059F5A2D1EBB7500D75D8E /* mangasPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangasPreview.json; sourceTree = "<group>"; };
 		45059F5C2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemotePreview.swift; sourceTree = "<group>"; };
+		45059F5E2D1EBF2F00D75D8E /* CachedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageViewModel.swift; sourceTree = "<group>"; };
+		45059F602D1EBF4800D75D8E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		45059F642D1EBFCF00D75D8E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		45059F662D1EC53600D75D8E /* MangaGridCachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaGridCachedImageView.swift; sourceTree = "<group>"; };
+		45059F682D1EC61F00D75D8E /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		453EF6362D1ACE99001E6478 /* MisMangas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisMangas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		453EF6492D1ACF23001E6478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 				453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */,
 				45059F5A2D1EBB7500D75D8E /* mangasPreview.json */,
 				45059F5C2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift */,
+				45059F682D1EC61F00D75D8E /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 		453EF6592D1D5853001E6478 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				45059F602D1EBF4800D75D8E /* ImageDownloader.swift */,
 				453EF6832D1DCE51001E6478 /* RepositoryRemoteProtocol.swift */,
 				453EF6852D1DCF5A001E6478 /* RepositoryRemote.swift */,
 			);
@@ -178,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				453EF6872D1DD3E7001E6478 /* MangasViewModel.swift */,
+				45059F5E2D1EBF2F00D75D8E /* CachedImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -237,6 +250,7 @@
 		453EF68A2D1DD6B3001E6478 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				45059F662D1EC53600D75D8E /* MangaGridCachedImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -244,6 +258,7 @@
 		453EF68B2D1DD6C2001E6478 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				45059F642D1EBFCF00D75D8E /* Image.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -324,22 +339,27 @@
 			files = (
 				453EF6682D1D5FA1001E6478 /* DemographicCases.swift in Sources */,
 				453EF68D2D1DD6E6001E6478 /* MangasView.swift in Sources */,
+				45059F612D1EBF4800D75D8E /* ImageDownloader.swift in Sources */,
 				453EF67E2D1DC706001E6478 /* URLSession.swift in Sources */,
 				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
 				453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */,
 				453EF6752D1D734F001E6478 /* URL.swift in Sources */,
 				45AE9B1D2D1EA76E00B7CC6B /* Genre.swift in Sources */,
 				453EF6842D1DCE51001E6478 /* RepositoryRemoteProtocol.swift in Sources */,
+				45059F672D1EC53600D75D8E /* MangaGridCachedImageView.swift in Sources */,
 				453EF6822D1DC9C8001E6478 /* NetworkInteractor.swift in Sources */,
 				453EF67C2D1D7B3C001E6478 /* URLRequest.swift in Sources */,
 				453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */,
 				453EF67A2D1D7B18001E6478 /* HTTPMethod.swift in Sources */,
 				453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */,
+				45059F5F2D1EBF2F00D75D8E /* CachedImageViewModel.swift in Sources */,
 				453EF6602D1D5DD7001E6478 /* Author.swift in Sources */,
+				45059F692D1EC61F00D75D8E /* PreviewData.swift in Sources */,
 				453EF6662D1D5ECA001E6478 /* ThemeCases.swift in Sources */,
 				45AE9B1F2D1EA7E400B7CC6B /* Theme.swift in Sources */,
 				453EF6772D1D7786001E6478 /* Endpoints.swift in Sources */,
 				453EF66C2D1D634A001E6478 /* PaginatedMangaResponse.swift in Sources */,
+				45059F652D1EBFCF00D75D8E /* Image.swift in Sources */,
 				45AE9B212D1EA7EF00B7CC6B /* Demographic.swift in Sources */,
 				453EF6802D1DC75A001E6478 /* NetworkError.swift in Sources */,
 				453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */,
