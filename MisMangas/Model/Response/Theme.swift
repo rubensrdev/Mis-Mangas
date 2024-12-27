@@ -9,6 +9,6 @@ import Foundation
 
 
 struct Theme: Codable {
-	let id: String
+	let id: UUID
 	let theme: String
 }

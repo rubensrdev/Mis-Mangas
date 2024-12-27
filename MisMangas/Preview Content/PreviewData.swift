@@ -26,9 +26,10 @@ extension Manga {
 											id: UUID(uuidString: "25617399-543F-4220-9114-3A4181AF8D80")!,
 											role: "Story & Art", firstName: "Eiichiro",
 											lastName: "Oda")],
-										genres: [Genre(id: "72C8E862-334F-4F00-B8EC-E1E4125BB7CD", genre: "Action"),
-											Genre(id: "BE70E289-D414-46A9-8F15-928EAFBC5A32", genre: "Adventure"),
-											Genre(id: "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62", genre: "Fantasy")],
+										genres: [
+											Genre(id: UUID(uuidString: "72C8E862-334F-4F00-B8EC-E1E4125BB7CD")!, genre: "Action"),
+											Genre(id: UUID(uuidString: "BE70E289-D414-46A9-8F15-928EAFBC5A32")!, genre: "Adventure"),
+											Genre(id: UUID(uuidString: "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62")!, genre: "Fantasy")],
 										themes: [],
-										demographics: [Demographic(id: "5E05BBF1-A72E-4231-9487-71CFE508F9F9", demographic: "Shounen")])
+										demographics: [Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Shounen")])
 }

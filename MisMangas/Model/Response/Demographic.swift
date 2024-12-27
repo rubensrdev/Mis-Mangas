@@ -8,6 +8,6 @@
 import Foundation
 
 struct Demographic: Codable {
-	let id: String
+	let id: UUID
 	let demographic: String
 }

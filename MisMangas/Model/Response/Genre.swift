@@ -8,6 +8,6 @@
 import Foundation
 
 struct Genre: Codable {
-	let id: String
+	let id: UUID
 	let genre: String
 }
