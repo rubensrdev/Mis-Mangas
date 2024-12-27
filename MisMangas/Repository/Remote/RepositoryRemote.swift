@@ -14,13 +14,9 @@ struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
 		self.session = session
 	}
 	
-	func getMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponseDTO {
-		guard let paginatedMangaResponse = try await executeRequest(
-			request: .get(.mangas(page: page, itemsPerPage: itemsPerPage)),
-			type: PaginatedMangaResponse.self
-		).toDTO() else {
-			throw NetworkError.dataNotValid
-		}
-		return paginatedMangaResponse
+	func getMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await executeRequest(
+					request: .get(.mangas(page: page, itemsPerPage: itemsPerPage)),
+					type: PaginatedMangaResponse.self)
 	}
 }

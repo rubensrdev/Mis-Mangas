@@ -11,10 +11,10 @@ import Foundation
 final class MangasViewModel {
 	let repository: RepositoryRemoteProtocol
 	
-	var response: PaginatedMangaResponseDTO?
-	var mangas: [MangaDTO] = []
+	var response: PaginatedMangaResponse?
+	var mangas: [Manga] = []
 	var page = 1
-	var perPage = 6
+	var perPage = 16
 	
 	var showErrorAlert = false
 	var errorMessage = ""

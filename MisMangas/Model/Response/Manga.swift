@@ -23,41 +23,7 @@ struct Manga: Codable, Identifiable {
 	let volumes: Int?
 	let url: String?
 	let authors: [Author]
-	let genres: [String]
-	let themes: [String]
-	let demographics: [String]
-}
-
-extension Manga {
-	func toDTO() -> MangaDTO? {
-		guard let mainPictureURL = URL(string: mainPicture ?? ""),
-			  let url = URL(string: url ?? ""),
-			  let startDate = ISO8601DateFormatter().date(from: startDate)
-		else { return nil }
-		
-		let genres = genres.compactMap { Genre(rawValue: $0) }
-		let themes = themes.compactMap { Theme(rawValue: $0) }
-		let demographics = demographics.compactMap { Demographic(rawValue: $0) }
-		
-		return MangaDTO(
-				id: id,
-				title: title,
-				titleJapanese: titleJapanese,
-				titleEnglish: titleEnglish,
-				background: background,
-				mainPicture: mainPictureURL,
-				sypnosis: synopsis,
-				startDate: startDate,
-				endDate: endDate.flatMap { ISO8601DateFormatter().date(from: $0) },
-				score: score,
-				status: status,
-				chapters: chapters,
-				volumes: volumes,
-				url: url,
-				authors: authors.map { $0.toDTO() },
-				genres: genres,
-				themes: themes,
-				demographics: demographics
-			)
-	}
+	let genres: [Genre]
+	let themes: [Theme]
+	let demographics: [Demographic]
 }

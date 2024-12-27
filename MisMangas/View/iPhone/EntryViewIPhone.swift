@@ -20,4 +20,5 @@ struct EntryViewIPhone: View {
 
 #Preview {
     EntryViewIPhone()
+		.environment(MangasViewModel())
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Demographic: String, CaseIterable, Identifiable, Codable {
+enum DemographicCases: String, CaseIterable, Identifiable, Codable {
 	case seinen = "Seinen"
 	case shounen = "Shounen"
 	case shoujo = "Shoujo"

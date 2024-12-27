@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RepositoryRemoteProtocol: Sendable {
-	func getMangas(page: String, itemsPerPage: String) async throws-> PaginatedMangaResponseDTO
+	func getMangas(page: String, itemsPerPage: String) async throws-> PaginatedMangaResponse
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Theme: String, CaseIterable, Identifiable, Codable {
+enum ThemeCases: String, CaseIterable, Identifiable, Codable {
 	case gore = "Gore"
 	case military = "Military"
 	case mythology = "Mythology"
