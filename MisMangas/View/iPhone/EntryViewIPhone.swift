@@ -20,5 +20,5 @@ struct EntryViewIPhone: View {
 
 #Preview {
     EntryViewIPhone()
-		.environment(MangasViewModel())
+		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
 }

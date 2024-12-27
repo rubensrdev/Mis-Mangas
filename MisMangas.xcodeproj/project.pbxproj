@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45059F5B2D1EBB7500D75D8E /* mangasPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45059F5A2D1EBB7500D75D8E /* mangasPreview.json */; };
+		45059F5D2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45059F5C2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift */; };
 		453EF64D2D1ACF23001E6478 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */; };
 		453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EF6492D1ACF23001E6478 /* Assets.xcassets */; };
 		453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF64A2D1ACF23001E6478 /* EntryViewIPhone.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45059F5A2D1EBB7500D75D8E /* mangasPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangasPreview.json; sourceTree = "<group>"; };
+		45059F5C2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemotePreview.swift; sourceTree = "<group>"; };
 		453EF6362D1ACE99001E6478 /* MisMangas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisMangas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		453EF6492D1ACF23001E6478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				453EF6472D1ACF23001E6478 /* Preview Assets.xcassets */,
+				45059F5A2D1EBB7500D75D8E /* mangasPreview.json */,
+				45059F5C2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				453EF64D2D1ACF23001E6478 /* Preview Assets.xcassets in Resources */,
 				453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */,
+				45059F5B2D1EBB7500D75D8E /* mangasPreview.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +344,7 @@
 				453EF6802D1DC75A001E6478 /* NetworkError.swift in Sources */,
 				453EF6502D1ACF23001E6478 /* MisMangasApp.swift in Sources */,
 				453EF6622D1D5E6A001E6478 /* GenreCases.swift in Sources */,
+				45059F5D2D1EBB9C00D75D8E /* RepositoryRemotePreview.swift in Sources */,
 				453EF6862D1DCF5A001E6478 /* RepositoryRemote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
