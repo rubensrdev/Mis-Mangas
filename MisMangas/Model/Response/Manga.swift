@@ -15,7 +15,7 @@ struct Manga: Codable, Identifiable, Hashable {
 	let background: String?
 	let mainPicture: String?
 	let sypnosis: String?
-	let startDate: String
+	let startDate: String?
 	let endDate: String?
 	let score: Double
 	let status: String
@@ -60,6 +60,7 @@ extension Manga {
 	}
 	
 	var publishedFormatted: String {
+		guard let startDate else { return "No publication date" }
 		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 		let outputFormatter = DateFormatter()
