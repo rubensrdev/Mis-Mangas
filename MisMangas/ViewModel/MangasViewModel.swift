@@ -12,7 +12,7 @@ final class MangasViewModel {
 	let repository: RepositoryRemoteProtocol
 	
 	var response: PaginatedMangaResponse?
-	var mangas: [Manga] = []
+	var mangas: [Manga] = [] // TODO: revisar cambio a SET para evitar duplicados
 	
 	let perPage = 12
 	var page = 1
@@ -37,7 +37,10 @@ final class MangasViewModel {
 		do {
 			let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
 			self.response = response
-			mangas.append(contentsOf: response.items)
+			let filteredMangas = response.items.filter { manga in
+				!mangas.contains { $0.id == manga.id }
+			}
+			mangas.append(contentsOf: filteredMangas)
 			totalItems = response.metadata.total
 		} catch let error as NetworkError {
 			showErrorAlert.toggle()
