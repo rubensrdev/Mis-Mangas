@@ -38,7 +38,11 @@ final class MangasViewModel {
 			self.response = response
 			mangas.append(contentsOf: response.items)
 			totalItems = response.metadata.total
-		} catch {
+		} catch let error as NetworkError {
+			showErrorAlert.toggle()
+			errorMessage = error.errorDescription ?? "Ocurrió un error inesperado en la red, prueba a refrescar la pantalla"
+			print(error)
+		}catch {
 			showErrorAlert.toggle()
 			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
 			print(error)
