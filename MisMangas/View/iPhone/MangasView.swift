@@ -19,7 +19,7 @@ struct MangasView: View {
 		
 		NavigationStack {
 			ScrollView {
-				LazyVGrid(columns: grid) {
+				LazyVGrid(columns: grid, spacing: 50) {
 					ForEach(vm.mangas) { manga in
 						NavigationLink(value: manga) {
 							VStack {
@@ -28,19 +28,20 @@ struct MangasView: View {
 									.font(.headline)
 									.multilineTextAlignment(.center)
 									.lineLimit(2).frame(width: 120)
-								
-							}
-							.contextMenu {
-								// TODO ver en VM los que están en la colección para mostrar un botón u otro
-								Button {
-									print("Agregar a colección si es que no lo tengo ya...")
-								} label: {
-									Label("Add to my collection", systemImage: "plus.circle")
-								}
-								Label("I already have it", systemImage: "checkmark.seal.fill")
 							}
 						}
-
+						.contextMenu {
+							// TODO ver en VM los que están en la colección para mostrar un botón u otro
+							Button {
+								print("Agregar a colección si es que no lo tengo ya...")
+							} label: {
+								Label("Add to my collection", systemImage: "plus.circle")
+							}
+							Label("I already have it", systemImage: "checkmark.seal.fill")
+						}
+						.onAppear {
+							vm.loadMoreMangas(id: manga.id)
+						}
 					}
 				}
 			}
@@ -51,7 +52,6 @@ struct MangasView: View {
 			.sheet(isPresented: $vm.showFilters) {
 				// TODO SHEET con los filtros de búsqueda
 			}
-			// TODO PAGINACIÓN
 		}
 		.task {
 			await vm.loadMangas()

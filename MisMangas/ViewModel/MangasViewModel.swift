@@ -13,8 +13,9 @@ final class MangasViewModel {
 	
 	var response: PaginatedMangaResponse?
 	var mangas: [Manga] = []
+	
+	let perPage = 12
 	var page = 1
-	var perPage = 50
 	
 	var showErrorAlert = false
 	var errorMessage = ""
@@ -22,6 +23,9 @@ final class MangasViewModel {
 	var showFilters = false
 	
 	var selectedManga: Manga?
+	
+	private var isLoadingMore = false
+	private var totalItems = 0
 	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
 		self.repository = repository
@@ -32,12 +36,35 @@ final class MangasViewModel {
 		do {
 			let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
 			self.response = response
-			mangas = response.items
+			mangas.append(contentsOf: response.items)
+			totalItems = response.metadata.total
 		} catch {
 			showErrorAlert.toggle()
 			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
 			print(error)
 		}
 	}
+	
+	private func isLast(id: Int) -> Bool {
+		mangas.last?.id == id
+	}
+	
+	private func hasMorePages() -> Bool {
+		mangas.count < totalItems
+	}
+	
+	@MainActor
+	func loadMoreMangas(id: Int) {
+		guard isLast(id: id),
+			  hasMorePages(),
+			  !isLoadingMore else { return }
+		isLoadingMore = true
+		page += 1
+		Task {
+			await loadMangas()
+			isLoadingMore = false
+		}
+	}
+	
 	
 }
