@@ -24,7 +24,8 @@ final class MangasViewModel {
 	
 	var selectedManga: Manga?
 	
-	private var isLoadingMore = false
+	var isLoadingMore = false
+	
 	private var totalItems = 0
 	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {

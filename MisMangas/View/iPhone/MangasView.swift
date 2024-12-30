@@ -44,6 +44,15 @@ struct MangasView: View {
 						}
 					}
 				}
+				if vm.isLoadingMore {
+					VStack {
+						ProgressView()
+							.padding(.vertical, 20)
+						Text("Loading more mangas...")
+							.font(.footnote)
+							.foregroundStyle(.secondary)
+					}
+				}
 			}
 			.navigationTitle("Mangas")
 			.navigationDestination(for: Manga.self, destination: { manga in
