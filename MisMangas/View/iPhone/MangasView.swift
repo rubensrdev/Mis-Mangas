@@ -13,11 +13,12 @@ struct MangasView: View {
 	
 	let grid: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 300))]
 	
-    var body: some View {
+	var body: some View {
 		
 		@Bindable var vm = vm
 		
 		NavigationStack {
+			
 			ScrollView {
 				LazyVGrid(columns: grid, spacing: 50) {
 					ForEach(vm.mangas) { manga in
@@ -31,7 +32,7 @@ struct MangasView: View {
 							}
 						}
 						.contextMenu {
-							// TODO ver en VM los que están en la colección para mostrar un botón u otro
+							// TODO: ver en VM los que están en la colección para mostrar un botón u otro
 							Button {
 								print("Agregar a colección si es que no lo tengo ya...")
 							} label: {
@@ -58,9 +59,20 @@ struct MangasView: View {
 			.navigationDestination(for: Manga.self, destination: { manga in
 				MangaDetailView(manga: manga)
 			})
-			.sheet(isPresented: $vm.showFilters) {
-				// TODO SHEET con los filtros de búsqueda
+			.toolbar {
+				ToolbarItem(placement: .topBarTrailing) {
+					Button(action: {
+						vm.showFilters.toggle()
+					}) {
+						Label("Filter mangas", systemImage: "line.horizontal.3.decrease.circle")
+						
+					}
+				}
 			}
+			.sheet(isPresented: $vm.showFilters) {
+				// TODO: SHEET con los filtros de búsqueda
+			}
+			
 		}
 		.task {
 			await vm.loadMangas()
@@ -72,10 +84,10 @@ struct MangasView: View {
 			Text(vm.errorMessage)
 		}
 		
-    }
+	}
 }
 
 #Preview {
-    MangasView()
+	MangasView()
 		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
 }
