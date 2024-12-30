@@ -42,7 +42,7 @@ final class MangasViewModel {
 			showErrorAlert.toggle()
 			errorMessage = error.errorDescription ?? "Ocurrió un error inesperado en la red, prueba a refrescar la pantalla"
 			print(error)
-		}catch {
+		} catch {
 			showErrorAlert.toggle()
 			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
 			print(error)
