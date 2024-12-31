@@ -71,7 +71,9 @@ struct MangasView: View {
 			}
 			.sheet(isPresented: $vm.showFilters) {
 				// TODO: SHEET con los filtros de búsqueda
+				FilterFormView(customSearchVM: CustomSearchViewModel())
 			}
+			
 			
 		}
 		.task {
@@ -86,6 +88,7 @@ struct MangasView: View {
 		
 	}
 }
+
 
 #Preview {
 	MangasView()
