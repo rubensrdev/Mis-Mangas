@@ -44,6 +44,8 @@
 		45BD121D2D23F42A0091707B /* FilterFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD121C2D23F42A0091707B /* FilterFormView.swift */; };
 		45BD12202D23F49D0091707B /* CustomSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD121F2D23F49D0091707B /* CustomSearch.swift */; };
 		45E1A37C2D23F5980071230E /* CustomSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E1A37B2D23F5980071230E /* CustomSearchViewModel.swift */; };
+		45E1A37E2D2414400071230E /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E1A37D2D2414400071230E /* FilterSelectionView.swift */; };
+		45E1A3842D2418130071230E /* FilterOptionCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E1A3832D2418130071230E /* FilterOptionCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		45BD121C2D23F42A0091707B /* FilterFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFormView.swift; sourceTree = "<group>"; };
 		45BD121F2D23F49D0091707B /* CustomSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearch.swift; sourceTree = "<group>"; };
 		45E1A37B2D23F5980071230E /* CustomSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchViewModel.swift; sourceTree = "<group>"; };
+		45E1A37D2D2414400071230E /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
+		45E1A3832D2418130071230E /* FilterOptionCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 				453EF6652D1D5ECA001E6478 /* ThemeCases.swift */,
 				453EF6672D1D5FA1001E6478 /* DemographicCases.swift */,
 				45059F6C2D1F241300D75D8E /* StatusCases.swift */,
+				45E1A3832D2418130071230E /* FilterOptionCases.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 		453EF68A2D1DD6B3001E6478 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				45E1A37D2D2414400071230E /* FilterSelectionView.swift */,
 				45059F662D1EC53600D75D8E /* MangaGridCachedImageView.swift */,
 			);
 			path = Components;
@@ -360,6 +366,7 @@
 				453EF67E2D1DC706001E6478 /* URLSession.swift in Sources */,
 				453EF64F2D1ACF23001E6478 /* EntryViewIPhone.swift in Sources */,
 				453EF66A2D1D5FCB001E6478 /* Manga.swift in Sources */,
+				45E1A37E2D2414400071230E /* FilterSelectionView.swift in Sources */,
 				453EF6752D1D734F001E6478 /* URL.swift in Sources */,
 				45AE9B1D2D1EA76E00B7CC6B /* Genre.swift in Sources */,
 				453EF6842D1DCE51001E6478 /* RepositoryRemoteProtocol.swift in Sources */,
@@ -367,6 +374,7 @@
 				453EF6822D1DC9C8001E6478 /* NetworkInteractor.swift in Sources */,
 				453EF67C2D1D7B3C001E6478 /* URLRequest.swift in Sources */,
 				453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */,
+				45E1A3842D2418130071230E /* FilterOptionCases.swift in Sources */,
 				453EF67A2D1D7B18001E6478 /* HTTPMethod.swift in Sources */,
 				453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */,
 				45059F5F2D1EBF2F00D75D8E /* CachedImageViewModel.swift in Sources */,

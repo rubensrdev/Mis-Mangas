@@ -13,8 +13,6 @@ struct FilterFormView: View {
 	
 	@Bindable var customSearchVM: CustomSearchViewModel
 	
-	@State private var editMode: EditMode = .active
-	
 	var body: some View {
 		NavigationStack {
 			Form {
@@ -32,41 +30,54 @@ struct FilterFormView: View {
 						.textContentType(.name)
 						.autocapitalization(.words)
 						.autocorrectionDisabled()
-					
-					Picker(selection: $customSearchVM.searchGenres) {
-						ForEach(GenreCases.allCases) { genre in
-							Text(genre.rawValue)
-								.tag(genre)
-						}
-					} label: {
-						Text("Select genres")
+					HStack {
+						Toggle("Include search substring", isOn: $customSearchVM.searchContains)
 					}
-					.pickerStyle(.navigationLink)
-					
-					Picker(selection: $customSearchVM.searchThemes) {
-						ForEach(ThemeCases.allCases) { theme in
-							Text(theme.rawValue)
-								.tag(theme)
-						}
-					} label: {
-						Text("Select themes")
-					}
-					.pickerStyle(.navigationLink)
-					
-					Picker(selection: $customSearchVM.searchDemographics) {
-						ForEach(DemographicCases.allCases) { demographic in
-							Text(demographic.rawValue)
-								.tag(demographic)
-						}
-					} label: {
-						Text("Select demographics")
-					}
-					.pickerStyle(.navigationLink)
-					
 				} header: {
-					Text("Available filters")
+					Text("By title and author")
+				}
+				Section {
+					NavigationLink("Select genres") {
+						FilterSelectionView(selectedItems: $customSearchVM.searchGenres, title: "Genres", filterOptionCase: .genre)
+					}
+					HStack {
+						Text("Selected genres:")
+						Text(customSearchVM.searchGenresInSelection)
+					}
+					.font(.footnote)
+				} header: {
+					Text("By genres")
+				}
+				Section {
+					NavigationLink("Select themes") {
+						FilterSelectionView(selectedItems: $customSearchVM.searchThemes, title: "Themes", filterOptionCase: .theme)
+					}
+					HStack {
+						Text("Selected themes:")
+						Text(customSearchVM.searchThemesInSelection)
+					}
+					.font(.footnote)
+				} header: {
+					Text("By themes")
+				}
+				Section {
+					NavigationLink("Select demographics") {
+						FilterSelectionView(selectedItems: $customSearchVM.searchDemographics, title: "Demographics", filterOptionCase: .theme)
+					}
+					HStack {
+						Text("Selected demographics:")
+						Text(customSearchVM.searchDemographicsInSelection)
+					}
+					.font(.footnote)
+				} header: {
+					Text("By demographics")
+				}
+				Section {
+					EmptyView() // Si no hay contenido principal en la sección
 				} footer: {
 					Text("You can use these filters freely to fine-tune your search.")
+						.font(.footnote)
+						.fontWeight(.semibold)
 				}
 			}
 			.navigationTitle("Filter Mangas")
@@ -83,12 +94,18 @@ struct FilterFormView: View {
 				
 				ToolbarItem(placement: .confirmationAction) {
 					Button {
-						print("Validate fields and search mangas")
+						if let customSearch = customSearchVM.validate() {
+							// TODO: Llamar al endpoint de búsqueda con el VM global mangasVM
+							dismiss()
+						}
 					} label: {
 						Text("Search")
 					}
 					
 				}
+			}
+			.alert("Validation Error", isPresented: $customSearchVM.showAlert) {} message: {
+				Text(customSearchVM.errorMessage)
 			}
 		}
 	}

@@ -36,6 +36,3 @@ extension Manga {
 													   Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Shounen")])
 }
 
-extension CustomSearch {
-	static let empty = CustomSearch(searchContains: false)
-}

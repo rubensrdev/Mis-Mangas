@@ -8,11 +8,11 @@
 import Foundation
 
 struct CustomSearch: Codable {
-	var searchTitle: String?
-	var searchAuthorFirstName: String?
-	var searchAuthorLastName: String?
-	var searchGenres: [String]?
-	var searchThemes: [String]?
-	var searchDemographics: [String]?
-	var searchContains: Bool
+	let searchTitle: String?
+	let searchAuthorFirstName: String?
+	let searchAuthorLastName: String?
+	let searchGenres: [String]?
+	let searchThemes: [String]?
+	let searchDemographics: [String]?
+	let searchContains: Bool
 }
