@@ -20,18 +20,21 @@ struct FilterFormView: View {
 					TextField("Title", text: $customSearchVM.searchTitle)
 						.autocapitalization(.words)
 						.autocorrectionDisabled()
-					
 					TextField("Author First Name", text: $customSearchVM.searchAuthorFirstName)
 						.textContentType(.givenName)
 						.autocapitalization(.words)
 						.autocorrectionDisabled()
-					
 					TextField("Author Last Name", text: $customSearchVM.searchAuthorLastName)
 						.textContentType(.name)
 						.autocapitalization(.words)
 						.autocorrectionDisabled()
 					HStack {
 						Toggle("Include search substring", isOn: $customSearchVM.searchContains)
+					}
+					if customSearchVM.showErrorSearchContains {
+						Text("If the toggle is on, at least one of the title or author fields must be filled.")
+							.font(.footnote)
+							.foregroundStyle(.red)
 					}
 				} header: {
 					Text("By title and author")
@@ -43,6 +46,7 @@ struct FilterFormView: View {
 					HStack {
 						Text("Selected genres:")
 						Text(customSearchVM.searchGenresInSelection)
+							.lineLimit(2)
 					}
 					.font(.footnote)
 				} header: {
@@ -55,6 +59,7 @@ struct FilterFormView: View {
 					HStack {
 						Text("Selected themes:")
 						Text(customSearchVM.searchThemesInSelection)
+							.lineLimit(2)
 					}
 					.font(.footnote)
 				} header: {
@@ -63,6 +68,7 @@ struct FilterFormView: View {
 				Section {
 					NavigationLink("Select demographics") {
 						FilterSelectionView(selectedItems: $customSearchVM.searchDemographics, title: "Demographics", filterOptionCase: .theme)
+							.lineLimit(2)
 					}
 					HStack {
 						Text("Selected demographics:")

@@ -18,24 +18,12 @@ final class CustomSearchViewModel {
 	var searchDemographics: Set<String>
 	var searchContains: Bool
 	
-	var showErrorSearchContains = false
+	var showErrorSearchContains: Bool {
+		searchContains && (searchTitle.isEmpty && searchAuthorFirstName.isEmpty && searchAuthorLastName.isEmpty)
+	}
+	
 	var showAlert = false
 	var errorMessage = ""
-	
-	var searchGenresInSelection: String {
-		guard !searchGenres.isEmpty else { return "" }
-		return searchGenres.joined(separator: ", ")
-	}
-	
-	var searchThemesInSelection: String {
-		guard !searchThemes.isEmpty else { return "" }
-		return searchThemes.joined(separator: ", ")
-	}
-	
-	var searchDemographicsInSelection: String {
-		guard !searchDemographics.isEmpty else { return "" }
-		return searchDemographics.joined(separator: ", ")
-	}
 	
 	init() {
 		searchTitle = ""
@@ -61,12 +49,29 @@ final class CustomSearchViewModel {
 		return CustomSearch(searchTitle: searchTitle, searchAuthorFirstName: searchAuthorFirstName, searchAuthorLastName: searchAuthorLastName, searchGenres: Array(searchGenres), searchThemes: Array(searchThemes), searchDemographics: Array(searchDemographics), searchContains: searchContains)
 	}
 	
-	private func validateNonEmptyFilters() -> (Bool) {
+	private func validateNonEmptyFilters() -> Bool {
 		return (searchTitle.isEmpty && searchAuthorFirstName.isEmpty && searchAuthorLastName.isEmpty && searchGenresInSelection.isEmpty && searchThemesInSelection.isEmpty && searchDemographicsInSelection.isEmpty)
 	}
 	
 	private func validateTitleAndAuthorIfSearchContainsIsTrue() -> Bool {
 		guard !searchContains else { return true }
 		return !searchTitle.isEmpty || !searchAuthorFirstName.isEmpty || !searchAuthorLastName.isEmpty
+	}
+}
+
+extension CustomSearchViewModel {
+	var searchGenresInSelection: String {
+		guard !searchGenres.isEmpty else { return "" }
+		return searchGenres.joined(separator: ", ")
+	}
+	
+	var searchThemesInSelection: String {
+		guard !searchThemes.isEmpty else { return "" }
+		return searchThemes.joined(separator: ", ")
+	}
+	
+	var searchDemographicsInSelection: String {
+		guard !searchDemographics.isEmpty else { return "" }
+		return searchDemographics.joined(separator: ", ")
 	}
 }
