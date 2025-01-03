@@ -59,7 +59,7 @@ final class CustomSearchViewModel {
 	}
 	
 	private func validateTitleAndAuthorIfSearchContainsIsTrue() -> Bool {
-		guard !searchContains else { return true }
+		guard searchContains else { return true }
 		return !searchTitle.isEmpty || !searchAuthorFirstName.isEmpty || !searchAuthorLastName.isEmpty
 	}
 }
@@ -88,7 +88,9 @@ extension CustomSearchViewModel {
 			searchGenres: searchGenres.isEmpty ? nil : Array(searchGenres),
 			searchThemes: searchThemes.isEmpty ? nil : Array(searchThemes),
 			searchDemographics: searchDemographics.isEmpty ? nil : Array(searchDemographics),
-			searchContains: searchContains
+			searchContains: searchContains,
+			page: "1",
+			perPage: "12"
 		)
 	}
 }

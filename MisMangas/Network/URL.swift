@@ -21,7 +21,11 @@ extension URL {
 			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 	
-	static let searchMangas = mainURL.appending(path: Endpoints.searchMangas.path)
+	static func searchMangas(page: String, itemsPerPage: String) -> URL {
+		mainURL
+			.appending(path: Endpoints.searchMangas.path)
+			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
+	}
 }
 
 extension URLQueryItem {

@@ -38,10 +38,19 @@ final class MangasViewModel {
 	@MainActor
 	func loadMangas() async {
 		do {
-			if isSearching, let searchCriteria {
+			if isSearching, var searchCriteria = searchCriteria {
+				if page == 1 {
+					mangas.removeAll()
+				}
+				searchCriteria.page = "\(page)"
+				searchCriteria.perPage = "\(perPage)"
 				let response = try await repository.searchMangas(with: searchCriteria)
 				self.response = response
-				mangas = response.items
+				let filteredMangas = response.items.filter { manga in
+					!mangas.contains { $0.id == manga.id }
+				}
+				mangas.append(contentsOf: filteredMangas)
+				totalItems = response.metadata.total
 			} else {
 				let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
 				self.response = response
@@ -72,9 +81,7 @@ final class MangasViewModel {
 	
 	@MainActor
 	func loadMoreMangas(id: Int) {
-		guard isLast(id: id),
-			  hasMorePages(),
-			  !isLoadingMore else { return }
+		guard isLast(id: id), hasMorePages(), !isLoadingMore else { return }
 		isLoadingMore = true
 		page += 1
 		Task {
@@ -99,7 +106,7 @@ final class MangasViewModel {
 		searchCriteria = nil
 		isSearching = false
 		page = 1
+		mangas.removeAll()
 	}
-	
 	
 }

@@ -15,4 +15,6 @@ struct CustomSearch: Codable {
 	let searchThemes: [String]?
 	let searchDemographics: [String]?
 	let searchContains: Bool
+	var page: String
+	var perPage: String
 }

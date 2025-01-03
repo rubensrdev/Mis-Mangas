@@ -54,12 +54,23 @@ struct MangasView: View {
 							.foregroundStyle(.secondary)
 					}
 				}
+				
 			}
 			.navigationTitle(vm.isSearching ? "Search results" : "Mangas")
 			.navigationDestination(for: Manga.self, destination: { manga in
 				MangaDetailView(manga: manga)
 			})
 			.toolbar {
+				if vm.isSearching {
+					ToolbarItem(placement: .topBarTrailing) {
+						Button("Back to all") {
+							Task {
+								vm.resetSearch()
+								await vm.loadMangas()
+							}
+						}
+					}
+				}
 				ToolbarItem(placement: .topBarTrailing) {
 					Button(action: {
 						vm.showFilters.toggle()
@@ -72,14 +83,24 @@ struct MangasView: View {
 			.sheet(isPresented: $vm.showFilters) {
 				FilterFormView(customSearchVM: CustomSearchViewModel())
 			}
+			if vm.isSearching && vm.mangas.isEmpty {
+				VStack {
+					Spacer()
+					Label("No mangas found...", systemImage: "magnifyingglass.circle")
+						.font(.headline)
+						.foregroundColor(.secondary)
+					Spacer()
+				}
+			}
+			if vm.mangas.isEmpty {
+				VStack {
+					Spacer()
+					ProgressView()
+					Spacer()
+				}
+			}
 		}
 		.task {
-			await vm.loadMangas()
-		}
-		.refreshable {
-			if vm.isSearching {
-				vm.resetSearch()
-			}
 			await vm.loadMangas()
 		}
 		.alert("App Error", isPresented: $vm.showErrorAlert) {} message: {

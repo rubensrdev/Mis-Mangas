@@ -22,17 +22,18 @@ extension URLRequest {
 		return request
 	}
 	
-	static func post<BODY>(_ url: URL, body: BODY) -> URLRequest where BODY: Encodable {
+	static func post<BODY>(_ url: URL, body: BODY) throws(NetworkError) -> URLRequest where BODY: Encodable {
 		var request = URLRequest(url: url)
 		request.httpMethod = HTTPMethod.post.method
 		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 		do {
 			request.httpBody = try JSONEncoder().encode(body)
+			// TODO: QUITAR ESTE LOG
 			if let body = request.httpBody {
 				print("JSON Body: \(String(data: body, encoding: .utf8) ?? "Invalid JSON")")
 			}
 		} catch {
-			print("Error encoding body: \(error)")
+			throw NetworkError.json(error)
 		}
 		return request
 	}

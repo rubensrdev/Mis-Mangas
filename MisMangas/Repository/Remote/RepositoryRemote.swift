@@ -21,6 +21,7 @@ struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
 	}
 	
 	func searchMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse {
-		return try await executeRequest(request: .post(.searchMangas, body: searchCriteria), type: PaginatedMangaResponse.self)
+		let request = try URLRequest.post(URL.searchMangas(page: searchCriteria.page, itemsPerPage: searchCriteria.perPage), body: searchCriteria)
+		return try await executeRequest(request: request, type: PaginatedMangaResponse.self)
 	}
 }
