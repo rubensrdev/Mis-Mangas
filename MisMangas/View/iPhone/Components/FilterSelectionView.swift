@@ -38,7 +38,6 @@ struct FilterSelectionView: View {
 }
 
 #Preview {
-	
 	NavigationStack {
 		FilterSelectionView(selectedItems: .constant([]), title: "Genres", filterOptionCase: .genre)
 	}

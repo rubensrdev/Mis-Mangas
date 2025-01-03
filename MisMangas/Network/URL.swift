@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// URL base para las solicitudes del API
-let mainURL = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com/list/")!
+/// URL base para las solicitudes manga del API
+let mainURL = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com")!
 
 extension URL {
 	/// Construye una URL para obtener la lista de mangas paginada.
@@ -17,9 +17,11 @@ extension URL {
 	/// - Returns: Una URL configurada para la solicitud de mangas.
 	static func mangas(page: String, itemsPerPage: String) -> URL {
 		mainURL
-			.appending(path: Endpoints.mangas.path)
+			.appending(path: Endpoints.listMangas.path)
 			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
+	
+	static let searchMangas = mainURL.appending(path: Endpoints.searchMangas.path)
 }
 
 extension URLQueryItem {

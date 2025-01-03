@@ -19,4 +19,8 @@ struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
 					request: .get(.mangas(page: page, itemsPerPage: itemsPerPage)),
 					type: PaginatedMangaResponse.self)
 	}
+	
+	func searhMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse {
+		return try await executeRequest(request: .post(.searchMangas, body: searchCriteria), type: PaginatedMangaResponse.self)
+	}
 }

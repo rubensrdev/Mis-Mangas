@@ -36,13 +36,18 @@ final class CustomSearchViewModel {
 	}
 	
 	func validate() -> CustomSearch? {
+		var errors = ""
+		var errorCount = 0
 		if validateNonEmptyFilters() {
-			errorMessage = "You must fill in or select at least one filter to be able to perform the search."
-			showAlert.toggle()
-			return nil
+			errorCount += 1
+			errors.append("\(errorCount) - You must fill in or select at least one filter to be able to perform the search.\n")
 		}
 		if validateTitleAndAuthorIfSearchContainsIsTrue() {
-			errorMessage = "If the toggle is on, at least one of the title or author fields must be filled."
+			errorCount += 1
+			errors.append("\(errorCount) - If the toggle is on, at least one of the title or author fields must be filled.\n")
+		}
+		if errorCount > 0 {
+			errorMessage = errors
 			showAlert.toggle()
 			return nil
 		}

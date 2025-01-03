@@ -102,6 +102,7 @@ struct FilterFormView: View {
 					Button {
 						if let customSearch = customSearchVM.validate() {
 							// TODO: Llamar al endpoint de búsqueda con el VM global mangasVM
+							
 							dismiss()
 						}
 					} label: {

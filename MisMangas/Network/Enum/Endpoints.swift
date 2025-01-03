@@ -9,7 +9,8 @@ import Foundation
 
 /// Representa los endpoints disponibles para interactuar con la API.
 enum Endpoints: String {
-	case mangas = "mangas"
+	case listMangas = "/list/mangas"
+	case searchMangas = "/search/manga"
 }
 
 extension Endpoints {
