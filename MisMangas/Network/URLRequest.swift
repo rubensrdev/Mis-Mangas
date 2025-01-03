@@ -25,8 +25,15 @@ extension URLRequest {
 	static func post<BODY>(_ url: URL, body: BODY) -> URLRequest where BODY: Encodable {
 		var request = URLRequest(url: url)
 		request.httpMethod = HTTPMethod.post.method
-		request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-		request.httpBody = try? JSONEncoder().encode(body)
+		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+		do {
+			request.httpBody = try JSONEncoder().encode(body)
+			if let body = request.httpBody {
+				print("JSON Body: \(String(data: body, encoding: .utf8) ?? "Invalid JSON")")
+			}
+		} catch {
+			print("Error encoding body: \(error)")
+		}
 		return request
 	}
 	

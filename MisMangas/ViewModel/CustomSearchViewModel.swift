@@ -42,7 +42,7 @@ final class CustomSearchViewModel {
 			errorCount += 1
 			errors.append("\(errorCount) - You must fill in or select at least one filter to be able to perform the search.\n")
 		}
-		if validateTitleAndAuthorIfSearchContainsIsTrue() {
+		if !validateTitleAndAuthorIfSearchContainsIsTrue() {
 			errorCount += 1
 			errors.append("\(errorCount) - If the toggle is on, at least one of the title or author fields must be filled.\n")
 		}
@@ -51,7 +51,7 @@ final class CustomSearchViewModel {
 			showAlert.toggle()
 			return nil
 		}
-		return CustomSearch(searchTitle: searchTitle, searchAuthorFirstName: searchAuthorFirstName, searchAuthorLastName: searchAuthorLastName, searchGenres: Array(searchGenres), searchThemes: Array(searchThemes), searchDemographics: Array(searchDemographics), searchContains: searchContains)
+		return customSearchValid
 	}
 	
 	private func validateNonEmptyFilters() -> Bool {
@@ -78,5 +78,17 @@ extension CustomSearchViewModel {
 	var searchDemographicsInSelection: String {
 		guard !searchDemographics.isEmpty else { return "" }
 		return searchDemographics.joined(separator: ", ")
+	}
+	
+	var customSearchValid: CustomSearch {
+		CustomSearch(
+			searchTitle: searchTitle.isEmpty ? nil : searchTitle,
+			searchAuthorFirstName: searchAuthorFirstName.isEmpty ? nil : searchAuthorFirstName,
+			searchAuthorLastName: searchAuthorLastName.isEmpty ? nil : searchAuthorLastName,
+			searchGenres: searchGenres.isEmpty ? nil : Array(searchGenres),
+			searchThemes: searchThemes.isEmpty ? nil : Array(searchThemes),
+			searchDemographics: searchDemographics.isEmpty ? nil : Array(searchDemographics),
+			searchContains: searchContains
+		)
 	}
 }

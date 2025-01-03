@@ -28,6 +28,9 @@ final class MangasViewModel {
 	
 	private var totalItems = 0
 	
+	var isSearching = false
+	var searchCriteria: CustomSearch?
+	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
 		self.repository = repository
 	}
@@ -35,13 +38,19 @@ final class MangasViewModel {
 	@MainActor
 	func loadMangas() async {
 		do {
-			let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
-			self.response = response
-			let filteredMangas = response.items.filter { manga in
-				!mangas.contains { $0.id == manga.id }
+			if isSearching, let searchCriteria {
+				let response = try await repository.searchMangas(with: searchCriteria)
+				self.response = response
+				mangas = response.items
+			} else {
+				let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
+				self.response = response
+				let filteredMangas = response.items.filter { manga in
+					!mangas.contains { $0.id == manga.id }
+				}
+				mangas.append(contentsOf: filteredMangas)
+				totalItems = response.metadata.total
 			}
-			mangas.append(contentsOf: filteredMangas)
-			totalItems = response.metadata.total
 		} catch let error as NetworkError {
 			showErrorAlert.toggle()
 			errorMessage = error.errorDescription ?? "Ocurrió un error inesperado en la red, prueba a refrescar la pantalla"
@@ -72,6 +81,24 @@ final class MangasViewModel {
 			await loadMangas()
 			isLoadingMore = false
 		}
+	}
+	
+	private func startSearch(with criteria: CustomSearch) {
+		searchCriteria = criteria
+		isSearching = true
+		page = 1
+	}
+	
+	@MainActor
+	func search(with criteria: CustomSearch) async {
+		startSearch(with: criteria)
+		await self.loadMangas()
+	}
+	
+	func resetSearch() {
+		searchCriteria = nil
+		isSearching = false
+		page = 1
 	}
 	
 	

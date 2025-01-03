@@ -55,7 +55,7 @@ struct MangasView: View {
 					}
 				}
 			}
-			.navigationTitle("Mangas")
+			.navigationTitle(vm.isSearching ? "Search results" : "Mangas")
 			.navigationDestination(for: Manga.self, destination: { manga in
 				MangaDetailView(manga: manga)
 			})
@@ -70,16 +70,16 @@ struct MangasView: View {
 				}
 			}
 			.sheet(isPresented: $vm.showFilters) {
-				// TODO: SHEET con los filtros de búsqueda
 				FilterFormView(customSearchVM: CustomSearchViewModel())
 			}
-			
-			
 		}
 		.task {
 			await vm.loadMangas()
 		}
 		.refreshable {
+			if vm.isSearching {
+				vm.resetSearch()
+			}
 			await vm.loadMangas()
 		}
 		.alert("App Error", isPresented: $vm.showErrorAlert) {} message: {

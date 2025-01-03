@@ -8,6 +8,7 @@
 import Foundation
 
 struct RepositoryRemotePreview: NetworkInteractor, RepositoryRemoteProtocol {
+
 	let session: URLSession
 	
 	init(session: URLSession = .shared) {
@@ -18,4 +19,10 @@ struct RepositoryRemotePreview: NetworkInteractor, RepositoryRemoteProtocol {
 		let data = try Data(contentsOf: Bundle.main.url(forResource: "mangasPreview", withExtension: "json")!)
 		return try JSONDecoder().decode(PaginatedMangaResponse.self, from: data)
 	}
+	
+	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
+	func searchMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse {
+		try await self.getMangas(page: "1", itemsPerPage: "10")
+	}
+	
 }

@@ -9,5 +9,5 @@ import Foundation
 
 protocol RepositoryRemoteProtocol: Sendable {
 	func getMangas(page: String, itemsPerPage: String) async throws-> PaginatedMangaResponse
-	func searhMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse
+	func searchMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse
 }

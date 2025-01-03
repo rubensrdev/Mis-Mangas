@@ -18,7 +18,7 @@ struct FilterFormView: View {
 			Form {
 				Section {
 					TextField("Title", text: $customSearchVM.searchTitle)
-						.autocapitalization(.words)
+						.autocapitalization(.none)
 						.autocorrectionDisabled()
 					TextField("Author First Name", text: $customSearchVM.searchAuthorFirstName)
 						.textContentType(.givenName)
@@ -101,9 +101,11 @@ struct FilterFormView: View {
 				ToolbarItem(placement: .confirmationAction) {
 					Button {
 						if let customSearch = customSearchVM.validate() {
-							// TODO: Llamar al endpoint de búsqueda con el VM global mangasVM
+							Task {
+								await mangasVM.search(with: customSearch)
+								dismiss()
+							}
 							
-							dismiss()
 						}
 					} label: {
 						Text("Search")
