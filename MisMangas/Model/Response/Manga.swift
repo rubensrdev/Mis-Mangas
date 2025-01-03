@@ -97,4 +97,9 @@ extension Manga {
 		guard !themes.isEmpty else { return "No themes found" }
 		return themes.map({ $0.theme }).joined(separator: ", ")
 	}
+	
+	
+	var toMangaInCollection: MangaInCollection {
+		MangaInCollection(id: self.id, manga: self)
+	}
 }
