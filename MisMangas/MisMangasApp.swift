@@ -11,11 +11,13 @@ import SwiftUI
 struct MisMangasApp: App {
 	
 	@State var mangasVM = MangasViewModel()
+	@State var myCollectionVM = MyCollectionViewModel()
 	
     var body: some Scene {
         WindowGroup {
             EntryViewIPhone()
 				.environment(mangasVM)
+				.environment(myCollectionVM)
         }
     }
 }
