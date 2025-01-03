@@ -14,6 +14,10 @@ struct EntryViewIPhone: View {
 				.tabItem {
 					Label("Mangas", systemImage: "book.fill")
 				}
+			CollectionView()
+				.tabItem {
+					Label("Collection", systemImage: "rectangle.stack.fill")
+				}
 		}
     }
 }
