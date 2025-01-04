@@ -15,11 +15,61 @@ struct EditingMangaInCollectionSheetView: View {
 	@Bindable var vm: MyCollectionEditViewModel
 	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		NavigationStack	{
+			Form {
+				
+				Section {
+					TextField("Enter volumes owned", value: $vm.volumesOwned, format: .number)
+						.keyboardType(.numberPad)
+					Text(vm.currentlyOwned)
+						.font(.footnote)
+						.foregroundStyle(.secondary)
+				} header: {
+					Text("Volumes owned")
+				}
+				Section {
+					TextField("Enter reading volume", value: $vm.readingVolume, format: .number)
+						.keyboardType(.numberPad)
+					Text(vm.currentlyReading)
+						.font(.footnote)
+						.foregroundStyle(.secondary)
+				} header: {
+					Text("Reading volume")
+				}
+			}
+			.navigationTitle("Update status")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItem(placement: .cancellationAction) {
+					Button {
+						dismiss()
+					} label: {
+						Text("Cancel")
+							.foregroundStyle(.red)
+					}
+				}
+				
+				ToolbarItem(placement: .confirmationAction) {
+					Button {
+						if let mangaInCollection = vm.validate() {
+							Task {
+								// TODO: Llama al myCollectionVM para hacer el UPDATE
+								dismiss()
+							}
+						}
+					} label: {
+						Text("Update")
+					}
+					
+				}
+			}
+		}
     }
 }
 
 #Preview {
-	EditingMangaInCollectionSheetView(vm: MyCollectionEditViewModel())
-		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
+	NavigationStack {
+		EditingMangaInCollectionSheetView(vm: MyCollectionEditViewModel(mangaInCollection: .preview) )
+			.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
+	}
 }

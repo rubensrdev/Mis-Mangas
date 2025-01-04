@@ -157,7 +157,8 @@ struct MangaInCollectionDetailView: View {
 			}
 		}
 		.sheet(isPresented: $vm.showEditingSheet) {
-			EditingMangaInCollectionSheetView(vm: MyCollectionEditViewModel())
+			EditingMangaInCollectionSheetView(vm: MyCollectionEditViewModel(mangaInCollection: mangaInCollection))
+				.presentationDetents([.medium])
 		}
     }
 }
