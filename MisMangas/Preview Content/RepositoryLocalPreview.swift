@@ -13,14 +13,21 @@ struct RepositoryLocalPreview: RepositoryLocalProtocol {
 		Bundle.main.url(forResource: "collectionPreview", withExtension: "json")!
 	}
 	
+	
 	func loadMangasInCollection() throws -> [MangaInCollection] {
-		print("Load mangas in collection preview")
-		let data = try Data(contentsOf: urlDocCollection)
-		let collection = try JSONDecoder().decode([MangaInCollection].self, from: data)
-		return collection
+		do {
+			print("Loading mangas in collection preview")
+			let data = try Data(contentsOf: urlDocCollection)
+			return try JSONDecoder().decode([MangaInCollection].self, from: data)
+		} catch {
+			print("Error loading mangas in collection preview")
+			throw error
+		}
 	}
 	
 	func saveMangasInCollection(_ mangas: [MangaInCollection]) throws {
 		print("Saving mangas in collection preview")
 	}
+	
 }
+

@@ -33,6 +33,6 @@ extension Manga {
 											Genre(id: UUID(uuidString: "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62")!, genre: "Fantasy")],
 										themes: [],
 										demographics: [Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Shounen"),
-													   Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Shounen")])
+													   Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Adventure")])
 }
 

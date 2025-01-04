@@ -1,59 +1,110 @@
+
 [
-    {
-        "id": 1,
-        "manga": {
-            "id": 1,
-            "title": "Monster",
-            "titleJapanese": "MONSTER",
-            "titleEnglish": "Monster",
-            "sypnosis": "Kenzou Tenma, a renowned Japanese neurosurgeon working in post-war Germany, faces a difficult choice...",
-            "startDate": "1994-12-05T00:00:00Z",
-            "endDate": "2001-12-20T00:00:00Z",
-            "status": "finished",
-            "volumes": 18,
-            "score": 9.15,
-            "mainPicture": "https://cdn.myanimelist.net/images/manga/3/258224l.jpg",
-            "authors": [
-                {
-                    "id": "54BE174C-2FE9-42C8-A842-85D291A6AEDD",
-                    "firstName": "Naoki",
-                    "lastName": "Urasawa",
-                    "role": "Story & Art"
-                }
-            ]
-        },
-        "volumesOwned": 18,
-        "readingVolume": 10,
-        "completedCollection": true
-    },
-    {
-        "id": 2,
-        "manga": {
-            "id": 2,
-            "title": "Berserk",
-            "titleJapanese": "ベルセルク",
-            "titleEnglish": "Berserk",
-            "sypnosis": "Guts, a former mercenary now known as the 'Black Swordsman,' is out for revenge...",
-            "startDate": "1989-08-25T00:00:00Z",
-            "status": "currently_publishing",
-            "mainPicture": "https://cdn.myanimelist.net/images/manga/1/157897l.jpg",
-            "authors": [
-                {
-                    "id": "6F0B6948-08C4-4761-8BE1-192E68AB0A2F",
-                    "firstName": "Kentarou",
-                    "lastName": "Miura",
-                    "role": "Story & Art"
-                },
-                {
-                    "id": "0304C4E9-2D89-463A-8FDD-EEAB5B9D57B3",
-                    "firstName": "",
-                    "lastName": "Studio Gaga",
-                    "role": "Art"
-                }
-            ]
-        },
-        "volumesOwned": 40,
-        "readingVolume": 30,
-        "completedCollection": false
-    }
+	{
+		"id": 1,
+		"manga": {
+			"id": 16110,
+			"title": "Dragon Ball: Ossu! Kaettekita Son Gokuu to Nakama-tachi!!",
+			"titleJapanese": "DRAGONBALL オッス!帰ってきた孫悟空と仲間たち!",
+			"titleEnglish": null,
+			"background": null,
+			"mainPicture": "https://cdn.myanimelist.net/images/manga/2/178356l.jpg",
+			"sypnosis": "Two strange aliens are terrorizing the home planet of Tarble, Vegeta's younger brother, they have followed him to earth. Read as Goku and his friends try to defeat these aliens at the request of Tarble.",
+			"startDate": "2009-03-21T00:00:00Z",
+			"endDate": "2009-04-21T00:00:00Z",
+			"score": 6.88,
+			"status": "finished",
+			"chapters": null,
+			"volumes": 2,
+			"url": "https://myanimelist.net/manga/16110/Dragon_Ball__Ossu_Kaettekita_Son_Gokuu_to_Nakama-tachi",
+			"authors": [
+				{
+					"id": "EF5541BB-2C38-4115-8D2B-5338989E1DCC",
+					"firstName": "Naho",
+					"lastName": "Ooishi",
+					"role": "Story & Art"
+				}
+			],
+			"genres": [
+				{
+					"id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD",
+					"genre": "Action"
+				},
+				{
+					"id": "F974BCB6-B002-44A6-A224-90D1E50595A2",
+					"genre": "Comedy"
+				},
+				{
+					"id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62",
+					"genre": "Fantasy"
+				},
+				{
+					"id": "2DEDC015-82DA-4EF4-B983-F0F58C8F689E",
+					"genre": "Sci-Fi"
+				}
+			],
+			"themes": [
+				{
+					"id": "ADC7CBC8-36B9-4E52-924A-4272B7B2CB2C",
+					"theme": "Martial Arts"
+				}
+			],
+			"demographics": [
+				{
+					"id": "47251D0E-4423-4D5F-BABF-C8907426A843",
+					"demographic": "Kids"
+				}
+			]
+		},
+		"volumesOwned": 2,
+		"readingVolume": 1,
+		"completedCollection": true
+	},
+	{
+		"id": 2,
+		"manga": {
+			"id": 5440,
+			"title": "Sei Dragon Girl Miracle",
+			"titleJapanese": "聖・ドラゴンガールみらくる",
+			"titleEnglish": "St. Dragon Girl Miracle",
+			"background": null,
+			"mainPicture": "https://cdn.myanimelist.net/images/manga/2/261037l.jpg",
+			"sypnosis": "Anjuu Sendou is a nice girl who just started her first year in the Seiryuu Academy Middle School. She is currently living away from home as a boarding student with her pet named Lime...",
+			"startDate": "2004-01-01T00:00:00Z",
+			"endDate": null,
+			"score": 7.17,
+			"status": "finished",
+			"chapters": 25,
+			"volumes": 5,
+			"url": "https://myanimelist.net/manga/5440/Sei_Dragon_Girl_Miracle",
+			"authors": [
+				{
+					"id": "04C81C34-F7C3-406F-929C-471DF9B9FD09",
+					"firstName": "Natsumi",
+					"lastName": "Matsumoto",
+					"role": "Story & Art"
+				}
+			],
+			"genres": [
+				{
+					"id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076",
+					"genre": "Romance"
+				},
+				{
+					"id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF",
+					"genre": "Supernatural"
+				}
+			],
+			"themes": [],
+			"demographics": [
+				{
+					"id": "C217B404-7691-4090-9775-9E63375EBF5B",
+					"demographic": "Shoujo"
+				}
+			]
+		},
+		"volumesOwned": 5,
+		"readingVolume": 3,
+		"completedCollection": false
+	}
 ]
