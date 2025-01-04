@@ -17,6 +17,9 @@ struct MangaInCollectionDetailView: View {
 	let mangaInCollection: MangaInCollection
 	
     var body: some View {
+		
+		@Bindable var vm = vm
+		
 		ScrollView {
 			VStack {
 				HStack {
@@ -143,10 +146,25 @@ struct MangaInCollectionDetailView: View {
 		}
 		.navigationTitle("Manga Detail")
 		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItem(placement: .topBarTrailing) {
+				Button {
+					vm.showEditingSheet.toggle()
+				} label: {
+					Label("Edit collection", systemImage: "pencil")
+				}
+
+			}
+		}
+		.sheet(isPresented: $vm.showEditingSheet) {
+			EditingMangaInCollectionSheetView(vm: MyCollectionEditViewModel())
+		}
     }
 }
 
 #Preview {
-	MangaInCollectionDetailView(mangaInCollection: .preview)
-		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
+	NavigationStack {
+		MangaInCollectionDetailView(mangaInCollection: .preview)
+			.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
+	}
 }

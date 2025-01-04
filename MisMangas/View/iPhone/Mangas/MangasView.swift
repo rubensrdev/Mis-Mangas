@@ -79,13 +79,13 @@ struct MangasView: View {
 						Button(action: {
 							vm.showFilters.toggle()
 						}) {
-							Label("Filter mangas", systemImage: "line.horizontal.3.decrease.circle")
+							Label("Filter mangas", systemImage: "line.horizontal.3.decrease")
 							
 						}
 					}
 				}
 				.sheet(isPresented: $vm.showFilters) {
-					FilterFormView(customSearchVM: CustomSearchViewModel())
+					FilterFormSheetView(customSearchVM: CustomSearchViewModel())
 				}
 				if vm.isSearching && vm.mangas.isEmpty {
 					VStack {

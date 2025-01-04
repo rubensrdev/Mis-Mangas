@@ -21,6 +21,8 @@ final class MyCollectionViewModel {
 	var showRemoveAlert = false
 	var removedMangaTitle = ""
 	
+	var showEditingSheet = false
+	
 	var mangas: [MangaInCollection] {
 		didSet {
 			try? repository.saveMangasInCollection(mangas)

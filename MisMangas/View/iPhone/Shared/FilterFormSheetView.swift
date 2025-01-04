@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct FilterFormView: View {
+struct FilterFormSheetView: View {
 	
 	@Environment(\.dismiss) private var dismiss
 	@Environment(MangasViewModel.self) private var mangasVM
@@ -121,6 +121,6 @@ struct FilterFormView: View {
 }
 
 #Preview {
-	FilterFormView(customSearchVM: CustomSearchViewModel())
+	FilterFormSheetView(customSearchVM: CustomSearchViewModel())
 		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
 }
