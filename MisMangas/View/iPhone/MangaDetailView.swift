@@ -10,7 +10,10 @@ import SwiftUI
 struct MangaDetailView: View {
 	
 	@Environment(\.dismiss) private var dismiss
+	@Environment(MyCollectionViewModel.self) private var myCollectionVM
+	
 	@State private var expandedSynopsis = false
+	
 	let manga: Manga
 	
 	
@@ -47,7 +50,6 @@ struct MangaDetailView: View {
 						} else {
 							LabeledContent("Status", value: "Unknown")
 						}
-						LabeledContent("Demographics", value: manga.demographicsFormatted)
 						LabeledContent("Published", value: manga.publishedFormatted)
 						LabeledContent("Volumes", value: manga.volumesFormatted)
 						
@@ -90,15 +92,30 @@ struct MangaDetailView: View {
 						.font(.headline)
 						.bold()
 					Text(manga.themesFormatted)
+					Spacer()
+					Text("Demographics")
+						.font(.headline)
+						.bold()
+					Text(manga.demographicsFormatted)
 				}
 				VStack {
-					Button {
-						// TODO diferenciar si ya está añadido para mostrar o no el botón
-						print("Añadir a mi colección")
-					} label: {
-						Label("Add to Collection", systemImage: "plus.circle.fill")
+					if myCollectionVM.isInCollection(manga.id) {
+						Label("I already have it", systemImage: "checkmark.seal.fill")
+							.padding(.horizontal, 8)
+							.padding(.vertical, 4)
+							.background(
+								RoundedRectangle(cornerRadius: 10)
+									.fill(Color.green)
+							)
+							.foregroundStyle(.white)
+					} else {
+						Button {
+							myCollectionVM.addToCollection(manga)
+						} label: {
+							Label("Add to Collection", systemImage: "plus.circle.fill")
+						}
+						.buttonStyle(.borderedProminent)
 					}
-					.buttonStyle(.borderedProminent)
 				}
 			}
 		}
@@ -113,5 +130,6 @@ struct MangaDetailView: View {
 #Preview {
 	NavigationStack {
 		MangaDetailView(manga: Manga.mangaPreviewData)
+			.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 	}
 }
