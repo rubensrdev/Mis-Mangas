@@ -28,5 +28,5 @@ struct MangaGridCachedImageView: View {
 }
 
 #Preview {
-	MangaGridCachedImageView(url: Manga.mangaPreviewData.imageURL)
+	MangaGridCachedImageView(url: Manga.preview.imageURL)
 }

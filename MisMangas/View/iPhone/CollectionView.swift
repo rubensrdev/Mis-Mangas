@@ -46,7 +46,7 @@ struct CollectionView: View {
 			}
 			.navigationTitle("My collection")
 			.navigationDestination(for: MangaInCollection.self, destination: { manga in
-				Text("Detail of \(manga.manga.title)")
+				MangaInCollectionDetailView(mangaInCollection: manga)
 			})
 		}
     }

@@ -10,8 +10,11 @@ import Foundation
 struct MangaInCollection: Codable, Identifiable, Hashable {
 	let id: Int
 	let manga: Manga
-	var volumesOwned: Int?
-	var readingVolume: Int?
-	var completedCollection = false
+	var volumesOwned: Int = 0
+	var readingVolume: Int = 0
+	var completedCollection: Bool {
+		guard let volumes = manga.volumes else { return false }
+		return readingVolume == volumes
+	}
 }
 

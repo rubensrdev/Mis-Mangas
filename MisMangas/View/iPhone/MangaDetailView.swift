@@ -129,7 +129,7 @@ struct MangaDetailView: View {
 
 #Preview {
 	NavigationStack {
-		MangaDetailView(manga: Manga.mangaPreviewData)
+		MangaDetailView(manga: .preview)
 			.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 	}
 }

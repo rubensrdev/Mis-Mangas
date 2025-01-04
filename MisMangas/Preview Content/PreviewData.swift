@@ -8,7 +8,7 @@
 import Foundation
 
 extension Manga {
-	static let mangaPreviewData = Manga(id: 13,
+	static let preview = Manga(id: 13,
 										title: "One Piece",
 										titleJapanese: "One Piece",
 										titleEnglish: "One Piece",
@@ -20,7 +20,7 @@ extension Manga {
 										score: 9.22,
 										status: "currently_publishing",
 										chapters: nil,
-										volumes: nil,
+										volumes: 98,
 										url: "https://myanimelist.net/manga/13/One_Piece",
 										authors: [Author(
 											id: UUID(uuidString: "25617399-543F-4220-9114-3A4181AF8D80")!,
@@ -36,3 +36,6 @@ extension Manga {
 													   Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Adventure")])
 }
 
+extension MangaInCollection {
+	static let preview = MangaInCollection(id: 13, manga: .preview, volumesOwned: 37, readingVolume: 11)
+}
