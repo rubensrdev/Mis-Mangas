@@ -8,11 +8,40 @@
 import SwiftUI
 
 struct CollectionView: View {
+	
+	@Environment(MyCollectionViewModel.self) private var vm
+	
+	let grid: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 300))]
+	
     var body: some View {
-        Text("There is my collection of mangas")
+		
+		@Bindable var vm = vm
+		
+		NavigationStack	{
+			ScrollView {
+				LazyVGrid(columns: grid, spacing: 50) {
+					ForEach(vm.mangas) { manga in
+						NavigationLink(value: manga) {
+							VStack {
+								MangaGridCachedImageView(url: manga.manga.imageURL)
+								Text(manga.manga.title)
+									.font(.headline)
+									.multilineTextAlignment(.center)
+									.lineLimit(2).frame(width: 120)
+							}
+						}
+					}
+				}
+			}
+			.navigationTitle("My collection")
+			.navigationDestination(for: MangaInCollection.self, destination: { manga in
+				Text("Detail of \(manga.manga.title)")
+			})
+		}
     }
 }
 
 #Preview {
-    CollectionView()
+	CollectionView()
+		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }

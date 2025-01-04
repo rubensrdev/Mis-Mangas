@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MangaInCollection: Codable, Identifiable {
+struct MangaInCollection: Codable, Identifiable, Hashable {
 	let id: Int
 	let manga: Manga
 	var volumesOwned: Int?

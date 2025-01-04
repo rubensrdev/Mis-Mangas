@@ -30,16 +30,25 @@ final class MyCollectionViewModel {
 			mangas = try repository.loadMangasInCollection()
 		} catch {
 			mangas = []
-			errorMessage = "Error loading mangas: \(error)"
+			errorMessage = "Error loading mangas in collection: \(error)"
 			showErrorAlert = true
 		}
 	}
 	
+	func isInCollection(_ id: Int) -> Bool {
+		mangas.contains(where: { $0.id == id })
+	}
+	
+	@MainActor
 	func addToCollection(_ manga: Manga) {
 		guard !mangas.contains(where: { $0.id == manga.id }) else { return }
 		mangas.append(manga.toMangaInCollection)
 		addedMangaTitle = manga.title
 		showToast = true
+		Task {
+			try await Task.sleep(for: .seconds(5))
+			showToast = false
+		}
 	}
 	
 }

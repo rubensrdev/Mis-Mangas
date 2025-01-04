@@ -10,6 +10,7 @@ import SwiftUI
 struct MangasView: View {
 	
 	@Environment(MangasViewModel.self) private var vm
+	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	
 	let grid: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 300))]
 	
@@ -17,94 +18,111 @@ struct MangasView: View {
 		
 		@Bindable var vm = vm
 		
-		NavigationStack {
-			
-			ScrollView {
-				LazyVGrid(columns: grid, spacing: 50) {
-					ForEach(vm.mangas) { manga in
-						NavigationLink(value: manga) {
-							VStack {
-								MangaGridCachedImageView(url: manga.imageURL)
-								Text(manga.title)
-									.font(.headline)
-									.multilineTextAlignment(.center)
-									.lineLimit(2).frame(width: 120)
-							}
-						}
-						.contextMenu {
-							// TODO: ver en VM los que están en la colección para mostrar un botón u otro
-							Button {
-								print("Agregar a colección si es que no lo tengo ya...")
-							} label: {
-								Label("Add to my collection", systemImage: "plus.circle")
-							}
-							Label("I already have it", systemImage: "checkmark.seal.fill")
-						}
-						.onAppear {
-							vm.loadMoreMangas(id: manga.id)
-						}
-					}
-				}
-				if vm.isLoadingMore {
-					VStack {
-						ProgressView()
-							.padding(.vertical, 20)
-						Text("Loading more mangas...")
-							.font(.footnote)
-							.foregroundStyle(.secondary)
-					}
-				}
+		ZStack {
+			NavigationStack {
 				
-			}
-			.navigationTitle(vm.isSearching ? "Search results" : "Mangas")
-			.navigationDestination(for: Manga.self, destination: { manga in
-				MangaDetailView(manga: manga)
-			})
-			.toolbar {
-				if vm.isSearching {
-					ToolbarItem(placement: .topBarTrailing) {
-						Button("Back to all") {
-							Task {
-								vm.resetSearch()
-								await vm.loadMangas()
+				ScrollView {
+					LazyVGrid(columns: grid, spacing: 50) {
+						ForEach(vm.mangas) { manga in
+							NavigationLink(value: manga) {
+								VStack {
+									MangaGridCachedImageView(url: manga.imageURL)
+									Text(manga.title)
+										.font(.headline)
+										.multilineTextAlignment(.center)
+										.lineLimit(2).frame(width: 120)
+								}
+							}
+							.contextMenu {
+								if myCollectionVM.isInCollection(manga.id) {
+									Label("I already have it", systemImage: "checkmark.seal.fill")
+								} else {
+									Button {
+										myCollectionVM.addToCollection(manga)
+									} label: {
+										Label("Add to my collection", systemImage: "plus.circle")
+									}
+								}
+							}
+							.onAppear {
+								vm.loadMoreMangas(id: manga.id)
 							}
 						}
 					}
+					if vm.isLoadingMore {
+						VStack {
+							ProgressView()
+								.padding(.vertical, 20)
+							Text("Loading more mangas...")
+								.font(.footnote)
+								.foregroundStyle(.secondary)
+						}
+					}
+					
 				}
-				ToolbarItem(placement: .topBarTrailing) {
-					Button(action: {
-						vm.showFilters.toggle()
-					}) {
-						Label("Filter mangas", systemImage: "line.horizontal.3.decrease.circle")
-						
+				.navigationTitle(vm.isSearching ? "Search results" : "Mangas")
+				.navigationDestination(for: Manga.self, destination: { manga in
+					MangaDetailView(manga: manga)
+				})
+				.toolbar {
+					if vm.isSearching {
+						ToolbarItem(placement: .topBarTrailing) {
+							Button("Back to all") {
+								Task {
+									vm.resetSearch()
+									await vm.loadMangas()
+								}
+							}
+						}
+					}
+					ToolbarItem(placement: .topBarTrailing) {
+						Button(action: {
+							vm.showFilters.toggle()
+						}) {
+							Label("Filter mangas", systemImage: "line.horizontal.3.decrease.circle")
+							
+						}
+					}
+				}
+				.sheet(isPresented: $vm.showFilters) {
+					FilterFormView(customSearchVM: CustomSearchViewModel())
+				}
+				if vm.isSearching && vm.mangas.isEmpty {
+					VStack {
+						Spacer()
+						Label("No mangas found...", systemImage: "magnifyingglass.circle")
+							.font(.headline)
+							.foregroundColor(.secondary)
+						Spacer()
+					}
+				}
+				if vm.mangas.isEmpty {
+					VStack {
+						Spacer()
+						ProgressView()
+						Spacer()
 					}
 				}
 			}
-			.sheet(isPresented: $vm.showFilters) {
-				FilterFormView(customSearchVM: CustomSearchViewModel())
+			.task {
+				await vm.loadMangas()
 			}
-			if vm.isSearching && vm.mangas.isEmpty {
+			.alert("App Error", isPresented: $vm.showErrorAlert) {} message: {
+				Text(vm.errorMessage)
+			}
+			if myCollectionVM.showToast {
 				VStack {
 					Spacer()
-					Label("No mangas found...", systemImage: "magnifyingglass.circle")
-						.font(.headline)
-						.foregroundColor(.secondary)
-					Spacer()
+					Text("\(myCollectionVM.addedMangaTitle) has been added to your collection.")
+						.padding()
+						.background(Color.black.opacity(0.8))
+						.foregroundColor(.white)
+						.cornerRadius(10)
+						.padding(.bottom, 20)
+						.transition(.move(edge: .bottom).combined(with: .opacity))
+						.animation(.easeInOut(duration: 0.5), value: myCollectionVM.showToast)
 				}
 			}
-			if vm.mangas.isEmpty {
-				VStack {
-					Spacer()
-					ProgressView()
-					Spacer()
-				}
-			}
-		}
-		.task {
-			await vm.loadMangas()
-		}
-		.alert("App Error", isPresented: $vm.showErrorAlert) {} message: {
-			Text(vm.errorMessage)
 		}
 		
 	}
@@ -114,4 +132,5 @@ struct MangasView: View {
 #Preview {
 	MangasView()
 		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
+		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }

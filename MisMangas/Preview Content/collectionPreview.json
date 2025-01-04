@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "manga": {
+            "id": 1,
+            "title": "Monster",
+            "titleJapanese": "MONSTER",
+            "titleEnglish": "Monster",
+            "sypnosis": "Kenzou Tenma, a renowned Japanese neurosurgeon working in post-war Germany, faces a difficult choice...",
+            "startDate": "1994-12-05T00:00:00Z",
+            "endDate": "2001-12-20T00:00:00Z",
+            "status": "finished",
+            "volumes": 18,
+            "score": 9.15,
+            "mainPicture": "https://cdn.myanimelist.net/images/manga/3/258224l.jpg",
+            "authors": [
+                {
+                    "id": "54BE174C-2FE9-42C8-A842-85D291A6AEDD",
+                    "firstName": "Naoki",
+                    "lastName": "Urasawa",
+                    "role": "Story & Art"
+                }
+            ]
+        },
+        "volumesOwned": 18,
+        "readingVolume": 10,
+        "completedCollection": true
+    },
+    {
+        "id": 2,
+        "manga": {
+            "id": 2,
+            "title": "Berserk",
+            "titleJapanese": "ベルセルク",
+            "titleEnglish": "Berserk",
+            "sypnosis": "Guts, a former mercenary now known as the 'Black Swordsman,' is out for revenge...",
+            "startDate": "1989-08-25T00:00:00Z",
+            "status": "currently_publishing",
+            "mainPicture": "https://cdn.myanimelist.net/images/manga/1/157897l.jpg",
+            "authors": [
+                {
+                    "id": "6F0B6948-08C4-4761-8BE1-192E68AB0A2F",
+                    "firstName": "Kentarou",
+                    "lastName": "Miura",
+                    "role": "Story & Art"
+                },
+                {
+                    "id": "0304C4E9-2D89-463A-8FDD-EEAB5B9D57B3",
+                    "firstName": "",
+                    "lastName": "Studio Gaga",
+                    "role": "Art"
+                }
+            ]
+        },
+        "volumesOwned": 40,
+        "readingVolume": 30,
+        "completedCollection": false
+    }
+]
