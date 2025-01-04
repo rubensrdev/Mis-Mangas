@@ -18,6 +18,9 @@ final class MyCollectionViewModel {
 	var showToast = false
 	var addedMangaTitle = ""
 	
+	var showRemoveAlert = false
+	var removedMangaTitle = ""
+	
 	var mangas: [MangaInCollection] {
 		didSet {
 			try? repository.saveMangasInCollection(mangas)
@@ -49,6 +52,16 @@ final class MyCollectionViewModel {
 			try await Task.sleep(for: .seconds(5))
 			showToast = false
 		}
+	}
+	
+	func showRemoveAlert(for manga: MangaInCollection) {
+		removedMangaTitle = manga.manga.title
+		showRemoveAlert = true
+	}
+	
+	func removeFromCollection(_ manga: MangaInCollection) {
+		mangas.removeAll() { $0.id == manga.id }
+		removedMangaTitle = manga.manga.title
 	}
 	
 }

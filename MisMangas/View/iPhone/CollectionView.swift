@@ -30,6 +30,17 @@ struct CollectionView: View {
 									.lineLimit(2).frame(width: 120)
 							}
 						}
+						.contextMenu {
+							Button {
+								vm.showRemoveAlert(for: manga)
+							} label: {
+								Label("Remove from collection", systemImage: "trash")
+							}
+						}
+						.alert("Remove \(vm.removedMangaTitle) from your collection", isPresented: $vm.showRemoveAlert) {
+							Button(role: .cancel) {} label: { Text("Cancel") }
+							Button(role: .destructive) { vm.removeFromCollection(manga) } label: { Text("Remove") }
+						}
 					}
 				}
 			}
