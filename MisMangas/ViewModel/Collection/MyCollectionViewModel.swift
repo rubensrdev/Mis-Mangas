@@ -66,4 +66,10 @@ final class MyCollectionViewModel {
 		removedMangaTitle = manga.manga.title
 	}
 	
+	func update(_ mangaInCollection: MangaInCollection) {
+		if let index = mangas.firstIndex(where: { $0.id == mangaInCollection.id }) {
+			mangas[index] = mangaInCollection
+		}
+	}
+	
 }

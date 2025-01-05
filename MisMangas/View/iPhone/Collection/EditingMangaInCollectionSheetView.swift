@@ -53,7 +53,7 @@ struct EditingMangaInCollectionSheetView: View {
 					Button {
 						if let mangaInCollection = vm.validate() {
 							Task {
-								// TODO: Llama al myCollectionVM para hacer el UPDATE
+								myCollectionVM.update(mangaInCollection)
 								dismiss()
 							}
 						}
@@ -62,6 +62,9 @@ struct EditingMangaInCollectionSheetView: View {
 					}
 					
 				}
+			}
+			.alert("Validation Error", isPresented: $vm.showAlert) {} message: {
+				Text(vm.errorMessage)
 			}
 		}
     }

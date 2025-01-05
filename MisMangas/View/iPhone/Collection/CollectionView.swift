@@ -46,7 +46,9 @@ struct CollectionView: View {
 			}
 			.navigationTitle("My collection")
 			.navigationDestination(for: MangaInCollection.self, destination: { manga in
-				MangaInCollectionDetailView(mangaInCollection: manga)
+				if let index = vm.mangas.firstIndex(where: { $0.id == manga.id}) {
+					MangaInCollectionDetailView(mangaInCollection: $vm.mangas[index])
+				}
 			})
 		}
     }
