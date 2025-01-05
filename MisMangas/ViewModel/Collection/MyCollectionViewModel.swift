@@ -23,6 +23,22 @@ final class MyCollectionViewModel {
 	
 	var showEditingSheet = false
 	
+	var searchText = ""
+	var orderOption = OrderOptions.byTitle
+	var filteredMangas: [MangaInCollection] {
+		mangas.filter { manga in
+			searchText.isEmpty || manga.manga.title.localizedCaseInsensitiveContains(searchText)
+		}
+		.sorted { manga1, manga2 in
+			switch orderOption {
+				case .byTitle:
+					manga1.manga.title < manga2.manga.title
+				case .byCollecionComplete:
+					manga1.completedCollection && !manga2.completedCollection
+			}
+		}
+	}
+	
 	var mangas: [MangaInCollection] {
 		didSet {
 			try? repository.saveMangasInCollection(mangas)

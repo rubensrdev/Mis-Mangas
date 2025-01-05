@@ -20,7 +20,7 @@ struct CollectionView: View {
 		NavigationStack	{
 			ScrollView {
 				LazyVGrid(columns: grid, spacing: 50) {
-					ForEach(vm.mangas) { manga in
+					ForEach(vm.filteredMangas) { manga in
 						NavigationLink(value: manga) {
 							VStack {
 								MangaGridCachedImageView(url: manga.manga.imageURL)
@@ -50,6 +50,8 @@ struct CollectionView: View {
 					MangaInCollectionDetailView(mangaInCollection: $vm.mangas[index])
 				}
 			})
+			.searchable(text: $vm.searchText , prompt: "Search by manga title")
+			.orderByToolbar(orderOption: $vm.orderOption)
 		}
     }
 }
