@@ -28,7 +28,7 @@ struct OrderByCollectionToolbar: ViewModifier {
 							}
 						}
 					} label: {
-						Text("Order by")
+						Label("Order by", systemImage: "arrow.up.arrow.down")
 					}
 				}
 			}
