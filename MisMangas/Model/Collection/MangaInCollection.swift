@@ -14,7 +14,7 @@ struct MangaInCollection: Codable, Identifiable, Hashable {
 	var readingVolume: Int = 0
 	var completedCollection: Bool {
 		guard let volumes = manga.volumes else { return false }
-		return readingVolume == volumes
+		return volumesOwned == volumes
 	}
 }
 
