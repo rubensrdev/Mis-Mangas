@@ -11,8 +11,8 @@ protocol RepositoryRemoteProtocol: Sendable {
 	func getMangas(page: String, itemsPerPage: String) async throws-> PaginatedMangaResponse
 	func getBestMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
 	func getAuthors() async throws -> [Author]
-	func getDemographics(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
-	func getThemes(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
-	func getGenres(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
+	func getDemographics() async throws -> [String]
+	func getThemes() async throws -> [String]
+	func getGenres() async throws -> [String]
 	func searchMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse
 }

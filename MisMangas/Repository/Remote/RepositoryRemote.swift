@@ -8,6 +8,7 @@
 import Foundation
 
 struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
+	
 	let session: URLSession
 	
 	init(session: URLSession = .shared) {
@@ -28,16 +29,16 @@ struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
 		try await executeRequest(request: .get(.authors()), type: [Author].self)
 	}
 	
-	func getDemographics(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await executeRequest(request: .get(.demographics(page: page, itemsPerPage: itemsPerPage)), type: PaginatedMangaResponse.self)
+	func getDemographics() async throws -> [String] {
+		try await executeRequest(request: .get(.demographics()), type: [String].self)
 	}
 	
-	func getThemes(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await executeRequest(request: .get(.themes(page: page, itemsPerPage: itemsPerPage)), type: PaginatedMangaResponse.self)
+	func getThemes() async throws -> [String] {
+		try await executeRequest(request: .get(.themes()), type: [String].self)
 	}
 	
-	func getGenres(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await executeRequest(request: .get(.genres(page: page, itemsPerPage: itemsPerPage)), type: PaginatedMangaResponse.self)
+	func getGenres() async throws -> [String] {
+		try await executeRequest(request: .get(.genres()), type: [String].self)
 	}
 	
 	func searchMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse {

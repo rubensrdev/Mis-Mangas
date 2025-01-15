@@ -30,16 +30,16 @@ struct RepositoryRemotePreview: NetworkInteractor, RepositoryRemoteProtocol {
 		return try JSONDecoder().decode([Author].self, from: data)
 	}
 	
-	func getDemographics(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "1", itemsPerPage: "10")
+	func getDemographics() async throws -> [String] {
+		previewDemographics
 	}
 	
-	func getThemes(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "1", itemsPerPage: "10")
+	func getThemes() async throws -> [String] {
+		previewThemes
 	}
 	
-	func getGenres(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "1", itemsPerPage: "10")
+	func getGenres() async throws -> [String] {
+		previewGenres
 	}
 	
 	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview

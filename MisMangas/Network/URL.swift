@@ -32,22 +32,19 @@ extension URL {
 			.appending(path: Endpoints.listAuthors.path)
 	}
 	
-	static func demographics(page: String, itemsPerPage: String) -> URL {
+	static func demographics() -> URL {
 		mainURL
 			.appending(path: Endpoints.listDemographics.path)
-			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 	
-	static func genres(page: String, itemsPerPage: String) -> URL {
+	static func genres() -> URL {
 		mainURL
 			.appending(path: Endpoints.listGenres.path)
-			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 	
-	static func themes(page: String, itemsPerPage: String) -> URL {
+	static func themes() -> URL {
 		mainURL
 			.appending(path: Endpoints.listThemes.path)
-			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 	
 	static func searchMangas(page: String, itemsPerPage: String) -> URL {

@@ -11,10 +11,11 @@ import Foundation
 final class ExploreViewModel {
 	let repository: RepositoryRemoteProtocol
 	
-	var responseForMangas: PaginatedMangaResponse?
 	var mangas: [Manga] = []
-	var responseForAuthors: [Author]?
 	var authors: [Author] = []
+	var demographics: [String] = []
+	var genres: [String] = []
+	var themes: [String] = []
 	
 	let perPage = 12
 	var page = 1
@@ -42,7 +43,6 @@ final class ExploreViewModel {
 			switch selectedExploreOption {
 				case .bestMangas:
 					let response = try await repository.getBestMangas(page: "\(page)", itemsPerPage: "\(perPage)")
-					responseForMangas = response
 					let filteredMangas = response.items.filter { manga in
 						!mangas.contains { $0.id == manga.id }
 					}
@@ -50,13 +50,31 @@ final class ExploreViewModel {
 					totalItems = response.metadata.total
 				case .authors:
 					let response = try await repository.getAuthors()
-					responseForAuthors = response
 					let filteredAuthors = response.filter { author in
 						!authors.contains { $0.id == author.id }
 					}
 					authors.append(contentsOf: filteredAuthors)
-				default:
-					print("Default case")
+				case .demographics:
+					let response = try await repository.getDemographics()
+					guard !response.isEmpty else { return }
+					let filteredDemographics = response.filter { demographic in
+						!demographics.contains(demographic)
+					}
+					demographics.append(contentsOf: filteredDemographics)
+				case .genres:
+					let response = try await repository.getGenres()
+					guard !response.isEmpty else { return }
+					let filteredGenres = response.filter { genre in
+						!genres.contains(genre)
+					}
+					genres.append(contentsOf: filteredGenres)
+				case .themes:
+					let response = try await repository.getThemes()
+					guard !response.isEmpty else { return }
+					let filteredThemes = response.filter { theme in
+						!themes.contains(theme)
+					}
+					themes.append(contentsOf: filteredThemes)
 			}
 		} catch let error as NetworkError {
 			showErrorAlert.toggle()

@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ExploreView: View {
+	
 	@Environment(ExploreViewModel.self) private var vm
+	@Environment(MyCollectionViewModel.self) private var myCollectionVM
+	
 	let grid: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 300))]
 	
 	var body: some View {
@@ -69,32 +72,38 @@ struct ExploreView: View {
 					case .demographics:
 						NavigationStack {
 							List {
-								ForEach(vm.mangas) { manga in
-									NavigationLink(value: manga) {
-										Text(manga.title)
-									}
+								ForEach(vm.demographics, id: \.self) { demography in
+									Text(demography)
 								}
 							}
+							.navigationTitle("Demographics")
+						}
+						.task {
+							await vm.loadMangasForSelectedOption()
 						}
 					case .genres:
 						NavigationStack {
 							List {
-								ForEach(vm.mangas) { manga in
-									NavigationLink(value: manga) {
-										Text(manga.title)
-									}
+								ForEach(vm.genres, id: \.self) { genre in
+									Text(genre)
 								}
 							}
+							.navigationTitle("Genres")
+						}
+						.task {
+							await vm.loadMangasForSelectedOption()
 						}
 					case .themes:
 						NavigationStack {
 							List {
-								ForEach(vm.mangas) { manga in
-									NavigationLink(value: manga) {
-										Text(manga.title)
-									}
+								ForEach(vm.themes, id: \.self) { theme in
+									Text(theme)
 								}
 							}
+							.navigationTitle("Themes")
+						}
+						.task {
+							await vm.loadMangasForSelectedOption()
 						}
 				}
 				
@@ -106,4 +115,5 @@ struct ExploreView: View {
 #Preview {
 	ExploreView()
 		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
+		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }
