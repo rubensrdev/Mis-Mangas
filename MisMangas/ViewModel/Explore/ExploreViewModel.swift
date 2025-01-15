@@ -17,7 +17,7 @@ final class ExploreViewModel {
 	var genres: [String] = []
 	var themes: [String] = []
 	
-	let perPage = 12
+	let perPage = 100
 	var page = 1
 	
 	var showErrorAlert = false
