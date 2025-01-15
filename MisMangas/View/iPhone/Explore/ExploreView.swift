@@ -156,7 +156,6 @@ struct ExploreView: View {
 				VStack {
 					Text("Select category")
 						.font(.headline)
-						.padding(.bottom, 5)
 					ScrollView(.horizontal) {
 						HStack(spacing: 18) {
 							ForEach(ExploreOptions.allCases) { option in
@@ -178,7 +177,7 @@ struct ExploreView: View {
 					.padding(.vertical, 10)
 					.background(Color(.systemGray6))
 					.cornerRadius(15)
-					.padding(.horizontal)
+					.padding()
 				}
 			}
 		}
