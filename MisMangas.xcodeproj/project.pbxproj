@@ -60,6 +60,7 @@
 		45F70C1F2D36676B00082294 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C1E2D36676B00082294 /* ExploreViewModel.swift */; };
 		45F70C212D367A5900082294 /* ExploreOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C202D367A5900082294 /* ExploreOptions.swift */; };
 		45F70C272D37D39B00082294 /* authorsPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F70C262D37D39B00082294 /* authorsPreview.json */; };
+		45F70C2D2D383D7600082294 /* MangaListCachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C2C2D383D7600082294 /* MangaListCachedImageView.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		45F70C1E2D36676B00082294 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		45F70C202D367A5900082294 /* ExploreOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOptions.swift; sourceTree = "<group>"; };
 		45F70C262D37D39B00082294 /* authorsPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = authorsPreview.json; sourceTree = "<group>"; };
+		45F70C2C2D383D7600082294 /* MangaListCachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaListCachedImageView.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -302,6 +304,7 @@
 			children = (
 				45E1A37D2D2414400071230E /* FilterSelectionView.swift */,
 				45059F662D1EC53600D75D8E /* MangaGridCachedImageView.swift */,
+				45F70C2C2D383D7600082294 /* MangaListCachedImageView.swift */,
 				459581212D2A985B007F295F /* OrderByToolbar.swift */,
 			);
 			path = Components;
@@ -483,6 +486,7 @@
 				45059F612D1EBF4800D75D8E /* ImageDownloader.swift in Sources */,
 				45C254132D286BF60015FFA7 /* RepositoryLocalPreview.swift in Sources */,
 				45059F6D2D1F241300D75D8E /* StatusCases.swift in Sources */,
+				45F70C2D2D383D7600082294 /* MangaListCachedImageView.swift in Sources */,
 				45BD121D2D23F42A0091707B /* FilterFormSheetView.swift in Sources */,
 				45F70C1D2D351A2800082294 /* ExploreView.swift in Sources */,
 				45E1A3902D2851D00071230E /* RepositoryLocalProtocol.swift in Sources */,

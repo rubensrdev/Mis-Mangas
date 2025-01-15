@@ -16,4 +16,13 @@ extension Image {
 			.cornerRadius(10)
 			.shadow(radius: 6)
 	}
+	
+	func mangaListImgStyle() -> some View {
+		self
+			.resizable()
+			.scaledToFit()
+			.frame(width: 60, height: 80)
+			.cornerRadius(10)
+			.shadow(radius: 6)
+	}
 }

@@ -18,38 +18,38 @@ struct ExploreView: View {
 		
 		ZStack {
 			VStack {
-				Text("Explore")
-					.font(.title)
-					.bold()
-				ScrollView(.horizontal) {
-					HStack(spacing: 18) {
-						ForEach(ExploreOptions.allCases) { option in
-							Button {
-								vm.changeSelectedOption(to: option)
-							} label: {
-								Text(option.rawValue)
-									.padding(.vertical, 10)
-									.padding(.horizontal, 20)
-									.background(vm.selectedExploreOption == option ? Color.blue : Color.gray.opacity(0.2))
-									.foregroundColor(vm.selectedExploreOption == option ? .white : .primary)
-									.cornerRadius(12)
-									.shadow(color: vm.selectedExploreOption == option ? .blue.opacity(0.5) : .clear, radius: 5, x: 0, y: 5)
-							}
-						}
-					}
-					.padding(.horizontal)
-				}
 				switch vm.selectedExploreOption {
 					case .bestMangas:
 						NavigationStack {
+							Section {
+								VStack(alignment: .leading, spacing: 4) {
+									Text("Best Mangas")
+										.font(.largeTitle)
+										.bold()
+									Text("A selection of the 100 best rated")
+										.font(.subheadline)
+										.foregroundStyle(.secondary)
+								}
+								.padding(.vertical, 8)
+							}
 							List {
 								ForEach(vm.mangas) { manga in
 									NavigationLink(value: manga) {
-										Text(manga.title)
+										HStack {
+											VStack(alignment: .leading) {
+												Text(manga.title)
+													.font(.headline)
+												Text(manga.scoreFormatted)
+													.font(.subheadline)
+													.foregroundStyle(.secondary)
+											}
+											Spacer()
+											MangaListCachedImageView(url: manga.imageURL)
+										}
+										
 									}
 								}
 							}
-							.navigationTitle("Best Mangas")
 							.navigationDestination(for: Manga.self, destination: { manga in
 								MangaDetailView(manga: manga)
 							})
@@ -59,54 +59,127 @@ struct ExploreView: View {
 						}
 					case .authors:
 						NavigationStack {
+							Section {
+								VStack(alignment: .leading, spacing: 4) {
+									Text("Authors")
+										.font(.largeTitle)
+										.bold()
+									Text("All authors and editors that exist")
+										.font(.subheadline)
+										.foregroundStyle(.secondary)
+								}
+								.padding(.vertical, 8)
+							}
 							List {
 								ForEach(vm.authors) { author in
-									Text(author.fullName)
+									VStack(alignment: .leading) {
+										Text(author.fullName)
+											.font(.headline)
+										Text(author.role)
+											.font(.subheadline)
+											.foregroundStyle(.secondary)
+									}
+									
 								}
 							}
-							.navigationTitle("Authors")
 						}
 						.task {
 							await vm.loadMangasForSelectedOption()
 						}
 					case .demographics:
 						NavigationStack {
+							VStack(alignment: .leading, spacing: 4) {
+								Text("Demographics")
+									.font(.largeTitle)
+									.bold()
+								Text("All demographics that exist")
+									.font(.subheadline)
+									.foregroundStyle(.secondary)
+							}
 							List {
 								ForEach(vm.demographics, id: \.self) { demography in
-									Text(demography)
+									VStack(alignment: .leading) {
+										Text(demography)
+											.font(.headline)
+									}
 								}
 							}
-							.navigationTitle("Demographics")
 						}
 						.task {
 							await vm.loadMangasForSelectedOption()
 						}
 					case .genres:
 						NavigationStack {
+							VStack(alignment: .leading, spacing: 4) {
+								Text("Genres")
+									.font(.largeTitle)
+									.bold()
+								Text("All genres that exist")
+									.font(.subheadline)
+									.foregroundStyle(.secondary)
+							}
 							List {
 								ForEach(vm.genres, id: \.self) { genre in
-									Text(genre)
+									VStack(alignment: .leading) {
+										Text(genre)
+											.font(.headline)
+									}
 								}
 							}
-							.navigationTitle("Genres")
 						}
 						.task {
 							await vm.loadMangasForSelectedOption()
 						}
 					case .themes:
 						NavigationStack {
+							VStack(alignment: .leading, spacing: 4) {
+								Text("Themes")
+									.font(.largeTitle)
+									.bold()
+								Text("All themes that exist")
+									.font(.subheadline)
+									.foregroundStyle(.secondary)
+							}
 							List {
 								ForEach(vm.themes, id: \.self) { theme in
-									Text(theme)
+									VStack(alignment: .leading) {
+										Text(theme)
+											.font(.headline)
+									}
 								}
 							}
-							.navigationTitle("Themes")
 						}
 						.task {
 							await vm.loadMangasForSelectedOption()
 						}
 				}
-				
+				VStack {
+					Text("Select category")
+						.font(.headline)
+						.padding(.bottom, 5)
+					ScrollView(.horizontal) {
+						HStack(spacing: 18) {
+							ForEach(ExploreOptions.allCases) { option in
+								Button {
+									vm.changeSelectedOption(to: option)
+								} label: {
+									Text(option.rawValue)
+										.padding(.vertical, 10)
+										.padding(.horizontal, 20)
+										.background(vm.selectedExploreOption == option ? Color.blue : Color.gray.opacity(0.2))
+										.foregroundColor(vm.selectedExploreOption == option ? .white : .primary)
+										.cornerRadius(12)
+										.shadow(color: vm.selectedExploreOption == option ? .blue.opacity(0.5) : .clear, radius: 5, x: 0, y: 5)
+								}
+							}
+						}
+						.padding(.horizontal)
+					}
+					.padding(.vertical, 10)
+					.background(Color(.systemGray6))
+					.cornerRadius(15)
+					.padding(.horizontal)
+				}
 			}
 		}
 	}
