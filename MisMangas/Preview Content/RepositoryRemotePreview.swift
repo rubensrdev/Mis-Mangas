@@ -21,6 +21,28 @@ struct RepositoryRemotePreview: NetworkInteractor, RepositoryRemoteProtocol {
 	}
 	
 	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
+	func getBestMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await self.getMangas(page: "1", itemsPerPage: "10")
+	}
+	
+	func getAuthors() async throws -> [Author] {
+		let data = try Data(contentsOf: Bundle.main.url(forResource: "authorsPreview", withExtension: "json")!)
+		return try JSONDecoder().decode([Author].self, from: data)
+	}
+	
+	func getDemographics(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await self.getMangas(page: "1", itemsPerPage: "10")
+	}
+	
+	func getThemes(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await self.getMangas(page: "1", itemsPerPage: "10")
+	}
+	
+	func getGenres(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await self.getMangas(page: "1", itemsPerPage: "10")
+	}
+	
+	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
 	func searchMangas(with searchCriteria: CustomSearch) async throws -> PaginatedMangaResponse {
 		try await self.getMangas(page: "1", itemsPerPage: "10")
 	}

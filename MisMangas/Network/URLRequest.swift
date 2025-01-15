@@ -28,10 +28,6 @@ extension URLRequest {
 		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 		do {
 			request.httpBody = try JSONEncoder().encode(body)
-			// TODO: QUITAR ESTE LOG
-			if let body = request.httpBody {
-				print("JSON Body: \(String(data: body, encoding: .utf8) ?? "Invalid JSON")")
-			}
 		} catch {
 			throw NetworkError.json(error)
 		}

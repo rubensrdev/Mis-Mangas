@@ -12,7 +12,7 @@ final class MangasViewModel {
 	let repository: RepositoryRemoteProtocol
 	
 	var response: PaginatedMangaResponse?
-	var mangas: [Manga] = [] // TODO: revisar cambio a SET para evitar duplicados
+	var mangas: [Manga] = [] 
 	
 	let perPage = 12
 	var page = 1

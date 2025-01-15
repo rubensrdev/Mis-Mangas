@@ -14,6 +14,10 @@ struct EntryViewIPhone: View {
 				.tabItem {
 					Label("Mangas", systemImage: "book.fill")
 				}
+			ExploreView()
+				.tabItem {
+					Label("Explore", systemImage: "square.grid.2x2.fill")
+				}
 			CollectionView()
 				.tabItem {
 					Label("Collection", systemImage: "rectangle.stack.fill")
@@ -24,4 +28,7 @@ struct EntryViewIPhone: View {
 
 #Preview {
     EntryViewIPhone()
+		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
+		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
+		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
 }
