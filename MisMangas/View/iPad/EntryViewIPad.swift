@@ -18,7 +18,7 @@ struct EntryViewIPad: View {
 				.tabItem {
 					Label("Explore", systemImage: "square.grid.2x2.fill")
 				}
-			CollectionView()
+			CollectionViewIPad()
 				.tabItem {
 					Label("Collection", systemImage: "rectangle.stack.fill")
 				}

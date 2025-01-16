@@ -20,7 +20,6 @@ struct MangasViewIPad: View {
 		
 		ZStack {
 			NavigationStack {
-				
 				ScrollView {
 					LazyVGrid(columns: grid, spacing: 20) {
 						ForEach(vm.mangas) { manga in
@@ -30,7 +29,8 @@ struct MangasViewIPad: View {
 									Text(manga.title)
 										.font(.headline)
 										.multilineTextAlignment(.center)
-										.lineLimit(2).frame(width: 120)
+										.lineLimit(2)
+										.frame(width: 120)
 								}
 							}
 							.contextMenu {

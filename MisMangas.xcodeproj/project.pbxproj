@@ -66,6 +66,7 @@
 		45F70C3E2D39311C00082294 /* MangaGridCachedImageViewIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C3D2D39311C00082294 /* MangaGridCachedImageViewIPad.swift */; };
 		45F70C402D39331600082294 /* ExploreViewIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C3F2D39331600082294 /* ExploreViewIpad.swift */; };
 		45F70C422D39386800082294 /* MangaListCachedImageViewIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */; };
+		45F70C442D39726F00082294 /* CollectionViewIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C432D39726F00082294 /* CollectionViewIPad.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,7 @@
 		45F70C3D2D39311C00082294 /* MangaGridCachedImageViewIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaGridCachedImageViewIPad.swift; sourceTree = "<group>"; };
 		45F70C3F2D39331600082294 /* ExploreViewIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewIpad.swift; sourceTree = "<group>"; };
 		45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaListCachedImageViewIpad.swift; sourceTree = "<group>"; };
+		45F70C432D39726F00082294 /* CollectionViewIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewIPad.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -456,6 +458,7 @@
 		45F70C392D392EA900082294 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				45F70C432D39726F00082294 /* CollectionViewIPad.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				45E1A38E2D280DBF0071230E /* CollectionView.swift in Sources */,
 				45F70C402D39331600082294 /* ExploreViewIpad.swift in Sources */,
 				45F70C342D392E3600082294 /* EntryViewIPad.swift in Sources */,
+				45F70C442D39726F00082294 /* CollectionViewIPad.swift in Sources */,
 				45C2540F2D285D5F0015FFA7 /* RepositoryLocal.swift in Sources */,
 				453EF67A2D1D7B18001E6478 /* HTTPMethod.swift in Sources */,
 				453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */,
