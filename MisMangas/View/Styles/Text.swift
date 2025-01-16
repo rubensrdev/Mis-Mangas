@@ -25,4 +25,31 @@ extension Text {
 			.cornerRadius(10)
 			.padding(.bottom, 20)
 	}
+	
+	func exploreTitleStyle() -> some View {
+		self
+			.font(.largeTitle)
+			.bold()
+			.foregroundStyle(.primaryBlue)
+	}
+	
+	func exploreSubtitleStyle() -> some View {
+		self
+			.font(.subheadline)
+			.foregroundStyle(.secondary)
+	}
+	
+	func scoreStyle() -> some View {
+		self
+			.font(.subheadline)
+			.padding(.vertical, 5)
+			.padding(.horizontal, 10)
+			.background(
+				Circle()
+					.fill(LinearGradient(colors: [.primaryBlue, .secondaryYellow, .tertiaryPink], startPoint: .leading, endPoint: .trailing))
+					
+					
+			)
+			.foregroundStyle(.primaryDark)
+	}
 }
