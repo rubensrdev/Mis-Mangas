@@ -1,0 +1,29 @@
+//
+//  HeaderSectionView.swift
+//  MisMangas
+//
+//  Created by Rubén Segura Romo on 16/1/25.
+//
+
+import SwiftUI
+
+struct HeaderSectionView: View {
+	let title: String
+	let subtitle: String
+	
+	var body: some View {
+		Section {
+			VStack(alignment: .leading, spacing: 4) {
+				Text(title)
+					.exploreTitleStyle()
+				Text(subtitle)
+					.exploreSubtitleStyle()
+			}
+			.padding(.vertical, 8)
+		}
+	}
+}
+
+#Preview {
+	HeaderSectionView(title: "Best Mangas", subtitle: "A selection of the 100 best rated")
+}

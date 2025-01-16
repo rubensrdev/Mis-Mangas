@@ -23,31 +23,10 @@ struct ExploreView: View {
 				switch vm.selectedExploreOption {
 					case .bestMangas:
 						NavigationStack {
-							Section {
-								VStack(alignment: .leading, spacing: 4) {
-									Text("Best Mangas")
-										.exploreTitleStyle()
-									Text("A selection of the 100 best rated")
-										.exploreSubtitleStyle()
-								}
-								.padding(.vertical, 8)
-							}
+							HeaderSectionView(title: "Best Mangas", subtitle: "A selection of the 100 best rated")
 							List {
 								ForEach(vm.mangas) { manga in
-									NavigationLink(value: manga) {
-										HStack {
-											VStack(alignment: .leading) {
-												Text(manga.title)
-													.font(.headline)
-													.foregroundStyle(.primaryDark)
-												Text(manga.scoreFormatted)
-													.scoreStyle()
-											}
-											Spacer()
-											MangaListCachedImageView(url: manga.imageURL)
-										}
-										
-									}
+									BestMangaRow(manga: manga)
 								}
 							}
 							.navigationDestination(for: Manga.self, destination: { manga in
@@ -59,25 +38,10 @@ struct ExploreView: View {
 						}
 					case .authors:
 						NavigationStack {
-							Section {
-								VStack(alignment: .leading, spacing: 4) {
-									Text("Authors")
-										.exploreTitleStyle()
-									Text("All authors and editors that exist")
-										.exploreSubtitleStyle()
-								}
-								.padding(.vertical, 8)
-							}
+							HeaderSectionView(title: "Authors", subtitle: "All authors and editors that exist")
 							List {
 								ForEach(vm.authors) { author in
-									VStack(alignment: .leading) {
-										Text(author.fullName)
-											.font(.headline)
-										Text(author.role)
-											.font(.subheadline)
-											.foregroundStyle(.secondary)
-									}
-									
+									AuthorRow(author: author)
 								}
 							}
 						}
@@ -86,18 +50,10 @@ struct ExploreView: View {
 						}
 					case .demographics:
 						NavigationStack {
-							VStack(alignment: .leading, spacing: 4) {
-								Text("Demographics")
-									.exploreTitleStyle()
-								Text("All demographics that exist")
-									.exploreSubtitleStyle()
-							}
+							HeaderSectionView(title: "Demographics", subtitle: "All demographics that exist")
 							List {
 								ForEach(vm.demographics, id: \.self) { demography in
-									VStack(alignment: .leading) {
-										Text(demography)
-											.font(.headline)
-									}
+									DemographyRow(demography: demography)
 								}
 							}
 						}
@@ -106,18 +62,10 @@ struct ExploreView: View {
 						}
 					case .genres:
 						NavigationStack {
-							VStack(alignment: .leading, spacing: 4) {
-								Text("Genres")
-									.exploreTitleStyle()
-								Text("All genres that exist")
-									.exploreSubtitleStyle()
-							}
+							HeaderSectionView(title: "Genres", subtitle: "All genres that exist")
 							List {
 								ForEach(vm.genres, id: \.self) { genre in
-									VStack(alignment: .leading) {
-										Text(genre)
-											.font(.headline)
-									}
+									GenreRow(genre: genre)
 								}
 							}
 						}
@@ -126,18 +74,10 @@ struct ExploreView: View {
 						}
 					case .themes:
 						NavigationStack {
-							VStack(alignment: .leading, spacing: 4) {
-								Text("Themes")
-									.exploreTitleStyle()
-								Text("All themes that exist")
-									.exploreSubtitleStyle()
-							}
+							HeaderSectionView(title: "Themes", subtitle: "All themes that exist")
 							List {
 								ForEach(vm.themes, id: \.self) { theme in
-									VStack(alignment: .leading) {
-										Text(theme)
-											.font(.headline)
-									}
+									ThemeRow(theme: theme)
 								}
 							}
 						}

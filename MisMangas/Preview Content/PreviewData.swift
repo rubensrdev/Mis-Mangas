@@ -36,6 +36,14 @@ extension Manga {
 											  Demographic(id: UUID(uuidString: "5E05BBF1-A72E-4231-9487-71CFE508F9F9")!, demographic: "Adventure")])
 }
 
+extension Author {
+	static let preview = Author(
+		id: UUID(uuidString: "25617399-543F-4220-9114-3A4181AF8D80")!,
+		role: "Story & Art",
+		firstName: "Eiichiro",
+		lastName: "Oda")
+}
+
 extension MangaInCollection {
 	static let preview = MangaInCollection(id: 13, manga: .preview, volumesOwned: 37, readingVolume: 11)
 }
