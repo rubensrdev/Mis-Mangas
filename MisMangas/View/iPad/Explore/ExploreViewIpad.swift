@@ -28,15 +28,7 @@ struct ExploreViewIpad: View {
 				switch vm.selectedExploreOption {
 					case .bestMangas:
 						NavigationStack {
-							Section {
-								VStack(alignment: .leading, spacing: 4) {
-									Text("Best Mangas")
-										.exploreTitleStyle()
-									Text("A selection of the 100 best rated")
-										.exploreSubtitleStyle()
-								}
-								.padding(.vertical, 8)
-							}
+							HeaderSectionView(title: "Best Mangas", subtitle: "A selection of the 100 best rated")
 							ScrollView {
 								LazyVGrid(columns: gridThreeColumns) {
 									ForEach(vm.mangas) { manga in
@@ -62,15 +54,7 @@ struct ExploreViewIpad: View {
 						}
 					case .authors:
 						NavigationStack {
-							Section {
-								VStack(alignment: .leading, spacing: 4) {
-									Text("Authors")
-										.exploreTitleStyle()
-									Text("All authors and editors that exist")
-										.exploreSubtitleStyle()
-								}
-								.padding(.vertical, 8)
-							}
+							HeaderSectionView(title: "Authors", subtitle: "All authors and editors that exist")
 							ScrollView {
 								LazyVGrid(columns: gridThreeColumns) {
 									ForEach(vm.authors) { author in
@@ -91,12 +75,7 @@ struct ExploreViewIpad: View {
 						}
 					case .demographics:
 						NavigationStack {
-							VStack(alignment: .leading, spacing: 4) {
-								Text("Demographics")
-									.exploreTitleStyle()
-								Text("All demographics that exist")
-									.exploreSubtitleStyle()
-							}
+							HeaderSectionView(title: "Demographics", subtitle: "All demographics that exist")
 							ScrollView {
 								LazyVGrid(columns: gridOneColumn) {
 									ForEach(vm.demographics, id: \.self) { demography in
@@ -114,12 +93,7 @@ struct ExploreViewIpad: View {
 						}
 					case .genres:
 						NavigationStack {
-							VStack(alignment: .leading, spacing: 4) {
-								Text("Genres")
-									.exploreTitleStyle()
-								Text("All genres that exist")
-									.exploreSubtitleStyle()
-							}
+							HeaderSectionView(title: "Genres", subtitle: "All genres that exist")
 							ScrollView {
 								LazyVGrid(columns: gridTwoColumns) {
 									ForEach(vm.genres, id: \.self) { genre in
@@ -137,12 +111,7 @@ struct ExploreViewIpad: View {
 						}
 					case .themes:
 						NavigationStack {
-							VStack(alignment: .leading, spacing: 4) {
-								Text("Themes")
-									.exploreTitleStyle()
-								Text("All themes that exist")
-									.exploreSubtitleStyle()
-							}
+							HeaderSectionView(title: "Themes", subtitle: "All themes that exist")
 							ScrollView {
 								LazyVGrid(columns: gridTwoColumns) {
 									ForEach(vm.themes, id: \.self) { theme in
