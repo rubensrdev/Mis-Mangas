@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+@MainActor let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+
 @main
 struct MisMangasApp: App {
 	
@@ -16,10 +18,17 @@ struct MisMangasApp: App {
 	
     var body: some Scene {
         WindowGroup {
-            EntryViewIPhone()
-				.environment(mangasVM)
-				.environment(myCollectionVM)
-				.environment(exploreVM)
+			if isIPad {
+				EntryViewIPad()
+					.environment(mangasVM)
+					.environment(myCollectionVM)
+					.environment(exploreVM)
+			} else {
+				EntryViewIPhone()
+					.environment(mangasVM)
+					.environment(myCollectionVM)
+					.environment(exploreVM)
+			}
         }
     }
 }

@@ -1,13 +1,13 @@
 //
-//  ExploreView.swift
+//  ExploreViewIpad.swift
 //  MisMangas
 //
-//  Created by Rubén Segura Romo on 13/1/25.
+//  Created by Rubén Segura Romo on 16/1/25.
 //
 
 import SwiftUI
 
-struct ExploreView: View {
+struct ExploreViewIpad: View {
 	
 	@Environment(ExploreViewModel.self) private var vm
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
@@ -15,6 +15,11 @@ struct ExploreView: View {
 	var body: some View {
 		
 		@Bindable var vm = vm
+		
+		let gridThreeColumns: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 20), count: 3)
+		let gridTwoColumns: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+		let gridOneColumn: [GridItem] = [GridItem(.flexible())]
+		
 		
 		VStack {
 			switch vm.selectedExploreOption {
@@ -31,21 +36,22 @@ struct ExploreView: View {
 							}
 							.padding(.vertical, 8)
 						}
-						List {
-							ForEach(vm.mangas) { manga in
-								NavigationLink(value: manga) {
-									HStack {
-										VStack(alignment: .leading) {
+						ScrollView {
+							LazyVGrid(columns: gridThreeColumns) {
+								ForEach(vm.mangas) { manga in
+									NavigationLink(value: manga) {
+										VStack(spacing: 10) {
+											MangaGridCachedImageViewIPad(url: manga.imageURL)
 											Text(manga.title)
 												.font(.headline)
+												.multilineTextAlignment(.center)
+												.lineLimit(2).frame(width: 120)
 											Text(manga.scoreFormatted)
 												.font(.subheadline)
 												.foregroundStyle(.secondary)
 										}
-										Spacer()
-										MangaListCachedImageView(url: manga.imageURL)
+										.padding()
 									}
-									
 								}
 							}
 						}
@@ -69,16 +75,18 @@ struct ExploreView: View {
 							}
 							.padding(.vertical, 8)
 						}
-						List {
-							ForEach(vm.authors) { author in
-								VStack(alignment: .leading) {
-									Text(author.fullName)
-										.font(.headline)
-									Text(author.role)
-										.font(.subheadline)
-										.foregroundStyle(.secondary)
+						ScrollView {
+							LazyVGrid(columns: gridThreeColumns) {
+								ForEach(vm.authors) { author in
+									VStack(alignment: .leading) {
+										Text(author.fullName)
+											.font(.headline)
+										Text(author.role)
+											.font(.subheadline)
+											.foregroundStyle(.secondary)
+									}
+									
 								}
-								
 							}
 						}
 					}
@@ -95,11 +103,14 @@ struct ExploreView: View {
 								.font(.subheadline)
 								.foregroundStyle(.secondary)
 						}
-						List {
-							ForEach(vm.demographics, id: \.self) { demography in
-								VStack(alignment: .leading) {
-									Text(demography)
-										.font(.headline)
+						ScrollView {
+							LazyVGrid(columns: gridOneColumn) {
+								ForEach(vm.demographics, id: \.self) { demography in
+									VStack(alignment: .leading) {
+										Text(demography)
+											.font(.headline)
+									}
+									.padding()
 								}
 							}
 						}
@@ -117,11 +128,14 @@ struct ExploreView: View {
 								.font(.subheadline)
 								.foregroundStyle(.secondary)
 						}
-						List {
-							ForEach(vm.genres, id: \.self) { genre in
-								VStack(alignment: .leading) {
-									Text(genre)
-										.font(.headline)
+						ScrollView {
+							LazyVGrid(columns: gridTwoColumns) {
+								ForEach(vm.genres, id: \.self) { genre in
+									VStack(alignment: .leading) {
+										Text(genre)
+											.font(.headline)
+									}
+									.padding()
 								}
 							}
 						}
@@ -139,11 +153,14 @@ struct ExploreView: View {
 								.font(.subheadline)
 								.foregroundStyle(.secondary)
 						}
-						List {
-							ForEach(vm.themes, id: \.self) { theme in
-								VStack(alignment: .leading) {
-									Text(theme)
-										.font(.headline)
+						ScrollView {
+							LazyVGrid(columns: gridTwoColumns) {
+								ForEach(vm.themes, id: \.self) { theme in
+									VStack(alignment: .leading) {
+										Text(theme)
+											.font(.headline)
+									}
+									.padding()
 								}
 							}
 						}
@@ -183,7 +200,7 @@ struct ExploreView: View {
 }
 
 #Preview {
-	ExploreView()
+	ExploreViewIpad()
 		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }

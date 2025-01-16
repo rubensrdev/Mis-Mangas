@@ -25,4 +25,22 @@ extension Image {
 			.cornerRadius(10)
 			.shadow(radius: 6)
 	}
+	
+	func mangaGridImgStyleForIPad() -> some View {
+		self
+			.resizable()
+			.scaledToFit()
+			.frame(width: 200, height: 300)
+			.cornerRadius(10)
+			.shadow(radius: 6)
+	}
+	
+	func mangaListImgStyleforIpad() -> some View {
+		self
+			.resizable()
+			.scaledToFit()
+			.frame(width: 180, height: 200)
+			.cornerRadius(10)
+			.shadow(radius: 6)
+	}
 }
