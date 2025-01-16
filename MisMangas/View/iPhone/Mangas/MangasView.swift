@@ -28,9 +28,7 @@ struct MangasView: View {
 								VStack {
 									MangaGridCachedImageView(url: manga.imageURL)
 									Text(manga.title)
-										.font(.headline)
-										.multilineTextAlignment(.center)
-										.lineLimit(2).frame(width: 120)
+										.mangaTitleStyle()
 								}
 							}
 							.contextMenu {

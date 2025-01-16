@@ -43,9 +43,7 @@ struct ExploreViewIpad: View {
 										VStack(spacing: 10) {
 											MangaGridCachedImageViewIPad(url: manga.imageURL)
 											Text(manga.title)
-												.font(.headline)
-												.multilineTextAlignment(.center)
-												.lineLimit(2).frame(width: 120)
+												.mangaTitleStyle()
 											Text(manga.scoreFormatted)
 												.font(.subheadline)
 												.foregroundStyle(.secondary)

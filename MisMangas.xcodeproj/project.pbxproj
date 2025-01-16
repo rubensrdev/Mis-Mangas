@@ -67,6 +67,7 @@
 		45F70C402D39331600082294 /* ExploreViewIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C3F2D39331600082294 /* ExploreViewIpad.swift */; };
 		45F70C422D39386800082294 /* MangaListCachedImageViewIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */; };
 		45F70C442D39726F00082294 /* CollectionViewIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C432D39726F00082294 /* CollectionViewIPad.swift */; };
+		45F70C462D3973E300082294 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C452D3973E300082294 /* Text.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		45F70C3F2D39331600082294 /* ExploreViewIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewIpad.swift; sourceTree = "<group>"; };
 		45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaListCachedImageViewIpad.swift; sourceTree = "<group>"; };
 		45F70C432D39726F00082294 /* CollectionViewIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewIPad.swift; sourceTree = "<group>"; };
+		45F70C452D3973E300082294 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				45059F642D1EBFCF00D75D8E /* Image.swift */,
+				45F70C452D3973E300082294 /* Text.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				453EF67C2D1D7B3C001E6478 /* URLRequest.swift in Sources */,
 				453EF65E2D1D5DA9001E6478 /* Metadata.swift in Sources */,
 				4595810B2D299A75007F295F /* MangaInCollectionDetailView.swift in Sources */,
+				45F70C462D3973E300082294 /* Text.swift in Sources */,
 				45E1A3842D2418130071230E /* FilterOptionCases.swift in Sources */,
 				4595810D2D29B113007F295F /* EditingMangaInCollectionSheetView.swift in Sources */,
 				45E1A38E2D280DBF0071230E /* CollectionView.swift in Sources */,
