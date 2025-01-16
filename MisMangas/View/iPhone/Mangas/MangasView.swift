@@ -19,10 +19,11 @@ struct MangasView: View {
 		@Bindable var vm = vm
 		
 		ZStack {
+			Color.primaryWhite
+				.ignoresSafeArea()
 			NavigationStack {
-				
 				ScrollView {
-					LazyVGrid(columns: grid, spacing: 50) {
+					LazyVGrid(columns: grid, spacing: 20) {
 						ForEach(vm.mangas) { manga in
 							NavigationLink(value: manga) {
 								VStack {
@@ -30,6 +31,11 @@ struct MangasView: View {
 									Text(manga.title)
 										.mangaTitleStyle()
 								}
+								.padding()
+								.frame(width: 150, height: 250)
+								.background(Color.secondaryGray)
+								.cornerRadius(10)
+								.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
 							}
 							.contextMenu {
 								if myCollectionVM.isInCollection(manga.id) {
@@ -43,17 +49,20 @@ struct MangasView: View {
 								}
 							}
 							.onAppear {
-								vm.loadMoreMangas(id: manga.id)
+								withAnimation(.easeIn(duration: 0.3)) {
+									vm.loadMoreMangas(id: manga.id)
+								}
+								
 							}
 						}
 					}
 					if vm.isLoadingMore {
 						VStack {
 							ProgressView()
-								.padding(.vertical, 20)
+								.withStyle()
 							Text("Loading more mangas...")
 								.font(.footnote)
-								.foregroundStyle(.secondary)
+								.foregroundStyle(.secondaryGray)
 						}
 					}
 					
@@ -71,6 +80,7 @@ struct MangasView: View {
 									await vm.loadMangas()
 								}
 							}
+							.foregroundStyle(.primaryRed)
 						}
 					}
 					ToolbarItem(placement: .topBarTrailing) {
@@ -78,7 +88,8 @@ struct MangasView: View {
 							vm.showFilters.toggle()
 						}) {
 							Label("Filter mangas", systemImage: "line.horizontal.3.decrease")
-							
+								.symbolRenderingMode(.palette)
+								.foregroundStyle(.primaryRed)
 						}
 					}
 				}
@@ -90,7 +101,10 @@ struct MangasView: View {
 						Spacer()
 						Label("No mangas found...", systemImage: "magnifyingglass.circle")
 							.font(.headline)
-							.foregroundColor(.secondary)
+							.padding()
+							.background(.secondaryGray)
+							.cornerRadius(10)
+							.padding()
 						Spacer()
 					}
 				}
@@ -98,6 +112,7 @@ struct MangasView: View {
 					VStack {
 						Spacer()
 						ProgressView()
+							.withStyle()
 						Spacer()
 					}
 				}

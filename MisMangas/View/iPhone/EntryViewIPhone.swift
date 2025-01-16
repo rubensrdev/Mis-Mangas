@@ -23,6 +23,7 @@ struct EntryViewIPhone: View {
 					Label("Collection", systemImage: "rectangle.stack.fill")
 				}
 		}
+		.tint(.primaryRed)
     }
 }
 

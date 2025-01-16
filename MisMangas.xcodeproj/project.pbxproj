@@ -68,6 +68,7 @@
 		45F70C422D39386800082294 /* MangaListCachedImageViewIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */; };
 		45F70C442D39726F00082294 /* CollectionViewIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C432D39726F00082294 /* CollectionViewIPad.swift */; };
 		45F70C462D3973E300082294 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C452D3973E300082294 /* Text.swift */; };
+		45F70C482D3985D000082294 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C472D3985D000082294 /* ProgressView.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaListCachedImageViewIpad.swift; sourceTree = "<group>"; };
 		45F70C432D39726F00082294 /* CollectionViewIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewIPad.swift; sourceTree = "<group>"; };
 		45F70C452D3973E300082294 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		45F70C472D3985D000082294 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -330,6 +332,7 @@
 			children = (
 				45059F642D1EBFCF00D75D8E /* Image.swift */,
 				45F70C452D3973E300082294 /* Text.swift */,
+				45F70C472D3985D000082294 /* ProgressView.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				45C2540F2D285D5F0015FFA7 /* RepositoryLocal.swift in Sources */,
 				453EF67A2D1D7B18001E6478 /* HTTPMethod.swift in Sources */,
 				453EF6882D1DD3E7001E6478 /* MangasViewModel.swift in Sources */,
+				45F70C482D3985D000082294 /* ProgressView.swift in Sources */,
 				45059F5F2D1EBF2F00D75D8E /* CachedImageViewModel.swift in Sources */,
 				453EF6602D1D5DD7001E6478 /* Author.swift in Sources */,
 				45059F692D1EC61F00D75D8E /* PreviewData.swift in Sources */,
