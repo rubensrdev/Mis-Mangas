@@ -11,7 +11,9 @@ extension Text {
 	func mangaTitleStyle() -> some View {
 		self
 			.font(.headline)
+			.foregroundStyle(.primaryDark)
 			.multilineTextAlignment(.center)
-			.lineLimit(2).frame(width: 120)
+			.lineLimit(2)
+			.padding(.horizontal, 5)
 	}
 }
