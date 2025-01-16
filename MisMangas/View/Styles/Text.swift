@@ -16,4 +16,13 @@ extension Text {
 			.lineLimit(2)
 			.padding(.horizontal, 5)
 	}
+	
+	func toastStyle() -> some View {
+		self
+			.padding()
+			.background(Color.primaryDark.opacity(0.8))
+			.foregroundColor(.primaryWhite)
+			.cornerRadius(10)
+			.padding(.bottom, 20)
+	}
 }

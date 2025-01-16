@@ -23,6 +23,7 @@ struct EntryViewIPad: View {
 					Label("Collection", systemImage: "rectangle.stack.fill")
 				}
 		}
+		.tint(.primaryRed)
     }
 }
 

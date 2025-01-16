@@ -100,11 +100,7 @@ struct MangasView: View {
 					VStack {
 						Spacer()
 						Label("No mangas found...", systemImage: "magnifyingglass.circle")
-							.font(.headline)
-							.padding()
-							.background(.secondaryGray)
-							.cornerRadius(10)
-							.padding()
+							.notFoundStyle()
 						Spacer()
 					}
 				}
@@ -127,11 +123,7 @@ struct MangasView: View {
 				VStack {
 					Spacer()
 					Text("\(myCollectionVM.addedMangaTitle) has been added to your collection.")
-						.padding()
-						.background(Color.black.opacity(0.8))
-						.foregroundColor(.white)
-						.cornerRadius(10)
-						.padding(.bottom, 20)
+						.toastStyle()
 						.transition(.move(edge: .bottom).combined(with: .opacity))
 						.animation(.easeInOut(duration: 0.5), value: myCollectionVM.showToast)
 				}

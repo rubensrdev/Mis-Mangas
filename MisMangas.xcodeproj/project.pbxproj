@@ -69,6 +69,7 @@
 		45F70C442D39726F00082294 /* CollectionViewIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C432D39726F00082294 /* CollectionViewIPad.swift */; };
 		45F70C462D3973E300082294 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C452D3973E300082294 /* Text.swift */; };
 		45F70C482D3985D000082294 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C472D3985D000082294 /* ProgressView.swift */; };
+		45F70C4A2D398A5F00082294 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C492D398A5F00082294 /* Label.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		45F70C432D39726F00082294 /* CollectionViewIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewIPad.swift; sourceTree = "<group>"; };
 		45F70C452D3973E300082294 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		45F70C472D3985D000082294 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		45F70C492D398A5F00082294 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -333,6 +335,7 @@
 				45059F642D1EBFCF00D75D8E /* Image.swift */,
 				45F70C452D3973E300082294 /* Text.swift */,
 				45F70C472D3985D000082294 /* ProgressView.swift */,
+				45F70C492D398A5F00082294 /* Label.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				45E1A38E2D280DBF0071230E /* CollectionView.swift in Sources */,
 				45F70C402D39331600082294 /* ExploreViewIpad.swift in Sources */,
 				45F70C342D392E3600082294 /* EntryViewIPad.swift in Sources */,
+				45F70C4A2D398A5F00082294 /* Label.swift in Sources */,
 				45F70C442D39726F00082294 /* CollectionViewIPad.swift in Sources */,
 				45C2540F2D285D5F0015FFA7 /* RepositoryLocal.swift in Sources */,
 				453EF67A2D1D7B18001E6478 /* HTTPMethod.swift in Sources */,
