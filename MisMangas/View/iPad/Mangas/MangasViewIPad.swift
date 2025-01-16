@@ -25,33 +25,7 @@ struct MangasViewIPad: View {
 				ScrollView {
 					LazyVGrid(columns: grid, spacing: 20) {
 						ForEach(vm.mangas) { manga in
-							NavigationLink(value: manga) {
-								VStack(spacing: 10) {
-									MangaGridCachedImageViewIPad(url: manga.imageURL)
-									Text(manga.title)
-										.mangaTitleStyle()
-								}
-								.padding()
-								.background(.secondaryGray)
-								.cornerRadius(10)
-								.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
-							}
-							.contextMenu {
-								if myCollectionVM.isInCollection(manga.id) {
-									Label("I already have it", systemImage: "checkmark.seal.fill")
-								} else {
-									Button {
-										myCollectionVM.addToCollection(manga)
-									} label: {
-										Label("Add to my collection", systemImage: "plus.circle")
-									}
-								}
-							}
-							.onAppear {
-								withAnimation(.easeIn(duration: 0.3)) {
-									vm.loadMoreMangas(id: manga.id)
-								}
-							}
+							MangaRowIpad(manga: manga)
 						}
 					}
 					if vm.isLoadingMore {
@@ -78,7 +52,7 @@ struct MangasViewIPad: View {
 									await vm.loadMangas()
 								}
 							}
-							.foregroundStyle(Color.primaryRed)
+							.foregroundStyle(Color.primaryBlue)
 						}
 					}
 					ToolbarItem(placement: .topBarTrailing) {
@@ -87,7 +61,7 @@ struct MangasViewIPad: View {
 						}) {
 							Label("Filter mangas", systemImage: "line.horizontal.3.decrease")
 								.symbolRenderingMode(.palette)
-								.foregroundStyle(.primaryRed)
+								.foregroundStyle(.primaryBlue)
 						}
 					}
 				}
@@ -136,3 +110,5 @@ struct MangasViewIPad: View {
 		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }
+
+

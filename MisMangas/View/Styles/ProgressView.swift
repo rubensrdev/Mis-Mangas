@@ -10,7 +10,7 @@ import SwiftUI
 extension ProgressView {
 	func withStyle() -> some View {
 		self
-			.tint(.primaryRed)
+			.tint(.primaryBlue)
 			.scaleEffect(1.5)
 			.padding(.vertical, 20)
 	}
