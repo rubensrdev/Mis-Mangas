@@ -13,6 +13,7 @@ struct ThemeRow: View {
 			Text(theme)
 				.font(.headline)
 		}
+		.padding()
 	}
 }
 

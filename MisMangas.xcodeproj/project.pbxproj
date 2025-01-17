@@ -78,6 +78,7 @@
 		45F70C562D3999F900082294 /* GenreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C552D3999F900082294 /* GenreRow.swift */; };
 		45F70C582D399A1700082294 /* ThemeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C572D399A1700082294 /* ThemeRow.swift */; };
 		45F70C5A2D399A5C00082294 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C592D399A5C00082294 /* HeaderSectionView.swift */; };
+		45F70C5C2D3AC56D00082294 /* SubmenuExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C5B2D3AC56D00082294 /* SubmenuExploreView.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +155,7 @@
 		45F70C552D3999F900082294 /* GenreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRow.swift; sourceTree = "<group>"; };
 		45F70C572D399A1700082294 /* ThemeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRow.swift; sourceTree = "<group>"; };
 		45F70C592D399A5C00082294 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		45F70C5B2D3AC56D00082294 /* SubmenuExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmenuExploreView.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 		453EF6512D1ACF59001E6478 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				459581132D29B2A9007F295F /* Shared */,
 				453EF68B2D1DD6C2001E6478 /* Styles */,
 				45F70C322D392C0600082294 /* iPad */,
 				453EF6892D1DD69A001E6478 /* iPhone */,
@@ -329,7 +332,6 @@
 				459581102D29B24C007F295F /* Mangas */,
 				459581112D29B269007F295F /* Explore */,
 				459581122D29B28F007F295F /* Collection */,
-				459581132D29B2A9007F295F /* Shared */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -393,6 +395,7 @@
 		459581132D29B2A9007F295F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				45F70C5B2D3AC56D00082294 /* SubmenuExploreView.swift */,
 				45059F6A2D1F1C1600D75D8E /* MangaDetailView.swift */,
 				45BD121C2D23F42A0091707B /* FilterFormSheetView.swift */,
 			);
@@ -457,7 +460,6 @@
 				45F70C372D392E9900082294 /* Mangas */,
 				45F70C382D392EA100082294 /* Explore */,
 				45F70C392D392EA900082294 /* Collection */,
-				45F70C3A2D392EED00082294 /* Shared */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -494,13 +496,6 @@
 				45F70C432D39726F00082294 /* CollectionViewIPad.swift */,
 			);
 			path = Collection;
-			sourceTree = "<group>";
-		};
-		45F70C3A2D392EED00082294 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +630,7 @@
 				45059F652D1EBFCF00D75D8E /* Image.swift in Sources */,
 				4595810F2D29B157007F295F /* MyCollectionEditViewModel.swift in Sources */,
 				45AE9B212D1EA7EF00B7CC6B /* Demographic.swift in Sources */,
+				45F70C5C2D3AC56D00082294 /* SubmenuExploreView.swift in Sources */,
 				45F70C562D3999F900082294 /* GenreRow.swift in Sources */,
 				45F70C542D3999D400082294 /* DemographyRow.swift in Sources */,
 				453EF6802D1DC75A001E6478 /* NetworkError.swift in Sources */,

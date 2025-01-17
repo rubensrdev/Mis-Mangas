@@ -13,6 +13,7 @@ struct DemographyRow: View {
 			Text(demography)
 				.font(.headline)
 		}
+		.padding()
 	}
 }
 

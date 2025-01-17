@@ -30,18 +30,9 @@ struct ExploreViewIpad: View {
 						NavigationStack {
 							HeaderSectionView(title: "Best Mangas", subtitle: "A selection of the 100 best rated")
 							ScrollView {
-								LazyVGrid(columns: gridThreeColumns) {
+								LazyVGrid(columns: gridThreeColumns, spacing: 30) {
 									ForEach(vm.mangas) { manga in
-										NavigationLink(value: manga) {
-											VStack(spacing: 10) {
-												MangaGridCachedImageViewIPad(url: manga.imageURL)
-												Text(manga.title)
-													.mangaTitleStyle()
-												Text(manga.scoreFormatted)
-													.scoreStyle()
-											}
-											.padding()
-										}
+										BestMangaRowIPad(manga: manga)
 									}
 								}
 							}
@@ -58,14 +49,7 @@ struct ExploreViewIpad: View {
 							ScrollView {
 								LazyVGrid(columns: gridThreeColumns) {
 									ForEach(vm.authors) { author in
-										VStack(alignment: .leading) {
-											Text(author.fullName)
-												.font(.headline)
-											Text(author.role)
-												.font(.subheadline)
-												.foregroundStyle(.secondary)
-										}
-										
+										AuthorRow(author: author)
 									}
 								}
 							}
@@ -79,11 +63,7 @@ struct ExploreViewIpad: View {
 							ScrollView {
 								LazyVGrid(columns: gridOneColumn) {
 									ForEach(vm.demographics, id: \.self) { demography in
-										VStack(alignment: .leading) {
-											Text(demography)
-												.font(.headline)
-										}
-										.padding()
+										DemographyRow(demography: demography)
 									}
 								}
 							}
@@ -97,11 +77,7 @@ struct ExploreViewIpad: View {
 							ScrollView {
 								LazyVGrid(columns: gridTwoColumns) {
 									ForEach(vm.genres, id: \.self) { genre in
-										VStack(alignment: .leading) {
-											Text(genre)
-												.font(.headline)
-										}
-										.padding()
+										GenreRow(genre: genre)
 									}
 								}
 							}
@@ -115,11 +91,7 @@ struct ExploreViewIpad: View {
 							ScrollView {
 								LazyVGrid(columns: gridTwoColumns) {
 									ForEach(vm.themes, id: \.self) { theme in
-										VStack(alignment: .leading) {
-											Text(theme)
-												.font(.headline)
-										}
-										.padding()
+										ThemeRow(theme: theme)
 									}
 								}
 							}
@@ -128,32 +100,7 @@ struct ExploreViewIpad: View {
 							await vm.loadMangasForSelectedOption()
 						}
 				}
-				VStack {
-					Text("Select category")
-						.font(.headline)
-					ScrollView(.horizontal) {
-						HStack(spacing: 18) {
-							ForEach(ExploreOptions.allCases) { option in
-								Button {
-									vm.changeSelectedOption(to: option)
-								} label: {
-									Text(option.rawValue)
-										.padding(.vertical, 10)
-										.padding(.horizontal, 20)
-										.background(vm.selectedExploreOption == option ? .primaryBlue : Color.gray.opacity(0.2))
-										.foregroundColor(vm.selectedExploreOption == option ? .primaryWhite : .primaryBlue)
-										.cornerRadius(12)
-										.shadow(color: vm.selectedExploreOption == option ? .primaryBlue.opacity(0.5) : .clear, radius: 5, x: 0, y: 5)
-								}
-							}
-						}
-						.padding(.horizontal)
-					}
-					.padding(.vertical, 10)
-					.background(Color(.systemGray6))
-					.cornerRadius(15)
-					.padding()
-				}
+				SubmenuExploreView()
 			}
 		}
 	}
@@ -163,4 +110,25 @@ struct ExploreViewIpad: View {
 	ExploreViewIpad()
 		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
+}
+
+struct BestMangaRowIPad: View {
+	let manga: Manga
+	var body: some View {
+		NavigationLink(value: manga) {
+			VStack(spacing: 10) {
+				MangaGridCachedImageViewIPad(url: manga.imageURL)
+				HStack {
+					Text(manga.title)
+						.mangaTitleStyle()
+					Text(manga.scoreFormatted)
+						.scoreStyle()
+				}
+			}
+			.padding()
+			.background(.secondaryGray)
+			.cornerRadius(10)
+			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
+		}
+	}
 }

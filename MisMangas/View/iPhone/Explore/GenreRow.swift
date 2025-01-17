@@ -13,6 +13,7 @@ struct GenreRow: View {
 			Text(genre)
 				.font(.headline)
 		}
+		.padding()
 	}
 }
 
