@@ -24,7 +24,7 @@ struct SubmenuExploreView: View {
 								.padding(.horizontal, 20)
 								.background(vm.selectedExploreOption == option ? .primaryBlue : Color.gray.opacity(0.2))
 								.foregroundColor(vm.selectedExploreOption == option ? .primaryWhite : .primaryBlue)
-								.cornerRadius(12)
+								.clipShape(RoundedRectangle(cornerRadius: 12))
 								.shadow(color: vm.selectedExploreOption == option ? .primaryBlue.opacity(0.5) : .clear, radius: 5, x: 0, y: 5)
 						}
 					}
@@ -33,7 +33,7 @@ struct SubmenuExploreView: View {
 			}
 			.padding(.vertical, 10)
 			.background(Color(.systemGray6))
-			.cornerRadius(15)
+			.clipShape(RoundedRectangle(cornerRadius: 12))
 			.padding()
 		}
 	}

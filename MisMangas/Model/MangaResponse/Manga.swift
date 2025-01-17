@@ -64,10 +64,11 @@ extension Manga {
 		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 		let outputFormatter = DateFormatter()
-		outputFormatter.dateStyle = .medium
+		// outputFormatter.dateStyle = .medium
+		outputFormatter.dateFormat = "yyyy"
 		guard let start = formatter.date(from: startDate) else { return "Invalid Date" }
 		if let end = endDate, let endParsed = formatter.date(from: end) {
-			return "\(outputFormatter.string(from: start)) - \(outputFormatter.string(from: endParsed))"
+			return "\(outputFormatter.string(from: start)) to \(outputFormatter.string(from: endParsed))"
 		} else {
 			return outputFormatter.string(from: start)
 		}

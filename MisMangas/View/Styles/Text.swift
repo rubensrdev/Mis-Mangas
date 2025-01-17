@@ -22,7 +22,7 @@ extension Text {
 			.padding()
 			.background(Color.primaryDark.opacity(0.8))
 			.foregroundColor(.primaryWhite)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.padding(.bottom, 20)
 	}
 	

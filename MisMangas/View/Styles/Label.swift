@@ -14,7 +14,7 @@ extension Label {
 			.foregroundStyle(Color.tertiaryPink)
 			.padding()
 			.background(Color.secondaryGray)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.padding()
 	}
 }

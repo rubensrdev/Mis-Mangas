@@ -13,7 +13,7 @@ extension VStack {
 			.padding()
 			.frame(width: 150, height: 250)
 			.background(Color.secondaryGray)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
 	}
 	
@@ -21,7 +21,14 @@ extension VStack {
 		self
 			.padding()
 			.background(.secondaryGray)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
+	}
+	
+	func mangaDetailStyle() -> some View {
+		self
+			.padding()
+			.background(Color.secondaryGray.opacity(0.3))
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 	}
 }

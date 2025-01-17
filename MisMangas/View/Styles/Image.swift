@@ -13,7 +13,7 @@ extension Image {
 			.resizable()
 			.scaledToFit()
 			.frame(width: 120, height: 160)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.shadow(radius: 6)
 	}
 	
@@ -22,7 +22,7 @@ extension Image {
 			.resizable()
 			.scaledToFit()
 			.frame(width: 60, height: 80)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.shadow(radius: 6)
 	}
 	
@@ -31,7 +31,7 @@ extension Image {
 			.resizable()
 			.scaledToFit()
 			.frame(width: 200, height: 300)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.shadow(radius: 6)
 	}
 	
@@ -40,7 +40,7 @@ extension Image {
 			.resizable()
 			.scaledToFit()
 			.frame(width: 180, height: 200)
-			.cornerRadius(10)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.shadow(radius: 6)
 	}
 }
