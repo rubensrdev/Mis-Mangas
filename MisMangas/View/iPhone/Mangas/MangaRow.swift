@@ -20,20 +20,18 @@ struct MangaRow: View {
 				Text(manga.title)
 					.mangaTitleStyle()
 			}
-			.padding()
-			.frame(width: 150, height: 250)
-			.background(Color.secondaryGray)
-			.cornerRadius(10)
-			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
+			.mangaRowStyle()
 		}
 		.contextMenu {
 			if myCollectionVM.isInCollection(manga.id) {
 				Label("I already have it", systemImage: "checkmark.seal.fill")
+					.symbolRenderingMode(.palette)
 			} else {
 				Button {
 					myCollectionVM.addToCollection(manga)
 				} label: {
 					Label("Add to my collection", systemImage: "plus.circle")
+						.symbolRenderingMode(.palette)
 				}
 			}
 		}

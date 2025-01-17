@@ -28,6 +28,7 @@ struct MangasView: View {
 							MangaRow(manga: manga)
 						}
 					}
+					.padding()
 					if vm.isLoadingMore {
 						VStack {
 							ProgressView()

@@ -20,10 +20,7 @@ struct MangaRowIpad: View {
 				Text(manga.title)
 					.mangaTitleStyle()
 			}
-			.padding()
-			.background(.secondaryGray)
-			.cornerRadius(10)
-			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
+			.mangaRowStyleIPad()
 		}
 		.contextMenu {
 			if myCollectionVM.isInCollection(manga.id) {

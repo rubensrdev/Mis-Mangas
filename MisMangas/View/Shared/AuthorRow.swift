@@ -16,6 +16,7 @@ struct AuthorRow: View {
 				.font(.subheadline)
 				.foregroundStyle(.secondary)
 		}
+		.padding()
 	}
 }
 

@@ -24,11 +24,16 @@ struct OrderByCollectionToolbar: ViewModifier {
 							Button {
 								orderOption = option
 							} label: {
-								Text(option.rawValue)
+								Label(option.rawValue, systemImage: option == orderOption ? "checkmark" : "circle")
+									.symbolRenderingMode(.palette)
+									.foregroundStyle(
+										option == orderOption ? .primaryBlue : .primaryDark.opacity(0.5)
+									)
 							}
 						}
 					} label: {
 						Label("Order by", systemImage: "arrow.up.arrow.down")
+							.foregroundStyle(.primaryBlue)
 					}
 				}
 			}

@@ -52,7 +52,7 @@ struct MangasViewIPad: View {
 									await vm.loadMangas()
 								}
 							}
-							.foregroundStyle(Color.primaryBlue)
+							.foregroundStyle(.primaryBlue)
 						}
 					}
 					ToolbarItem(placement: .topBarTrailing) {
