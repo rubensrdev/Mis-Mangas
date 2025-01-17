@@ -371,11 +371,6 @@
 		459581112D29B269007F295F /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				45F70C572D399A1700082294 /* ThemeRow.swift */,
-				45F70C552D3999F900082294 /* GenreRow.swift */,
-				45F70C532D3999D400082294 /* DemographyRow.swift */,
-				45F70C512D39997D00082294 /* AuthorRow.swift */,
-				45F70C4F2D39996200082294 /* BestMangaRow.swift */,
 				45F70C1C2D351A2800082294 /* ExploreView.swift */,
 				45F70C202D367A5900082294 /* ExploreOptions.swift */,
 			);
@@ -398,6 +393,11 @@
 				45F70C5B2D3AC56D00082294 /* SubmenuExploreView.swift */,
 				45059F6A2D1F1C1600D75D8E /* MangaDetailView.swift */,
 				45BD121C2D23F42A0091707B /* FilterFormSheetView.swift */,
+				45F70C572D399A1700082294 /* ThemeRow.swift */,
+				45F70C552D3999F900082294 /* GenreRow.swift */,
+				45F70C532D3999D400082294 /* DemographyRow.swift */,
+				45F70C512D39997D00082294 /* AuthorRow.swift */,
+				45F70C4F2D39996200082294 /* BestMangaRow.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
