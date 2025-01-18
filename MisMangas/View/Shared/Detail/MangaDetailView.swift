@@ -16,7 +16,6 @@ struct MangaDetailView: View {
 	
 	let manga: Manga
 	
-	
 	var body: some View {
 		
 		ZStack {
@@ -42,9 +41,6 @@ struct MangaDetailView: View {
 			.navigationTitle("Manga Detail")
 			.navigationBarTitleDisplayMode(.inline)
 		}
-		
-		
-		
 	}
 }
 
