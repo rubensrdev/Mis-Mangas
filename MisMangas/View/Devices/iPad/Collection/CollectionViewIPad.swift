@@ -44,10 +44,6 @@ struct CollectionViewIPad: View {
 										
 									}
 								}
-								.alert("Remove \(vm.removedMangaTitle) from your collection", isPresented: $vm.showRemoveAlert) {
-									Button(role: .cancel) {} label: { Text("Cancel") }
-									Button(role: .destructive) { vm.removeFromCollection(manga) } label: { Text("Remove") }
-								}
 							}
 						}
 					}
@@ -59,6 +55,13 @@ struct CollectionViewIPad: View {
 					})
 					.searchable(text: $vm.searchText , prompt: "Search by manga title")
 					.orderByToolbar(orderOption: $vm.orderOption)
+				}
+			}
+			.overlay {
+				MangaRemoveAlert(mangaTitle: vm.removedMangaTitle, isPresented: $vm.showRemoveAlert) {
+					if let manga = vm.mangaToRemove {
+						vm.removeFromCollection(manga)
+					}
 				}
 			}
 		}

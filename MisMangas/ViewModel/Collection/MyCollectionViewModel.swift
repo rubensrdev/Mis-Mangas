@@ -20,6 +20,7 @@ final class MyCollectionViewModel {
 	
 	var showRemoveAlert = false
 	var removedMangaTitle = ""
+	var mangaToRemove: MangaInCollection?
 	
 	var showEditingSheet = false
 	
@@ -73,6 +74,7 @@ final class MyCollectionViewModel {
 	}
 	
 	func showRemoveAlert(for manga: MangaInCollection) {
+		mangaToRemove = manga
 		removedMangaTitle = manga.manga.title
 		showRemoveAlert = true
 	}
