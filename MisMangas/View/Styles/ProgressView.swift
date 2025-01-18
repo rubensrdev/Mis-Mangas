@@ -14,4 +14,9 @@ extension ProgressView {
 			.scaleEffect(1.5)
 			.padding(.vertical, 20)
 	}
+	
+	func statusInCollectionStyle() -> some View {
+		self
+			.frame(width: 150)
+	}
 }
