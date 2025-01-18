@@ -55,7 +55,7 @@ struct MangaInCollectionDetailView: View {
 			}
 			.sheet(isPresented: $vm.showEditingSheet) {
 				EditingMangaInCollectionSheetView(vm: MyCollectionEditViewModel(mangaInCollection: mangaInCollection))
-					.presentationDetents([.medium])
+					.presentationDetents(isIPad ? [.height(400)] : [.medium])
 			}
 		}
     }

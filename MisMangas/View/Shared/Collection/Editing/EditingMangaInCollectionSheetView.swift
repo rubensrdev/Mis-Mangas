@@ -17,25 +17,18 @@ struct EditingMangaInCollectionSheetView: View {
     var body: some View {
 		NavigationStack	{
 			Form {
-				
-				Section {
-					TextField("Enter volumes owned", value: $vm.volumesOwned, format: .number)
-						.keyboardType(.numberPad)
-					Text(vm.currentlyOwned)
-						.font(.footnote)
-						.foregroundStyle(.secondary)
-				} header: {
-					Text("Volumes owned")
-				}
-				Section {
-					TextField("Enter reading volume", value: $vm.readingVolume, format: .number)
-						.keyboardType(.numberPad)
-					Text(vm.currentlyReading)
-						.font(.footnote)
-						.foregroundStyle(.secondary)
-				} header: {
-					Text("Reading volume")
-				}
+				EditingMangaVolumeSection(
+					title: "Volumes Owned",
+					textFieldPlaceholder: "Enter volumes owned",
+					value: $vm.volumesOwned,
+					currentInfo: vm.currentlyOwned
+				)
+				EditingMangaVolumeSection(
+					title: "Reading volume",
+					textFieldPlaceholder: "Enter reading volume",
+					value: $vm.readingVolume,
+					currentInfo: vm.currentlyReading
+				)
 			}
 			.navigationTitle("Update status")
 			.navigationBarTitleDisplayMode(.inline)
@@ -59,6 +52,7 @@ struct EditingMangaInCollectionSheetView: View {
 						}
 					} label: {
 						Text("Update")
+							.foregroundStyle(.primaryBlue)
 					}
 					
 				}
@@ -76,3 +70,4 @@ struct EditingMangaInCollectionSheetView: View {
 			.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 	}
 }
+

@@ -68,7 +68,8 @@ final class MyCollectionEditViewModel {
 
 extension MyCollectionEditViewModel {
 	var currentlyOwned: String {
-		"Owned Volumes: \(volumesOwned)"
+		guard let totalVolumes = mangaInCollection.manga.volumes else { return "Owned Volumes: \(volumesOwned) of unfinished manga" }
+		return "Owned Volumes: \(volumesOwned) of \(totalVolumes) volumes."
 	}
 	var currentlyReading: String {
 		guard let totalVolumes = mangaInCollection.manga.volumes else { return "Currently Reading Volume: \(readingVolume) of unfinished manga" }
