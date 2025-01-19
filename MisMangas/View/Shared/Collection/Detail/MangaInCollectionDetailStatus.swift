@@ -44,10 +44,10 @@ struct MangaInCollectionDetailStatus: View {
 			}
 			HStack {
 				if mangaInCollection.completedCollection {
-					Label("Collection completed", systemImage: "checkmark.shield.fill")
+					Label("Completed", systemImage: "checkmark.shield.fill")
 						.collectionCompletedStyle()
 				} else {
-					Label("Collection not completed", systemImage: "xmark.shield.fill")
+					Label("Not completed", systemImage: "xmark.shield.fill")
 						.collectionNotCompletedStyle()
 				}
 			}

@@ -162,6 +162,7 @@
       }
     },
     "Collection completed" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -172,11 +173,22 @@
       }
     },
     "Collection not completed" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Colección no completada"
+          }
+        }
+      }
+    },
+    "Completed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completada"
           }
         }
       }
@@ -308,6 +320,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se encontraron mangas..."
+          }
+        }
+      }
+    },
+    "Not completed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No completada"
           }
         }
       }
