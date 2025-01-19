@@ -17,45 +17,53 @@ struct CollectionViewIPad: View {
 		
 		@Bindable var vm = vm
 		
-		NavigationStack	{
+		NavigationStack {
 			ZStack {
 				Color.primaryWhite
 					.ignoresSafeArea()
-				if vm.filteredMangas.isEmpty {
-					MyCollectionIsEmptyView()
-				} else {
-					ScrollView {
-						LazyVGrid(columns: grid, spacing: 20) {
-							ForEach(vm.filteredMangas) { manga in
-								NavigationLink(value: manga) {
-									VStack {
-										MangaGridCachedImageViewIPad(url: manga.manga.imageURL)
-										Text(manga.manga.title)
-											.mangaTitleStyle()
+				
+				ScrollView {
+					if vm.filteredMangas.isEmpty {
+						MyCollectionIsEmptyView()
+					} else {
+						VStack(alignment: .leading, spacing: 16) {
+							HeaderSectionView(
+								title: "My collection",
+								subtitle: "Your favorite mangas, curated just for you"
+							)
+							.padding(.horizontal, 40)
+							
+							LazyVGrid(columns: grid, spacing: 20) {
+								ForEach(vm.filteredMangas) { manga in
+									NavigationLink(value: manga) {
+										VStack {
+											MangaGridCachedImageViewIPad(url: manga.manga.imageURL)
+											Text(manga.manga.title)
+												.mangaTitleStyle()
+										}
+										.mangaRowStyleIPad()
 									}
-									.mangaRowStyleIPad()
-								}
-								.contextMenu {
-									Button {
-										vm.showRemoveAlert(for: manga)
-									} label: {
-										Label("Remove from collection", systemImage: "trash")
-											.symbolRenderingMode(.palette)
-										
+									.contextMenu {
+										Button {
+											vm.showRemoveAlert(for: manga)
+										} label: {
+											Label("Remove from collection", systemImage: "trash")
+												.symbolRenderingMode(.palette)
+										}
 									}
 								}
 							}
+							.padding()
 						}
 					}
-					.navigationTitle("My collection")
-					.navigationDestination(for: MangaInCollection.self, destination: { manga in
-						if let index = vm.mangas.firstIndex(where: { $0.id == manga.id}) {
-							MangaInCollectionDetailView(mangaInCollection: $vm.mangas[index])
-						}
-					})
-					.searchable(text: $vm.searchText , prompt: "Search by manga title")
-					.orderByToolbar(orderOption: $vm.orderOption)
 				}
+				.navigationDestination(for: MangaInCollection.self, destination: { manga in
+					if let index = vm.mangas.firstIndex(where: { $0.id == manga.id }) {
+						MangaInCollectionDetailView(mangaInCollection: $vm.mangas[index])
+					}
+				})
+				.searchable(text: $vm.searchText, prompt: "Search by manga title") 
+				.orderByToolbar(orderOption: $vm.orderOption)
 			}
 			.overlay {
 				MangaRemoveAlert(mangaTitle: vm.removedMangaTitle, isPresented: $vm.showRemoveAlert) {

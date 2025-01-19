@@ -23,23 +23,31 @@ struct MangasViewIPad: View {
 				.ignoresSafeArea()
 			NavigationStack {
 				ScrollView {
-					LazyVGrid(columns: grid, spacing: 20) {
-						ForEach(vm.mangas) { manga in
-							MangaRowIpad(manga: manga)
+					VStack(alignment: .leading, spacing: 16) {
+						HeaderSectionView(
+							title: vm.isSearching ? "Search results" : "All mangas",
+							subtitle: vm.isSearching ? "This is all we have found" : "Browse through a vast collection of mangas"
+						)
+						.padding(.horizontal, 40)
+						
+						LazyVGrid(columns: grid, spacing: 20) {
+							ForEach(vm.mangas) { manga in
+								MangaRowIpad(manga: manga)
+							}
+						}
+						.padding()
+						
+						if vm.isLoadingMore {
+							VStack {
+								ProgressView()
+									.withStyle()
+								Text("Loading more mangas...")
+									.font(.footnote)
+									.foregroundStyle(.secondaryGray)
+							}
 						}
 					}
-					if vm.isLoadingMore {
-						VStack {
-							ProgressView()
-								.withStyle()
-							Text("Loading more mangas...")
-								.font(.footnote)
-								.foregroundStyle(.secondaryGray)
-						}
-					}
-					
 				}
-				.navigationTitle(vm.isSearching ? "Search results" : "Mangas")
 				.navigationDestination(for: Manga.self, destination: { manga in
 					MangaDetailView(manga: manga)
 				})
@@ -80,6 +88,7 @@ struct MangasViewIPad: View {
 					VStack {
 						Spacer()
 						ProgressView()
+							.withStyle()
 						Spacer()
 					}
 				}
@@ -100,15 +109,12 @@ struct MangasViewIPad: View {
 				}
 			}
 		}
-		
 	}
 }
-
 
 #Preview {
 	MangasViewIPad()
 		.environment(MangasViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }
-
 

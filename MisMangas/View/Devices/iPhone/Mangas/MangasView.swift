@@ -23,24 +23,29 @@ struct MangasView: View {
 				.ignoresSafeArea()
 			NavigationStack {
 				ScrollView {
-					LazyVGrid(columns: grid, spacing: 20) {
-						ForEach(vm.mangas) { manga in
-							MangaRow(manga: manga)
+					VStack(alignment: .leading) {
+						HeaderSectionView(
+							title: vm.isSearching ? "Search results" : "All mangas",
+							subtitle: vm.isSearching ? "This is all we have found" : "Browse through a vast collection of mangas"
+						)
+						.padding(.horizontal, 40)
+						LazyVGrid(columns: grid, spacing: 20) {
+							ForEach(vm.mangas) { manga in
+								MangaRow(manga: manga)
+							}
+						}
+						.padding()
+						if vm.isLoadingMore {
+							VStack {
+								ProgressView()
+									.withStyle()
+								Text("Loading more mangas...")
+									.font(.footnote)
+									.foregroundStyle(.secondaryGray)
+							}
 						}
 					}
-					.padding()
-					if vm.isLoadingMore {
-						VStack {
-							ProgressView()
-								.withStyle()
-							Text("Loading more mangas...")
-								.font(.footnote)
-								.foregroundStyle(.secondaryGray)
-						}
-					}
-					
 				}
-				.navigationTitle(vm.isSearching ? "Search results" : "Mangas")
 				.navigationDestination(for: Manga.self, destination: { manga in
 					MangaDetailView(manga: manga)
 				})
