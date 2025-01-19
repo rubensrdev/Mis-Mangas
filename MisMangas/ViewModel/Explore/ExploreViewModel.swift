@@ -109,11 +109,11 @@ final class ExploreViewModel {
 					themes.append(contentsOf: filteredThemes)
 			}
 		} catch let error as NetworkError {
-			errorMessage = error.errorDescription ?? "Ocurrió un error inesperado en la red, prueba a refrescar la pantalla"
+			errorMessage = error.errorDescription ?? "An unexpected network error occurred, try refreshing the screen"
 			showErrorAlert.toggle()
 			print(error)
 		} catch {
-			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
+			errorMessage = "An error occurred while loading the manga, try refreshing the screen"
 			showErrorAlert.toggle()
 			print(error)
 		}

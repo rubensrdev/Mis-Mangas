@@ -62,11 +62,11 @@ final class MangasViewModel {
 			}
 		} catch let error as NetworkError {
 			showErrorAlert.toggle()
-			errorMessage = error.errorDescription ?? "Ocurrió un error inesperado en la red, prueba a refrescar la pantalla"
+			errorMessage = error.errorDescription ?? "An unexpected network error occurred, try refreshing the screen"
 			print(error)
 		} catch {
 			showErrorAlert.toggle()
-			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
+			errorMessage = "An error occurred while loading the manga, try refreshing the screen"
 			print(error)
 		}
 	}
