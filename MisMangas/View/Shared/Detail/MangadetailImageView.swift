@@ -21,7 +21,7 @@ struct MangadetailImageView: View {
 				ProgressView()
 			}
 			Text(manga.title)
-				.font(.title)
+				.font(.animeAceFontDetail)
 				.bold()
 				.multilineTextAlignment(.center)
 				.foregroundColor(.primaryBlue)
