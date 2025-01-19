@@ -100,6 +100,7 @@
 		45F70C8D2D3D10C300082294 /* BestMangaRowIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C8C2D3D10C300082294 /* BestMangaRowIPad.swift */; };
 		45F70C8F2D3D1A8900082294 /* animeace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45F70C8E2D3D1A8900082294 /* animeace.ttf */; };
 		45F70C922D3D1D9100082294 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C912D3D1D9100082294 /* Font.swift */; };
+		45F70C942D3D254C00082294 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 45F70C932D3D254C00082294 /* Localizable.xcstrings */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +200,7 @@
 		45F70C8E2D3D1A8900082294 /* animeace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = animeace.ttf; sourceTree = "<group>"; };
 		45F70C902D3D1C1800082294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		45F70C912D3D1D9100082294 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		45F70C932D3D254C00082294 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,8 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				45F70C902D3D1C1800082294 /* Info.plist */,
-				45F70C8E2D3D1A8900082294 /* animeace.ttf */,
+				45F70C932D3D254C00082294 /* Localizable.xcstrings */,
 				453EF6482D1ACF23001E6478 /* Preview Content */,
+				45F70C8E2D3D1A8900082294 /* animeace.ttf */,
 				453EF6492D1ACF23001E6478 /* Assets.xcassets */,
 				453EF6572D1D5845001E6478 /* Model */,
 				453EF6562D1D5824001E6478 /* Network */,
@@ -653,7 +656,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				es,
 			);
 			mainGroup = 453EF62D2D1ACE99001E6478;
 			minimizedProjectReferenceProxies = 1;
@@ -677,6 +680,7 @@
 				45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */,
 				45059F5B2D1EBB7500D75D8E /* mangasPreview.json in Resources */,
 				45F70C272D37D39B00082294 /* authorsPreview.json in Resources */,
+				45F70C942D3D254C00082294 /* Localizable.xcstrings in Resources */,
 				45F70C8F2D3D1A8900082294 /* animeace.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,6 +845,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 			};
@@ -898,6 +903,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -1,0 +1,606 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ has been added to your collection." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ se ha añadido a tu colección."
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "Add to Collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir a la colección"
+          }
+        }
+      }
+    },
+    "Add to my collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir a mi colección"
+          }
+        }
+      }
+    },
+    "App Error" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de la aplicación"
+          }
+        }
+      }
+    },
+    "Author First Name" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre del autor"
+          }
+        }
+      }
+    },
+    "Author Last Name" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apellido del autor"
+          }
+        }
+      }
+    },
+    "Authors" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autores"
+          }
+        }
+      }
+    },
+    "Back to all" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver a todos "
+          }
+        }
+      }
+    },
+    "By demographics" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por demografías"
+          }
+        }
+      }
+    },
+    "By genres" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por géneros"
+          }
+        }
+      }
+    },
+    "By themes" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por temas"
+          }
+        }
+      }
+    },
+    "By title and author" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por título y autor"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        }
+      }
+    },
+    "Collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colección"
+          }
+        }
+      }
+    },
+    "Collection completed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colección completada"
+          }
+        }
+      }
+    },
+    "Collection not completed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colección no completada"
+          }
+        }
+      }
+    },
+    "Demographics" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demografías"
+          }
+        }
+      }
+    },
+    "Edit collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar colección"
+          }
+        }
+      }
+    },
+    "Explore" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar"
+          }
+        }
+      }
+    },
+    "Filter mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar mangas"
+          }
+        }
+      }
+    },
+    "Filter Mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar Mangas"
+          }
+        }
+      }
+    },
+    "Genres" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Géneros"
+          }
+        }
+      }
+    },
+    "I already have it" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ya lo tengo"
+          }
+        }
+      }
+    },
+    "If the toggle is on, at least one of the title or author fields must be filled." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si el interruptor está activado, se debe completar al menos uno de los campos de título o autor."
+          }
+        }
+      }
+    },
+    "Include search substring" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incluir subcadena de búsqueda"
+          }
+        }
+      }
+    },
+    "Loading more mangas..." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando más mangas…"
+          }
+        }
+      }
+    },
+    "Manga Detail" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detalle del manga"
+          }
+        }
+      }
+    },
+    "Mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mangas"
+          }
+        }
+      }
+    },
+    "No mangas found..." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontraron mangas..."
+          }
+        }
+      }
+    },
+    "Order by" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordenar por"
+          }
+        }
+      }
+    },
+    "Publication year" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Año de publicación"
+          }
+        }
+      }
+    },
+    "Read More" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leer más"
+          }
+        }
+      }
+    },
+    "Reading volume:" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volumen en lectura:"
+          }
+        }
+      }
+    },
+    "Reading volume: " : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volumen en lectura:"
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        }
+      }
+    },
+    "Remove %@ from your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar %@ de tu colección"
+          }
+        }
+      }
+    },
+    "Remove from collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar de la colección"
+          }
+        }
+      }
+    },
+    "Score" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puntuación"
+          }
+        }
+      }
+    },
+    "Search" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
+          }
+        }
+      }
+    },
+    "Search by manga title" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar por título de manga"
+          }
+        }
+      }
+    },
+    "Select demographics" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona demografías"
+          }
+        }
+      }
+    },
+    "Select genres" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona géneros"
+          }
+        }
+      }
+    },
+    "Select themes" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona temas"
+          }
+        }
+      }
+    },
+    "Selected demographics:" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demografías seleccionadas:"
+          }
+        }
+      }
+    },
+    "Selected genres:" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Géneros seleccionados:"
+          }
+        }
+      }
+    },
+    "Selected themes:" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temas seleccionados:"
+          }
+        }
+      }
+    },
+    "Show Less" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar menos"
+          }
+        }
+      }
+    },
+    "Status" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado"
+          }
+        }
+      }
+    },
+    "Synopsis" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinopsis"
+          }
+        }
+      }
+    },
+    "Themes" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temas"
+          }
+        }
+      }
+    },
+    "Title" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Título"
+          }
+        }
+      }
+    },
+    "Update" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actulizar"
+          }
+        }
+      }
+    },
+    "Update status" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado de actualización"
+          }
+        }
+      }
+    },
+    "Validation Error" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de validación"
+          }
+        }
+      }
+    },
+    "Volumes" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volúmenes"
+          }
+        }
+      }
+    },
+    "Volumes owned:" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volúmenes que tengo:"
+          }
+        }
+      }
+    },
+    "Volumes owned: " : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volúmenes que tengo:"
+          }
+        }
+      }
+    },
+    "You can use these filters freely to fine-tune your search." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puede utilizar estos filtros libremente para afinar su búsqueda."
+          }
+        }
+      }
+    },
+    "Your collection is empty" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu colección está vacía"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
