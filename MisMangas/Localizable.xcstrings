@@ -91,6 +91,16 @@
         }
       }
     },
+    "Back to Top" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver arriba"
+          }
+        }
+      }
+    },
     "By demographics" : {
       "localizations" : {
         "es" : {
@@ -292,6 +302,7 @@
       }
     },
     "No mangas found..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
