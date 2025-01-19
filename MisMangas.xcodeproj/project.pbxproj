@@ -410,7 +410,6 @@
 			isa = PBXGroup;
 			children = (
 				45F70C1C2D351A2800082294 /* ExploreView.swift */,
-				45F70C202D367A5900082294 /* ExploreOptions.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -547,6 +546,7 @@
 		45F70C6F2D3AE2B300082294 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				45F70C202D367A5900082294 /* ExploreOptions.swift */,
 				45F70C572D399A1700082294 /* ThemeRow.swift */,
 				45F70C552D3999F900082294 /* GenreRow.swift */,
 				45F70C532D3999D400082294 /* DemographyRow.swift */,

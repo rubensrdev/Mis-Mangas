@@ -10,9 +10,6 @@ struct SubmenuExploreView: View {
 	@Environment(ExploreViewModel.self) private var vm
 	var body: some View {
 		VStack {
-			Text("Select category")
-				.font(.headline)
-				.foregroundStyle(.primaryDark)
 			ScrollView(.horizontal) {
 				HStack(spacing: 18) {
 					ForEach(ExploreOptions.allCases) { option in
