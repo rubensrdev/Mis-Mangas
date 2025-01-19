@@ -42,6 +42,12 @@ struct ExploreView: View {
 							List {
 								ForEach(vm.authors) { author in
 									AuthorRow(author: author)
+										.onAppear {
+											vm.checkAndLoadMoreAuthors(current: author)
+										}
+									if vm.isLoadingMoreAuthors {
+										ProgressView()
+									}
 								}
 							}
 						}

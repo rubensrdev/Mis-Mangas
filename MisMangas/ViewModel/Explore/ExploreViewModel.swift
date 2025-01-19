@@ -23,7 +23,11 @@ final class ExploreViewModel {
 	var showErrorAlert = false
 	var errorMessage = ""
 	
-	var isLoadingMore = false
+	var allAuthors: [Author] = [] // Lista completa de autores cargados desde el servidor
+	var authorSimulatedPerPage = 40
+	var authorSimulatedPage = 1
+	var totalAuthors = 0
+	var isLoadingMoreAuthors = false
 	
 	var selectedExploreOption: ExploreOptions = .bestMangas
 	
@@ -31,6 +35,36 @@ final class ExploreViewModel {
 	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
 		self.repository = repository
+	}
+	
+	@MainActor
+	func loadAuthors() async {
+		guard allAuthors.isEmpty else { return }
+		do {
+			let response = try await repository.getAuthors()
+			allAuthors = response
+			authors = Array(allAuthors.prefix(perPage))
+			totalAuthors = allAuthors.count
+		} catch {
+			errorMessage = "Error loading authors"
+			showErrorAlert.toggle()
+		}
+	}
+	
+	@MainActor
+	func checkAndLoadMoreAuthors(current: Author) {
+		guard current == authors.last else { return }
+		loadMoreAuthors()
+	}
+	
+	@MainActor
+	func loadMoreAuthors() {
+		guard !isLoadingMoreAuthors, authors.count < totalAuthors else { return }
+		isLoadingMoreAuthors = true
+		let currentCount = authors.count
+		let newCount = min(currentCount + perPage, totalAuthors)
+		authors = Array(allAuthors.prefix(newCount))
+		isLoadingMoreAuthors = false
 	}
 	
 	func changeSelectedOption(to option: ExploreOptions) {
@@ -49,11 +83,9 @@ final class ExploreViewModel {
 					mangas.append(contentsOf: filteredMangas)
 					totalItems = response.metadata.total
 				case .authors:
-					let response = try await repository.getAuthors()
-					let filteredAuthors = response.filter { author in
-						!authors.contains { $0.id == author.id }
+					if allAuthors.isEmpty {
+						await loadAuthors()
 					}
-					authors.append(contentsOf: filteredAuthors)
 				case .demographics:
 					let response = try await repository.getDemographics()
 					guard !response.isEmpty else { return }
@@ -77,12 +109,12 @@ final class ExploreViewModel {
 					themes.append(contentsOf: filteredThemes)
 			}
 		} catch let error as NetworkError {
-			showErrorAlert.toggle()
 			errorMessage = error.errorDescription ?? "Ocurrió un error inesperado en la red, prueba a refrescar la pantalla"
+			showErrorAlert.toggle()
 			print(error)
 		} catch {
-			showErrorAlert.toggle()
 			errorMessage = "Ocurrió un error al cargar los mangas, prueba a refrescar la pantalla"
+			showErrorAlert.toggle()
 			print(error)
 		}
 	}
