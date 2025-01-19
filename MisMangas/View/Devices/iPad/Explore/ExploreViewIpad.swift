@@ -20,7 +20,6 @@ struct ExploreViewIpad: View {
 		let gridTwoColumns: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
 		let gridOneColumn: [GridItem] = [GridItem(.flexible())]
 		
-		
 		ZStack {
 			Color.primaryWhite
 				.ignoresSafeArea()
@@ -28,13 +27,21 @@ struct ExploreViewIpad: View {
 				switch vm.selectedExploreOption {
 					case .bestMangas:
 						NavigationStack {
-							HeaderSectionView(title: "Best Mangas", subtitle: "A selection of the 100 best rated")
-							ScrollView {
-								LazyVGrid(columns: gridThreeColumns, spacing: 30) {
-									ForEach(vm.mangas) { manga in
-										BestMangaRowIPad(manga: manga)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Best Mangas",
+									subtitle: "A selection of the 100 best rated"
+								)
+								.padding()
+								.padding(.horizontal, 20)
+								ScrollView {
+									LazyVGrid(columns: gridThreeColumns, spacing: 30) {
+										ForEach(vm.mangas) { manga in
+											BestMangaRowIPad(manga: manga)
+										}
 									}
 								}
+								.padding()
 							}
 							.navigationDestination(for: Manga.self, destination: { manga in
 								MangaDetailView(manga: manga)
@@ -45,16 +52,23 @@ struct ExploreViewIpad: View {
 						}
 					case .authors:
 						NavigationStack {
-							HeaderSectionView(title: "Authors", subtitle: "All authors and editors that exist")
-							ScrollView {
-								LazyVGrid(columns: gridThreeColumns) {
-									ForEach(vm.authors) { author in
-										AuthorRow(author: author)
-											.onAppear {
-												vm.checkAndLoadMoreAuthors(current: author)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Authors",
+									subtitle: "All authors and editors that exist"
+								)
+								.padding()
+								.padding(.horizontal, 40)
+								ScrollView {
+									LazyVGrid(columns: gridThreeColumns) {
+										ForEach(vm.authors) { author in
+											AuthorRow(author: author)
+												.onAppear {
+													vm.checkAndLoadMoreAuthors(current: author)
+												}
+											if vm.isLoadingMoreAuthors {
+												ProgressView()
 											}
-										if vm.isLoadingMoreAuthors {
-											ProgressView()
 										}
 									}
 								}
@@ -65,11 +79,18 @@ struct ExploreViewIpad: View {
 						}
 					case .demographics:
 						NavigationStack {
-							HeaderSectionView(title: "Demographics", subtitle: "All demographics that exist")
-							ScrollView {
-								LazyVGrid(columns: gridOneColumn) {
-									ForEach(vm.demographics, id: \.self) { demography in
-										DemographyRow(demography: demography)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Demographics",
+									subtitle: "All demographics that exist"
+								)
+								.padding()
+								.padding(.horizontal, 40)
+								ScrollView {
+									LazyVGrid(columns: gridOneColumn) {
+										ForEach(vm.demographics, id: \.self) { demography in
+											DemographyRow(demography: demography)
+										}
 									}
 								}
 							}
@@ -79,11 +100,18 @@ struct ExploreViewIpad: View {
 						}
 					case .genres:
 						NavigationStack {
-							HeaderSectionView(title: "Genres", subtitle: "All genres that exist")
-							ScrollView {
-								LazyVGrid(columns: gridTwoColumns) {
-									ForEach(vm.genres, id: \.self) { genre in
-										GenreRow(genre: genre)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Genres",
+									subtitle: "All genres that exist"
+								)
+								.padding()
+								.padding(.horizontal, 40)
+								ScrollView {
+									LazyVGrid(columns: gridTwoColumns) {
+										ForEach(vm.genres, id: \.self) { genre in
+											GenreRow(genre: genre)
+										}
 									}
 								}
 							}
@@ -93,11 +121,18 @@ struct ExploreViewIpad: View {
 						}
 					case .themes:
 						NavigationStack {
-							HeaderSectionView(title: "Themes", subtitle: "All themes that exist")
-							ScrollView {
-								LazyVGrid(columns: gridTwoColumns) {
-									ForEach(vm.themes, id: \.self) { theme in
-										ThemeRow(theme: theme)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Themes",
+									subtitle: "All themes that exist"
+								)
+								.padding()
+								.padding(.horizontal, 40)
+								ScrollView {
+									LazyVGrid(columns: gridTwoColumns) {
+										ForEach(vm.themes, id: \.self) { theme in
+											ThemeRow(theme: theme)
+										}
 									}
 								}
 							}
@@ -117,5 +152,3 @@ struct ExploreViewIpad: View {
 		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }
-
-

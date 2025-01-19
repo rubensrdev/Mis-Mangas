@@ -23,10 +23,17 @@ struct ExploreView: View {
 				switch vm.selectedExploreOption {
 					case .bestMangas:
 						NavigationStack {
-							HeaderSectionView(title: "Best Mangas", subtitle: "A selection of the 100 best rated")
-							List {
-								ForEach(vm.mangas) { manga in
-									BestMangaRow(manga: manga)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Best Mangas",
+									subtitle: "A selection of the 100 best rated"
+								)
+								.padding()
+								.padding(.horizontal, 20)
+								List {
+									ForEach(vm.mangas) { manga in
+										BestMangaRow(manga: manga)
+									}
 								}
 							}
 							.navigationDestination(for: Manga.self, destination: { manga in
@@ -38,15 +45,22 @@ struct ExploreView: View {
 						}
 					case .authors:
 						NavigationStack {
-							HeaderSectionView(title: "Authors", subtitle: "All authors and editors that exist")
-							List {
-								ForEach(vm.authors) { author in
-									AuthorRow(author: author)
-										.onAppear {
-											vm.checkAndLoadMoreAuthors(current: author)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Authors",
+									subtitle: "All authors and editors that exist"
+								)
+								.padding()
+								.padding(.horizontal, 20)
+								List {
+									ForEach(vm.authors) { author in
+										AuthorRow(author: author)
+											.onAppear {
+												vm.checkAndLoadMoreAuthors(current: author)
+											}
+										if vm.isLoadingMoreAuthors {
+											ProgressView()
 										}
-									if vm.isLoadingMoreAuthors {
-										ProgressView()
 									}
 								}
 							}
@@ -56,10 +70,17 @@ struct ExploreView: View {
 						}
 					case .demographics:
 						NavigationStack {
-							HeaderSectionView(title: "Demographics", subtitle: "All demographics that exist")
-							List {
-								ForEach(vm.demographics, id: \.self) { demography in
-									DemographyRow(demography: demography)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Demographics",
+									subtitle: "All demographics that exist"
+								)
+								.padding()
+								.padding(.horizontal, 20)
+								List {
+									ForEach(vm.demographics, id: \.self) { demography in
+										DemographyRow(demography: demography)
+									}
 								}
 							}
 						}
@@ -68,10 +89,17 @@ struct ExploreView: View {
 						}
 					case .genres:
 						NavigationStack {
-							HeaderSectionView(title: "Genres", subtitle: "All genres that exist")
-							List {
-								ForEach(vm.genres, id: \.self) { genre in
-									GenreRow(genre: genre)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Genres",
+									subtitle: "All genres that exist"
+								)
+								.padding()
+								.padding(.horizontal, 20)
+								List {
+									ForEach(vm.genres, id: \.self) { genre in
+										GenreRow(genre: genre)
+									}
 								}
 							}
 						}
@@ -80,10 +108,17 @@ struct ExploreView: View {
 						}
 					case .themes:
 						NavigationStack {
-							HeaderSectionView(title: "Themes", subtitle: "All themes that exist")
-							List {
-								ForEach(vm.themes, id: \.self) { theme in
-									ThemeRow(theme: theme)
+							VStack(alignment: .leading, spacing: 0) {
+								HeaderSectionView(
+									title: "Themes",
+									subtitle: "All themes that exist"
+								)
+								.padding()
+								.padding(.horizontal, 20)
+								List {
+									ForEach(vm.themes, id: \.self) { theme in
+										ThemeRow(theme: theme)
+									}
 								}
 							}
 						}
@@ -102,4 +137,3 @@ struct ExploreView: View {
 		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }
-
