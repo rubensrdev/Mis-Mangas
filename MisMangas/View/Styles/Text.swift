@@ -26,14 +26,14 @@ extension Text {
 			.padding(.bottom, 20)
 	}
 	
-	func exploreTitleStyle() -> some View {
+	func headerSecTitleStyle() -> some View {
 		self
-			.font(.largeTitle)
+			.font(.animeAceFont)
 			.bold()
 			.foregroundStyle(.primaryBlue)
 	}
 	
-	func exploreSubtitleStyle() -> some View {
+	func headerSecSubtitleStyle() -> some View {
 		self
 			.font(.subheadline)
 			.foregroundStyle(.secondary)

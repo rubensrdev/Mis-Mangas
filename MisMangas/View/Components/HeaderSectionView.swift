@@ -15,9 +15,9 @@ struct HeaderSectionView: View {
 		Section {
 			VStack(alignment: .leading, spacing: 4) {
 				Text(title)
-					.exploreTitleStyle()
+					.headerSecTitleStyle()
 				Text(subtitle)
-					.exploreSubtitleStyle()
+					.headerSecSubtitleStyle()
 			}
 			.padding(.vertical, 8)
 		}

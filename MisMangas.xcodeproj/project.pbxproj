@@ -98,6 +98,8 @@
 		45F70C892D3BBBC600082294 /* EditingMangaVolumeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C882D3BBBC600082294 /* EditingMangaVolumeSection.swift */; };
 		45F70C8B2D3BC08A00082294 /* MangaRemoveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C8A2D3BC08A00082294 /* MangaRemoveAlert.swift */; };
 		45F70C8D2D3D10C300082294 /* BestMangaRowIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C8C2D3D10C300082294 /* BestMangaRowIPad.swift */; };
+		45F70C8F2D3D1A8900082294 /* animeace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45F70C8E2D3D1A8900082294 /* animeace.ttf */; };
+		45F70C922D3D1D9100082294 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F70C912D3D1D9100082294 /* Font.swift */; };
 		45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45F7DA2B2D29463000B17DDD /* collectionPreview.json */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +196,9 @@
 		45F70C882D3BBBC600082294 /* EditingMangaVolumeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingMangaVolumeSection.swift; sourceTree = "<group>"; };
 		45F70C8A2D3BC08A00082294 /* MangaRemoveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaRemoveAlert.swift; sourceTree = "<group>"; };
 		45F70C8C2D3D10C300082294 /* BestMangaRowIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMangaRowIPad.swift; sourceTree = "<group>"; };
+		45F70C8E2D3D1A8900082294 /* animeace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = animeace.ttf; sourceTree = "<group>"; };
+		45F70C902D3D1C1800082294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		45F70C912D3D1D9100082294 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		45F7DA2B2D29463000B17DDD /* collectionPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = collectionPreview.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +246,8 @@
 		453EF64C2D1ACF23001E6478 /* MisMangas */ = {
 			isa = PBXGroup;
 			children = (
+				45F70C902D3D1C1800082294 /* Info.plist */,
+				45F70C8E2D3D1A8900082294 /* animeace.ttf */,
 				453EF6482D1ACF23001E6478 /* Preview Content */,
 				453EF6492D1ACF23001E6478 /* Assets.xcassets */,
 				453EF6572D1D5845001E6478 /* Model */,
@@ -395,6 +402,7 @@
 				45F70C472D3985D000082294 /* ProgressView.swift */,
 				45F70C492D398A5F00082294 /* Label.swift */,
 				45F70C5D2D3ACA4400082294 /* Vstack.swift */,
+				45F70C912D3D1D9100082294 /* Font.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -669,6 +677,7 @@
 				45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */,
 				45059F5B2D1EBB7500D75D8E /* mangasPreview.json in Resources */,
 				45F70C272D37D39B00082294 /* authorsPreview.json in Resources */,
+				45F70C8F2D3D1A8900082294 /* animeace.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +700,7 @@
 				45F70C3C2D392F0300082294 /* MangasViewIPad.swift in Sources */,
 				45059F6D2D1F241300D75D8E /* StatusCases.swift in Sources */,
 				45F70C2D2D383D7600082294 /* MangaListCachedImageView.swift in Sources */,
+				45F70C922D3D1D9100082294 /* Font.swift in Sources */,
 				45BD121D2D23F42A0091707B /* FilterFormSheetView.swift in Sources */,
 				45F70C1D2D351A2800082294 /* ExploreView.swift in Sources */,
 				45F70C752D3AE9F800082294 /* FilterFooterView.swift in Sources */,
@@ -904,6 +914,7 @@
 				DEVELOPMENT_TEAM = 8MU6QHY59H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MisMangas/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mis Mangas";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -938,6 +949,7 @@
 				DEVELOPMENT_TEAM = 8MU6QHY59H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MisMangas/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mis Mangas";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
