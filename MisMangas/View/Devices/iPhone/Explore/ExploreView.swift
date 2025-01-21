@@ -25,8 +25,8 @@ struct ExploreView: View {
 						NavigationStack {
 							VStack(alignment: .leading, spacing: 0) {
 								HeaderSectionView(
-									title: "Best Mangas",
-									subtitle: "A selection of the 100 best rated"
+									title: String(localized: LocalizedStringResource("Best_Mangas")),
+									subtitle: String(localized: LocalizedStringResource("Best_Mangas_Sub"))
 								)
 								.padding()
 								.padding(.horizontal, 20)
@@ -47,8 +47,8 @@ struct ExploreView: View {
 						NavigationStack {
 							VStack(alignment: .leading, spacing: 0) {
 								HeaderSectionView(
-									title: "Authors",
-									subtitle: "All authors and editors that exist"
+									title: String(localized: LocalizedStringResource("Authors_Title")),
+									subtitle: String(localized: LocalizedStringResource("Authors_Sub"))
 								)
 								.padding()
 								.padding(.horizontal, 20)
@@ -72,8 +72,8 @@ struct ExploreView: View {
 						NavigationStack {
 							VStack(alignment: .leading, spacing: 0) {
 								HeaderSectionView(
-									title: "Demographics",
-									subtitle: "All demographics that exist"
+									title: String(localized: LocalizedStringResource("Demographics_Title")),
+									subtitle: String(localized: LocalizedStringResource("Demographics_Sub"))
 								)
 								.padding()
 								.padding(.horizontal, 20)
@@ -91,8 +91,8 @@ struct ExploreView: View {
 						NavigationStack {
 							VStack(alignment: .leading, spacing: 0) {
 								HeaderSectionView(
-									title: "Genres",
-									subtitle: "All genres that exist"
+									title: String(localized: LocalizedStringResource("Genres_Title")),
+									subtitle: String(localized: LocalizedStringResource("Genres_Sub"))
 								)
 								.padding()
 								.padding(.horizontal, 20)
@@ -110,8 +110,8 @@ struct ExploreView: View {
 						NavigationStack {
 							VStack(alignment: .leading, spacing: 0) {
 								HeaderSectionView(
-									title: "Themes",
-									subtitle: "All themes that exist"
+									title: String(localized: LocalizedStringResource("Themes_Title")),
+									subtitle: String(localized: LocalizedStringResource("Themes_Sub"))
 								)
 								.padding()
 								.padding(.horizontal, 20)

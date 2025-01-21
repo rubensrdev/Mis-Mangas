@@ -28,8 +28,8 @@ struct CollectionView: View {
 					} else {
 						VStack(alignment: .leading, spacing: 16) {
 							HeaderSectionView(
-								title: "My collection",
-								subtitle: "Your favorite mangas, curated just for you"
+								title: String(localized: LocalizedStringResource("My_Collection")),
+								subtitle: String(localized: LocalizedStringResource("My_Collection_Sub"))
 							)
 							.padding(.horizontal, 40)
 							
@@ -62,7 +62,7 @@ struct CollectionView: View {
 						MangaInCollectionDetailView(mangaInCollection: $vm.mangas[index])
 					}
 				})
-				.searchable(text: $vm.searchText, prompt: "Search by manga title") 
+				.searchable(text: $vm.searchText, prompt: "Search by manga title")
 				.orderByToolbar(orderOption: $vm.orderOption)
 			}
 			.overlay {

@@ -28,8 +28,8 @@ struct MangasViewIPad: View {
 					ScrollView {
 						VStack(alignment: .leading, spacing: 16) {
 							HeaderSectionView(
-								title: vm.isSearching ? "Search results" : "All mangas",
-								subtitle: vm.isSearching ? "This is all we have found" : "Browse through a vast collection of mangas"
+								title: String(localized: vm.isSearching ? LocalizedStringResource("Search_Results") : LocalizedStringResource("All_Mangas")),
+								subtitle: String(localized: vm.isSearching ? LocalizedStringResource("Search_Found") : LocalizedStringResource("Browse_Mangas"))
 							)
 							.padding(.horizontal, 40)
 							.id("top")
