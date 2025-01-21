@@ -23,17 +23,7 @@ struct MangaRow: View {
 			.mangaRowStyle()
 		}
 		.contextMenu {
-			if myCollectionVM.isInCollection(manga.id) {
-				Label("I already have it", systemImage: "checkmark.seal.fill")
-					.symbolRenderingMode(.palette)
-			} else {
-				Button {
-					myCollectionVM.addToCollection(manga)
-				} label: {
-					Label("Add to my collection", systemImage: "plus.circle")
-						.symbolRenderingMode(.palette)
-				}
-			}
+			MangaContextMenu(manga: manga)
 		}
 		.onAppear {
 			withAnimation(.easeIn(duration: 0.3)) {
