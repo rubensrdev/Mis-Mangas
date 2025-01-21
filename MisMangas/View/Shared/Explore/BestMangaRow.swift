@@ -11,6 +11,7 @@ struct BestMangaRow: View {
 	var body: some View {
 		NavigationLink(value: manga) {
 			HStack {
+				MangaListCachedImageView(url: manga.imageURL)
 				VStack(alignment: .leading) {
 					Text(manga.title)
 						.font(.headline)
@@ -18,8 +19,8 @@ struct BestMangaRow: View {
 					Text(manga.scoreFormatted)
 						.scoreStyle()
 				}
-				Spacer()
-				MangaListCachedImageView(url: manga.imageURL)
+				.padding(.horizontal)
+				
 			}
 			
 		}
