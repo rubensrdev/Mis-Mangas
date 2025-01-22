@@ -21,6 +21,18 @@ extension URL {
 			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 	
+	static func mangasByThemes(_ theme: String, page: String, itemsPerPage: String) -> URL {
+		mainURL
+			.appending(path: "\(Endpoints.listMangaByTheme.path)/\(theme)")
+			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
+	}
+	
+	static func mangasByGenres(_ genre: String, page: String, itemsPerPage: String) -> URL {
+		mainURL
+			.appending(path: "\(Endpoints.listMangaByGenre.path)/\(genre)")
+			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
+	}
+	
 	static func mangasByDemographic(_ demographic: String, page: String, itemsPerPage: String) -> URL {
 		mainURL
 			.appending(path: "\(Endpoints.listMangaByDemographic.path)/\(demographic)")

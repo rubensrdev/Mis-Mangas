@@ -80,7 +80,7 @@ struct ExploreView: View {
 								.padding(.horizontal, 20)
 								List {
 									ForEach(vm.demographics, id: \.self) { demography in
-										DemographyRow(demography: demography)
+										ExploreRow(type: demography)
 									}
 								}
 								.navigationDestination(for: String.self) { demography in
@@ -102,8 +102,11 @@ struct ExploreView: View {
 								.padding(.horizontal, 20)
 								List {
 									ForEach(vm.genres, id: \.self) { genre in
-										GenreRow(genre: genre)
+										ExploreRow(type: genre)
 									}
+								}
+								.navigationDestination(for: String.self) { genre in
+									ExploreMangasByView(option: .genres, optionSelected: genre)
 								}
 							}
 						}
@@ -121,8 +124,11 @@ struct ExploreView: View {
 								.padding(.horizontal, 20)
 								List {
 									ForEach(vm.themes, id: \.self) { theme in
-										ThemeRow(theme: theme)
+										ExploreRow(type: theme)
 									}
+								}
+								.navigationDestination(for: String.self) { theme in
+									ExploreMangasByView(option: .themes, optionSelected: theme)
 								}
 							}
 						}

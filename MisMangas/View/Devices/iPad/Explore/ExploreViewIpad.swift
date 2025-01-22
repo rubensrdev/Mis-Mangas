@@ -89,7 +89,7 @@ struct ExploreViewIpad: View {
 								ScrollView {
 									LazyVGrid(columns: gridOneColumn) {
 										ForEach(vm.demographics, id: \.self) { demography in
-											DemographyRow(demography: demography)
+											ExploreRow(type: demography)
 										}
 									}
 								}
@@ -110,7 +110,7 @@ struct ExploreViewIpad: View {
 								ScrollView {
 									LazyVGrid(columns: gridTwoColumns) {
 										ForEach(vm.genres, id: \.self) { genre in
-											GenreRow(genre: genre)
+											ExploreRow(type: genre)
 										}
 									}
 								}
@@ -131,7 +131,7 @@ struct ExploreViewIpad: View {
 								ScrollView {
 									LazyVGrid(columns: gridTwoColumns) {
 										ForEach(vm.themes, id: \.self) { theme in
-											ThemeRow(theme: theme)
+											ExploreRow(type: theme)
 										}
 									}
 								}

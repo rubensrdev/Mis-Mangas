@@ -25,16 +25,7 @@ struct ExploreMangasByView: View {
 
 			VStack(alignment: .leading) {
 				if exploreVM.mangasForOption.isEmpty {
-					VStack {
-						if exploreVM.isLoadingMangasForOption {
-							ProgressView()
-								.withStyle()
-						} else {
-							Text("No mangas found.")
-								.font(.headline)
-								.foregroundStyle(.primaryDark)
-						}
-					}
+					ExploreNoMangasFoundView()
 				} else {
 					List {
 						ForEach(exploreVM.mangasForOption) { manga in
@@ -50,7 +41,6 @@ struct ExploreMangasByView: View {
 								.withStyle()
 						}
 					}
-					.listStyle(.inset)
 					.navigationTitle("Mangas for \(optionSelected) in \(option.rawValue.capitalized)")
 					.navigationBarTitleDisplayMode(.inline)
 					.navigationDestination(for: Manga.self) { manga in
@@ -86,3 +76,5 @@ struct ExploreMangasByView: View {
 		.environment(ExploreViewModel(repository: RepositoryRemotePreview()))
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }
+
+

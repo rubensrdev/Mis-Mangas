@@ -9,6 +9,8 @@ import Foundation
 
 protocol RepositoryRemoteProtocol: Sendable {
 	func getMangas(page: String, itemsPerPage: String) async throws-> PaginatedMangaResponse
+	func getMangasByThemes(_ theme: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
+	func getMangasByGenres(_ genre: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
 	func getMangasByDemographic(_ demographic: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
 	func getBestMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
 	func getAuthors() async throws -> [Author]

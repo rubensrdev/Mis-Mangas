@@ -21,6 +21,14 @@ struct RepositoryRemote: RepositoryRemoteProtocol, NetworkInteractor {
 					type: PaginatedMangaResponse.self)
 	}
 	
+	func getMangasByThemes(_ theme: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await executeRequest(request: .get(.mangasByThemes(theme, page: page, itemsPerPage: itemsPerPage)), type: PaginatedMangaResponse.self)
+	}
+	
+	func getMangasByGenres(_ genre: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await executeRequest(request: .get(.mangasByGenres(genre, page: page, itemsPerPage: itemsPerPage)), type: PaginatedMangaResponse.self)
+	}
+	
 	func getMangasByDemographic(_ demographic: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
 		try await executeRequest(request: .get(.mangasByDemographic(demographic, page: page, itemsPerPage: itemsPerPage)), type: PaginatedMangaResponse.self)
 	}

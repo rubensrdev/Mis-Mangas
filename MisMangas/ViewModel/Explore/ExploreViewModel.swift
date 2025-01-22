@@ -131,7 +131,10 @@ final class ExploreViewModel {
 			switch option {
 				case .demographics:
 					return try await repository.getMangasByDemographic(selected, page: page, itemsPerPage: perPage)
-				// TODO: implementar para géneros y temas
+				case .genres:
+					return try await repository.getMangasByGenres(selected, page: page, itemsPerPage: perPage)
+				case .themes:
+					return try await repository.getMangasByThemes(selected, page: page, itemsPerPage: perPage)
 				default:
 					return nil
 			}

@@ -17,6 +17,8 @@ enum Endpoints: String {
 	case listThemes = "/list/themes"
 	case searchMangas = "/search/manga"
 	case listMangaByDemographic = "/list/mangaByDemographic"
+	case listMangaByGenre = "/list/mangaByGenre"
+	case listMangaByTheme = "/list/mangaByTheme"
 }
 
 extension Endpoints {
