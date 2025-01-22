@@ -92,6 +92,9 @@ struct ExploreViewIpad: View {
 											ExploreRow(type: demography)
 										}
 									}
+									.navigationDestination(for: String.self) { demography in
+										ExploreMangasByView(option: .demographics, optionSelected: demography)
+									}
 								}
 							}
 						}
@@ -113,6 +116,9 @@ struct ExploreViewIpad: View {
 											ExploreRow(type: genre)
 										}
 									}
+									.navigationDestination(for: String.self) { genre in
+										ExploreMangasByView(option: .genres, optionSelected: genre)
+									}
 								}
 							}
 						}
@@ -133,6 +139,9 @@ struct ExploreViewIpad: View {
 										ForEach(vm.themes, id: \.self) { theme in
 											ExploreRow(type: theme)
 										}
+									}
+									.navigationDestination(for: String.self) { theme in
+										ExploreMangasByView(option: .themes, optionSelected: theme)
 									}
 								}
 							}
