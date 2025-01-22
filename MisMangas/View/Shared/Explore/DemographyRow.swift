@@ -9,11 +9,13 @@ import SwiftUI
 struct DemographyRow: View {
 	let demography: String
 	var body: some View {
-		VStack(alignment: .leading) {
-			Text(demography)
-				.font(.headline)
+		NavigationLink(value: demography) {
+			VStack(alignment: .leading) {
+				Text(demography)
+					.font(.headline)
+			}
+			.padding()
 		}
-		.padding()
 	}
 }
 

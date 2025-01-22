@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct BestMangaRow: View {
+struct ExploreMangaRow: View {
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	let manga: Manga
 	var body: some View {
@@ -45,6 +45,6 @@ struct BestMangaRow: View {
 }
 
 #Preview {
-	BestMangaRow(manga: .preview)
+	ExploreMangaRow(manga: .preview)
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }

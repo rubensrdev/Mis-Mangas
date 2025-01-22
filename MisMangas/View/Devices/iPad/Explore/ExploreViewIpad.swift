@@ -48,7 +48,7 @@ struct ExploreViewIpad: View {
 							})
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .authors:
 						NavigationStack {
@@ -75,7 +75,7 @@ struct ExploreViewIpad: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .demographics:
 						NavigationStack {
@@ -96,7 +96,7 @@ struct ExploreViewIpad: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .genres:
 						NavigationStack {
@@ -117,7 +117,7 @@ struct ExploreViewIpad: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .themes:
 						NavigationStack {
@@ -138,7 +138,7 @@ struct ExploreViewIpad: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 				}
 				SubmenuExploreView()

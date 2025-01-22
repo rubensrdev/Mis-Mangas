@@ -21,6 +21,12 @@ extension URL {
 			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
 	}
 	
+	static func mangasByDemographic(_ demographic: String, page: String, itemsPerPage: String) -> URL {
+		mainURL
+			.appending(path: "\(Endpoints.listMangaByDemographic.path)/\(demographic)")
+			.appending(queryItems: [.queryPage(page: page), .queryItemsPerPage(itemsPerPage: itemsPerPage)])
+	}
+	
 	static func bestMangas(page: String, itemsPerPage: String) -> URL {
 		mainURL
 			.appending(path: Endpoints.listBestMangas.path)

@@ -483,6 +483,16 @@
         }
       }
     },
+    "Mangas for %@ in %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mangas for %1$@ in %2$@"
+          }
+        }
+      }
+    },
     "My_Collection" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -516,6 +526,9 @@
           }
         }
       }
+    },
+    "No mangas found." : {
+
     },
     "No mangas found..." : {
       "extractionState" : "stale",

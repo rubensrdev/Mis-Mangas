@@ -21,6 +21,11 @@ struct RepositoryRemotePreview: NetworkInteractor, RepositoryRemoteProtocol {
 	}
 	
 	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
+	func getMangasByDemographic(_ demographic: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
+		try await self.getMangas(page: "1", itemsPerPage: "10")
+	}
+	
+	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
 	func getBestMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
 		try await self.getMangas(page: "1", itemsPerPage: "10")
 	}

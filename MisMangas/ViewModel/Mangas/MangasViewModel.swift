@@ -61,11 +61,11 @@ final class MangasViewModel {
 				totalItems = response.metadata.total
 			}
 		} catch let error as NetworkError {
-			showErrorAlert.toggle()
+			showErrorAlert = true
 			errorMessage = error.errorDescription ?? "An unexpected network error occurred, try refreshing the screen"
 			print(error)
 		} catch {
-			showErrorAlert.toggle()
+			showErrorAlert = true
 			errorMessage = "An error occurred while loading the manga, try refreshing the screen"
 			print(error)
 		}

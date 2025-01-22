@@ -33,6 +33,12 @@ final class ExploreViewModel {
 	
 	private var totalItems = 0
 	
+	var mangasForOption: [Manga] = []
+	var isLoadingMangasForOption = false
+	var pageForOption = 1
+	var perPageForOption = 40
+	var totalItemsForOption = 0
+	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
 		self.repository = repository
 	}
@@ -47,7 +53,7 @@ final class ExploreViewModel {
 			totalAuthors = allAuthors.count
 		} catch {
 			errorMessage = "Error loading authors"
-			showErrorAlert.toggle()
+			showErrorAlert = true
 		}
 	}
 	
@@ -72,7 +78,7 @@ final class ExploreViewModel {
 	}
 	
 	@MainActor
-	func loadMangasForSelectedOption() async {
+	func loadForSelectedOption() async {
 		do {
 			switch selectedExploreOption {
 				case .bestMangas:
@@ -110,13 +116,71 @@ final class ExploreViewModel {
 			}
 		} catch let error as NetworkError {
 			errorMessage = error.errorDescription ?? "An unexpected network error occurred, try refreshing the screen"
-			showErrorAlert.toggle()
+			showErrorAlert = true
 			print(error)
 		} catch {
 			errorMessage = "An error occurred while loading the manga, try refreshing the screen"
-			showErrorAlert.toggle()
+			showErrorAlert = true
 			print(error)
 		}
+	}
+	
+	@MainActor
+	func searchMangasFor(_ option: ExploreOptions, _ selected: String, _ page: String, _ perPage: String) async throws -> PaginatedMangaResponse? {
+		do {
+			switch option {
+				case .demographics:
+					return try await repository.getMangasByDemographic(selected, page: page, itemsPerPage: perPage)
+				// TODO: implementar para géneros y temas
+				default:
+					return nil
+			}
+		} catch {
+			errorMessage = "Failed to load mangas for \(selected) in \(option.rawValue)"
+			showErrorAlert = true
+			return nil
+		}
+	}
+	
+	func resetStateForOption() {
+		mangasForOption.removeAll()
+		isLoadingMangasForOption = false
+		pageForOption = 1
+		totalItemsForOption = 0
+	}
+
+	@MainActor
+	func loadMangasForSelectedOption(_ option: ExploreOptions, selected: String) async {
+		if pageForOption == 1 {
+			resetStateForOption()
+		}
+		guard !isLoadingMangasForOption else { return }
+		isLoadingMangasForOption = true
+		do {
+			let response = try await searchMangasFor(option, selected, "\(pageForOption)", "\(perPageForOption)")
+			if let response = response {
+				let mangas = response.items.filter { manga in
+					!mangasForOption.contains { $0.id == manga.id }
+				}
+				mangasForOption.append(contentsOf: mangas)
+				totalItemsForOption = response.metadata.total
+				pageForOption += 1
+			}
+		} catch {
+			errorMessage = "Failed to load mangas for \(selected) in \(option.rawValue)"
+			showErrorAlert = true
+		}
+		isLoadingMangasForOption = false
+	}
+	
+	private func hasMorePages() -> Bool {
+		mangasForOption.count < totalItemsForOption
+	}
+	
+	@MainActor
+	func loadMoreMangasIfNeeded(for id: Int, _ option: ExploreOptions, _ selected: String) async {
+		guard !isLoadingMangasForOption, mangasForOption.last?.id == id, mangasForOption.count < totalItemsForOption, hasMorePages() else { return }
+		await loadMangasForSelectedOption(option, selected: selected)
 	}
 	
 }

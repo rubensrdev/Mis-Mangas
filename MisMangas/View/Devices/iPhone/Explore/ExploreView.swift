@@ -32,16 +32,17 @@ struct ExploreView: View {
 								.padding(.horizontal, 20)
 								List {
 									ForEach(vm.mangas) { manga in
-										BestMangaRow(manga: manga)
+										ExploreMangaRow(manga: manga)
 									}
 								}
+								.navigationDestination(for: Manga.self, destination: { manga in
+									MangaDetailView(manga: manga)
+								})
 							}
-							.navigationDestination(for: Manga.self, destination: { manga in
-								MangaDetailView(manga: manga)
-							})
+							
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .authors:
 						NavigationStack {
@@ -66,7 +67,7 @@ struct ExploreView: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .demographics:
 						NavigationStack {
@@ -82,10 +83,13 @@ struct ExploreView: View {
 										DemographyRow(demography: demography)
 									}
 								}
+								.navigationDestination(for: String.self) { demography in
+									ExploreMangasByView(option: .demographics, optionSelected: demography)
+								}
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .genres:
 						NavigationStack {
@@ -104,7 +108,7 @@ struct ExploreView: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 					case .themes:
 						NavigationStack {
@@ -123,7 +127,7 @@ struct ExploreView: View {
 							}
 						}
 						.task {
-							await vm.loadMangasForSelectedOption()
+							await vm.loadForSelectedOption()
 						}
 				}
 				SubmenuExploreView()
