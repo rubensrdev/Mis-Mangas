@@ -19,25 +19,25 @@ struct RepositoryRemotePreview: NetworkInteractor, RepositoryRemoteProtocol {
 		let data = try Data(contentsOf: Bundle.main.url(forResource: "mangasPreview", withExtension: "json")!)
 		return try JSONDecoder().decode(PaginatedMangaResponse.self, from: data)
 	}
-	
-	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
+
 	func getMangasByThemes(_ theme: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "2", itemsPerPage: "10")
+		let data = try Data(contentsOf: Bundle.main.url(forResource: "mangasByThemePreview", withExtension: "json")!)
+		return try JSONDecoder().decode(PaginatedMangaResponse.self, from: data)
 	}
-	
-	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
+
 	func getMangasByGenres(_ genre: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "3", itemsPerPage: "10")
+		let data = try Data(contentsOf: Bundle.main.url(forResource: "mangasByGenrePreview", withExtension: "json")!)
+		return try JSONDecoder().decode(PaginatedMangaResponse.self, from: data)
 	}
 	
-	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
 	func getMangasByDemographic(_ demographic: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "1", itemsPerPage: "10")
+		let data = try Data(contentsOf: Bundle.main.url(forResource: "mangasByDemographyPreview", withExtension: "json")!)
+		return try JSONDecoder().decode(PaginatedMangaResponse.self, from: data)
 	}
 	
-	// TODO: Cambiar por otro fichero de resultado para diferenciar en la preview
 	func getBestMangas(page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse {
-		try await self.getMangas(page: "1", itemsPerPage: "10")
+		let data = try Data(contentsOf: Bundle.main.url(forResource: "bestMangasPreview", withExtension: "json")!)
+		return try JSONDecoder().decode(PaginatedMangaResponse.self, from: data)
 	}
 	
 	func getAuthors() async throws -> [Author] {

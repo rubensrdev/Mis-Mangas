@@ -1,0 +1,231 @@
+{
+    "items": [
+        {
+            "volumes": 30,
+            "endDate": "2012-12-25T00:00:00Z",
+            "authors": [
+                {
+                    "firstName": "Hiroaki",
+                    "lastName": "Samura",
+                    "id": "CC411797-5B0C-423B-8E89-4D308C9A8B84",
+                    "role": "Story & Art"
+                }
+            ],
+            "id": 658,
+            "background": "Mugen no Juunin won the Excellence Prize at the Japan Media Arts Festival in 1997. The series was published in English by Dark Horse Comics as Blade of the Immortal in 31 volumes from March 1, 1997 to April 1, 2015. The release featured the unusual method of cutting out and rearranging panels, which was done so to have the series read left to right while still appealing to Hiroaki Samura's request of not flipping the pages. The series was first released in monthly comics issues from June 1, 1996 to November 14, 2007 but was stopped after 131 issues. Dark Horse has been republishing the series in 3-in-1 omnibuses since January 10, 2017. The final omnibus will contain the novel Blade of the Immortal: Legend of the Sword Demon. The series has also been published in Brazilian Portuguese by Jbc in a 2-in-1 edition since December 2015.",
+            "demographics": [
+                {
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D",
+                    "demographic": "Seinen"
+                }
+            ],
+            "startDate": "1993-06-25T00:00:00Z",
+            "themes": [
+                {
+                    "theme": "Historical",
+                    "id": "3CF0EDA7-5856-40F7-A0CF-EC676B4A842C"
+                },
+                {
+                    "theme": "Martial Arts",
+                    "id": "ADC7CBC8-36B9-4E52-924A-4272B7B2CB2C"
+                },
+                {
+                    "theme": "Samurai",
+                    "id": "04238A83-08E4-4066-AE4C-D5024609F8F0"
+                }
+            ],
+            "genres": [
+                {
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD",
+                    "genre": "Action"
+                },
+                {
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32",
+                    "genre": "Adventure"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                },
+                {
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF",
+                    "genre": "Supernatural"
+                }
+            ],
+            "score": 8.43,
+            "chapters": 207,
+            "status": "finished",
+            "url": "\"https:\/\/myanimelist.net\/manga\/658\/Mugen_no_Juunin\"",
+            "titleEnglish": "Blade of the Immortal",
+            "title": "Mugen no Juunin",
+            "sypnosis": "Manji is an infamous swordsman in feudal Japan who is known as the \"Hundred Man Killer,\" as he has killed one hundred innocent men. However, there is something far more frightening than his ominous reputation: the fact that he is immortal. This is the handiwork of eight-hundred-year-old nun Yaobikuni, who placed bloodworms capable of healing almost any wound in Manji's body. \n\nTo atone for his crimes, Manji resolves to kill one thousand evil men. Yaobikuni agrees to this proposal, saying that if he succeeds, she will undo his curse of immortality. Soon after this promise, Manji meets Rin Asano, a 16-year-old girl who requests Manji's assistance in killing those who slaughtered her parents.\n\nInitially reluctant, Manji refuses Rin's desperate plea. However, owing to her evident lack of strength, Manji changes his mind and agrees to protect Rin for four years. With this partnership set in stone, the two embark on a perilous journey of bloodshed, vengeance, and redemption, each to fulfill their own life's cause.\n\n[Written by MAL Rewrite]\n\n\nNote: Originally published with 219 chapters, which were then recollected into 207 chapters in the tankoubons. Please do not change the chapter count. ",
+            "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/279869l.jpg\"",
+            "titleJapanese": "無限の住人"
+        },
+        {
+            "volumes": 28,
+            "id": 904,
+            "authors": [
+                {
+                    "role": "Story",
+                    "firstName": "Kazuo",
+                    "lastName": "Koike",
+                    "id": "9E4D9E17-4674-4DDF-B049-FA0449D72ECE"
+                },
+                {
+                    "role": "Art",
+                    "firstName": "Goseki",
+                    "lastName": "Kojima",
+                    "id": "11B90543-31A7-401F-8F60-1EA2DB4BEB04"
+                }
+            ],
+            "titleJapanese": "子連れ狼",
+            "background": "Kozure Ookami was published in English as Lone Wolf & Cub initially by First Comics in 1987 as a monthly comic book sized series featuring cover illustrations by many renowned comic book artists such as Frank Miller. Each issue contained around 64 to 128 pages, but publication was cancelled at 45 issues after the company's shutdown in 1991. Dark Horse began republishing the series in traditional tankoubon format form September 12, 2000 to December 24, 2002, as well as in 2-in-1 omnibus volumes from May 22, 2013 to April 26, 2016. In 2001, Dark Horse's edition won the Eisner Award for the Best U.S. Edition of International Material. The manga was also published in Brazilian Portuguese by Panini Comics\/Planet Manga from December 2004 to April 2007, and began republishing in December 2016. The series has been adapted into multiple live-action films, television series, and stage plays.",
+            "demographics": [
+                {
+                    "demographic": "Seinen",
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D"
+                }
+            ],
+            "startDate": "1970-09-01T00:00:00Z",
+            "themes": [
+                {
+                    "theme": "Historical",
+                    "id": "3CF0EDA7-5856-40F7-A0CF-EC676B4A842C"
+                },
+                {
+                    "theme": "Samurai",
+                    "id": "04238A83-08E4-4066-AE4C-D5024609F8F0"
+                }
+            ],
+            "genres": [
+                {
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD",
+                    "genre": "Action"
+                }
+            ],
+            "score": 8.66,
+            "chapters": 142,
+            "status": "finished",
+            "url": "\"https:\/\/myanimelist.net\/manga\/904\/Kozure_Ookami\"",
+            "titleEnglish": "Lone Wolf & Cub",
+            "title": "Kozure Ookami",
+            "sypnosis": "Ittou Ogami has very little left to live for. Though once the Shogunate's chief executioner, his name is left in ruins after being framed for treason by the treacherous Yagyuu Clan, seeking to steal his position of power. His misfortune does not end here, however; they culminate in the brutal murder of his entire family, including his wife Azami, with only his child Daigorou still left alive.\n\nWith dishonor upon his head and his beloved wife in the grave, Ittou takes up a new mantle as an assassin for hire. Alongside his young son, Ittou wanders the country in search of revenge, with only the complete destruction of the Yagyuu Clan on his mind. As he travels the land, the number of his successful assassinations quickly grows, and soon the moniker of \"Lone Wolf and Cub\" becomes infamous across the land as the choice assassin to get the job done right.\n\n[Written by MAL Rewrite]",
+            "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/159264l.jpg\"",
+            "endDate": "1976-04-01T00:00:00Z"
+        },
+        {
+            "authors": [
+                {
+                    "lastName": "Watanabe",
+                    "firstName": "Taeko",
+                    "role": "Story & Art",
+                    "id": "57C400E8-8B3A-4AD9-96C1-033903F334A1"
+                }
+            ],
+            "titleJapanese": "風光る",
+            "id": 1072,
+            "volumes": 45,
+            "background": "Kaze Hikaru has been published in English by VIZ Media under the Shojo Beat imprint since January 3, 2006.",
+            "demographics": [
+                {
+                    "demographic": "Shoujo",
+                    "id": "C217B404-7691-4090-9775-9E63375EBF5B"
+                }
+            ],
+            "startDate": "1997-01-01T00:00:00Z",
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Romance",
+                    "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+                }
+            ],
+            "themes": [
+                {
+                    "theme": "Crossdressing",
+                    "id": "FE0F859B-27B9-4323-B44E-7721C596B3E0"
+                },
+                {
+                    "theme": "Historical",
+                    "id": "3CF0EDA7-5856-40F7-A0CF-EC676B4A842C"
+                },
+                {
+                    "theme": "Samurai",
+                    "id": "04238A83-08E4-4066-AE4C-D5024609F8F0"
+                }
+            ],
+            "score": 7.83,
+            "chapters": null,
+            "status": "finished",
+            "url": "\"https:\/\/myanimelist.net\/manga\/1072\/Kaze_Hikaru\"",
+            "titleEnglish": "Kaze Hikaru",
+            "title": "Kaze Hikaru",
+            "sypnosis": "In the year 1863, a time fraught with violent social upheaval, samurai of all walks of life flock to Kyoto in the hope of joining the Mibu-Roshi—a band of warriors united around their undying loyalty to the Shogunate system. In time, this group would become one of the greatest (and most famous) movements in Japanese history... the Shinsengumi!\n\nInto this fierce milieu steps Seizaburou Kamiya, a young would-be warrior who, though lacking in combat experience, possesses a fiery enthusiasm to both aid the Mibu-Roshi in their mission and to avenge his wrongfully murdered family. One of the Mibu-Roshi's most gifted (and immature) swordsmen, the legendary Souji Okita, agrees to take Seizaburou under his wing. What no one suspects, least of all Souji, is that Seizaburou is actually a girl named Sei Tominaga in disguise!\n\n(Source: Viz Media)\n\nIncluded one-shot:\nVolume 45: Ooedo Shinsengumi!",
+            "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/2\/251088l.jpg\"",
+            "endDate": "2020-05-28T00:00:00Z"
+        },
+        {
+            "volumes": 5,
+            "id": 1598,
+            "authors": [
+                {
+                    "firstName": "Kei",
+                    "role": "Story & Art",
+                    "id": "B76D1ADD-0B59-409D-93AF-D0E8382107A8",
+                    "lastName": "Toume"
+                }
+            ],
+            "endDate": "2001-08-30T00:00:00Z",
+            "background": "Kurogane was published in English by Del Rey from June 27, 2006 to June 26, 2007.",
+            "demographics": [
+                {
+                    "demographic": "Seinen",
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D"
+                }
+            ],
+            "startDate": "1993-11-25T00:00:00Z",
+            "genres": [
+                {
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD",
+                    "genre": "Action"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                }
+            ],
+            "themes": [
+                {
+                    "id": "3CF0EDA7-5856-40F7-A0CF-EC676B4A842C",
+                    "theme": "Historical"
+                },
+                {
+                    "id": "04238A83-08E4-4066-AE4C-D5024609F8F0",
+                    "theme": "Samurai"
+                }
+            ],
+            "score": 7.18,
+            "chapters": 38,
+            "status": "finished",
+            "url": "\"https:\/\/myanimelist.net\/manga\/1598\/Kurogane\"",
+            "titleEnglish": "Kuro Gane",
+            "title": "Kurogane",
+            "sypnosis": "Avenging his father's murder is a matter of honor for the young samurai Jintetsu. But it turns out that the killer is a corrupt government official—and now the powers that be are determined to hunt Jintetsu down like an animal. There's only one problem: Jintetsu is already dead.\n\nTorn to pieces by a pack of dogs, Jintetsu's ravaged body has been found by Genkichi, outcast and master inventor. Genkichi gives the dead boy a new, indestructible steel body and a talking sword—just what he'll need to face down the gang that's terrorizing his hometown and the mobster who ordered his father's hit. But what about Otsuki, the beautiful girl he left behind? Steel armor is defense against any sword, but it can't save Jintetsu from the pain in his heart.\n\n(Source: JustManga)",
+            "titleJapanese": "黒鉄〈KUROGANE〉",
+            "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/197920l.jpg\""
+        }
+    ],
+    "metadata": {
+        "per": 10,
+        "page": 1,
+        "total": 261
+    }
+}

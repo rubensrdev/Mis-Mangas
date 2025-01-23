@@ -1,0 +1,292 @@
+{
+  "items": [
+    
+    {
+      "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/156534l.jpg\"",
+      "titleJapanese": "らんま½",
+      "status": "finished",
+      "sypnosis": "Soun Tendou runs the Tendou Martial Arts School accompanied by his three daughters: Akane, Nabiki, and Kasumi. One day, the sisters' lives are turned upside down when their father announces that he has promised one of them to be married to a fellow martial artist's son in hopes of carrying on the family legacy. In addition to their mixed reactions, when the fiancé arrives, the last thing the Tendou family expects is Ranma Saotome and his father, Genma.\n\nRanma has been training in China with his father until an unfortunate accident changed them both. Now, when water touches them, Ranma turns into a girl and Genma into a giant panda. Ranma ½ follows Ranma as he attempts to get along with his newly betrothed, the youngest of the Tendou sisters, Akane. As the two begin to attend the same school, they deal with fellow friends and rivals, all of whom have something to say about their engagement.\n\n[Written by MAL Rewrite]",
+      "background": "Ranma ½ was published in English by VIZ Media from May 1993 to November 16, 2006. It was VIZ's longest running manga at the release of its final volume. It was republished in 2-in-1 omnibuses in the original right-to-left format by VIZ Media under the Shonen Sunday imprint from March 11, 2014 to March 14, 2017. The series was also partially published in Spanish in a special kanzenban edition (based on Japanese shinsouban) by EDT\/Glénat España from December 2011 to June 2013, but the publisher went defunct. In June 2015, the license was picked up by Planeta Cómic.",
+      "genres": [
+        {
+          "genre": "Action",
+          "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+        },
+        {
+          "genre": "Comedy",
+          "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+        },
+        {
+          "genre": "Ecchi",
+          "id": "9A13ADF1-52E5-4112-AE95-6F0DDEF4BC0D"
+        },
+        {
+          "genre": "Romance",
+          "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+        }
+      ],
+      "demographics": [
+        {
+          "demographic": "Shounen",
+          "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+        }
+      ],
+      "url": "\"https:\/\/myanimelist.net\/manga\/23\/Ranma_%C2%BD\"",
+      "titleEnglish": "Ranma 1\/2",
+      "score": 7.99,
+      "id": 23,
+      "themes": [
+        {
+          "id": "C91B67F0-2B27-43F8-B399-13A974E14825",
+          "theme": "Harem"
+        },
+        {
+          "id": "ADC7CBC8-36B9-4E52-924A-4272B7B2CB2C",
+          "theme": "Martial Arts"
+        },
+        {
+          "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D",
+          "theme": "School"
+        }
+      ],
+      "title": "Ranma ½",
+      "authors": [
+        {
+          "lastName": "Takahashi",
+          "role": "Story & Art",
+          "firstName": "Rumiko",
+          "id": "F5661B3B-17D6-43A9-A282-CE2AB74157DD"
+        }
+      ],
+      "endDate": "1996-02-21T00:00:00Z",
+      "volumes": 38,
+      "startDate": "1987-08-05T00:00:00Z",
+      "chapters": 407
+    },
+    {
+      "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/262324l.jpg\"",
+      "titleJapanese": "NANA",
+      "status": "on_hiatus",
+      "sypnosis": "Nana Komatsu is a naive, unmotivated girl who spends her high school days chasing one crush after the other. Despite continually facing failure in her quest for love, her spirits have never dampened. At the age of 20, she finds herself on a train to Tokyo with hopes of reuniting with her current boyfriend.\n\nNana Osaki, on the other hand, is feisty and prideful. After joining a local band during her high school days, she falls in love with music and one of the band members. However, when faced with the choice between her relationship and her musical career, she chooses the latter and separates from her boyfriend. On her 20th birthday, she boards the same train to Tokyo, like her namesake, where she aims to become a top vocalist.\n\nThe two girls with the same name but very different aspirations find themselves sitting together on their journey to the city, and, as fate would have it, eventually share the same apartment. A deep and unique bond is then forged, where they will support each other in this saga of love, music, friendship, and heartbreak.\n\n[Written by MAL Rewrite]",
+      "genres": [
+        {
+          "genre": "Award Winning",
+          "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+        },
+        {
+          "genre": "Drama",
+          "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+        },
+        {
+          "genre": "Romance",
+          "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+        }
+      ],
+      "background": "Nana has been published in English by VIZ Media under the Shojo Beat imprint since December 6, 2005; in Spain by Planeta Cómic since 2007; and in Argentina by Editorial Ivrea since 2009. The series was placed on hiatus since the July 2009 issue of Cookie due to the mangaka's sudden illness.",
+      "demographics": [
+        {
+          "demographic": "Shoujo",
+          "id": "C217B404-7691-4090-9775-9E63375EBF5B"
+        }
+      ],
+      "url": "\"https:\/\/myanimelist.net\/manga\/28\/Nana\"",
+      "titleEnglish": "Nana",
+      "score": 8.79,
+      "id": 28,
+      "themes": [
+        {
+          "id": "840867E7-6C60-49CE-8C47-A99AA71A2113",
+          "theme": "Adult Cast"
+        },
+        {
+          "id": "2F76BD28-F021-4B12-9FC2-7F10BF7A5F17",
+          "theme": "Love Polygon"
+        },
+        {
+          "id": "2BA6A0CA-AB07-480F-942D-68061E786565",
+          "theme": "Music"
+        }
+      ],
+      "title": "Nana",
+      "authors": [
+        {
+          "lastName": "Yazawa",
+          "role": "Story & Art",
+          "firstName": "Ai",
+          "id": "5B168257-6A33-4784-93E9-774D29FFCBD7"
+        }
+      ],
+      "startDate": "2000-05-26T00:00:00Z",
+      "endDate": "2009-05-26T00:00:00Z",
+      "chapters": 84,
+      "volumes": 21
+    },
+    {
+      "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/262323l.jpg\"",
+      "titleJapanese": "パラダイス・キス",
+      "status": "finished",
+      "sypnosis": "After two eccentrically dressed individuals ambush her, high school student Yukari Hayasaka promptly passes out due to shock. She soon awakens to find herself surrounded by even more strangely dressed people in the basement studio of Paradise Kiss—a fashion design club composed of four students from Yazawa School for the Arts. Although it seems like Yukari has been kidnapped, the older students explain that they only approached her to see if she would model their collection for an upcoming fashion show.\n\nBeing a senior with a busy schedule, Yukari furiously rejects the group's offer. But when she drops her student passbook in her haste to leave, the ringleader of the group, George Koizumi, picks it up and uses it as a means to coerce Yukari into considering their request. After hearing about the other members' unbridled ambition, Yukari is inspired to reevaluate her own circumstances and eventually agrees to help them out.\n\nNow as Paradise Kiss' model, Yukari must learn to balance her new responsibilities with her hectic personal life. However, the more time she spends with George and the rest of the team, the harder it becomes for her to avoid getting swept up in the glitz and glamor of the fashion world.\n\n[Written by MAL Rewrite]",
+      "background": "Paradise Kiss was published in English by Tokyopop from May 21, 2002 to March 9, 2004. Due to Tokyopop dissolving in 2011, Vertical Inc. acquired the publishing rights and republished the entire series in three volumes from September 25, 2012 to March 5, 2013. The manga received a live-action film adaptation produced by Fox International, which was released in Japan on June 4, 2011. A mobile game based on the series was published by Hot Pod on June 6, 2011.",
+      "genres": [
+        {
+          "genre": "Drama",
+          "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+        },
+        {
+          "genre": "Romance",
+          "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+        }
+      ],
+      "demographics": [
+        {
+          "demographic": "Josei",
+          "id": "69722EC1-C23D-4FFC-8A6D-E7BFE86240EB"
+        }
+      ],
+      "url": "\"https:\/\/myanimelist.net\/manga\/29\/Paradise_Kiss\"",
+      "titleEnglish": "Paradise Kiss",
+      "score": 8.3,
+      "id": 29,
+      "themes": [
+        {
+          "theme": "School",
+          "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D"
+        },
+        {
+          "theme": "Visual Arts",
+          "id": "4BEECBB2-B664-4EC0-89B4-C1E5156FAC8D"
+        }
+      ],
+      "title": "Paradise Kiss",
+      "authors": [
+        {
+          "firstName": "Ai",
+          "lastName": "Yazawa",
+          "role": "Story & Art",
+          "id": "5B168257-6A33-4784-93E9-774D29FFCBD7"
+        }
+      ],
+      "startDate": "1999-03-23T00:00:00Z",
+      "volumes": 5,
+      "chapters": 48,
+      "endDate": "2003-03-22T00:00:00Z"
+    },
+    {
+      "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/3\/267782l.jpg\"",
+      "titleJapanese": "桜蘭高校ホスト部",
+      "status": "finished",
+      "sypnosis": "At Ouran High School, an academy where only the children of the rich and powerful attend, there exists a club consisting of the most elite of the student body: the legendary Host Club. Within the club's room, six beautiful, bored boys spend their time entertaining equally beautiful and bored girls.\n\nHaruhi Fujioka, a poor scholarship student, has no interest in the Host Club—until she breaks a valuable vase in their clubroom. After being mistaken for a boy, Haruhi is forced by Kyouya Ootori to work for the Host Club to repay her debt. Tamaki Suou, the princely leader of the club, eagerly takes her under his wing to teach her the ways of the host.\n\nThings, however, are never quite so simple with the Host Club around. Even the most mundane events can turn into huge spectacles with the likes of prankster twins Hikaru and Kaoru Hitachiin, stoic Takashi Morinozuka, and sweet Mitsukuni \"Hunny\" Haninozuka. The crazy adventures of the Host Club are just beginning, and Haruhi must learn how to survive in the glitzy world of the hosts.\n\n[Written by MAL Rewrite]\n\nNote: The final volume contains a special bonus chapter where the group travels to Spain.",
+      "background": "Ouran Koukou Host Club was published in English as Ouran High School Host Club by VIZ Media under the Shojo Beat imprint from July 5, 2005 to June 5, 2012. An 18-volume boxed-set including an exclusive notepad featuring character's art was released on November 6, 2012. It was also was published in Polish by Japonica Polonica Fantastica from October 2009 to September 2013.",
+      "genres": [
+        {
+          "id": "F974BCB6-B002-44A6-A224-90D1E50595A2",
+          "genre": "Comedy"
+        },
+        {
+          "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+          "genre": "Drama"
+        },
+        {
+          "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076",
+          "genre": "Romance"
+        }
+      ],
+      "demographics": [
+        {
+          "demographic": "Shoujo",
+          "id": "C217B404-7691-4090-9775-9E63375EBF5B"
+        }
+      ],
+      "score": 8.5,
+      "titleEnglish": "Ouran High School Host Club",
+      "url": "\"https:\/\/myanimelist.net\/manga\/30\/Ouran_Koukou_Host_Club\"",
+      "id": 30,
+      "themes": [
+        {
+          "id": "FE0F859B-27B9-4323-B44E-7721C596B3E0",
+          "theme": "Crossdressing"
+        },
+        {
+          "id": "50B579AE-CA41-4822-AFCB-939B9D6EF701",
+          "theme": "Reverse Harem"
+        },
+        {
+          "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D",
+          "theme": "School"
+        }
+      ],
+      "title": "Ouran Koukou Host Club",
+      "authors": [
+        {
+          "lastName": "Hatori",
+          "firstName": "Bisco",
+          "id": "B296B13E-DEA2-410D-B65B-E72258E0B8D3",
+          "role": "Story & Art"
+        }
+      ],
+      "endDate": "2010-09-24T00:00:00Z",
+      "chapters": 87,
+      "startDate": "2002-07-24T00:00:00Z",
+      "volumes": 18
+    },
+    {
+      "mainPicture": "\"https:\/\/cdn.myanimelist.net\/images\/manga\/1\/209659l.jpg\"",
+      "titleJapanese": "ラブ★コン",
+      "status": "finished",
+      "sypnosis": "When the taller than average 172 cm Risa Koizumi learns that her occasional nemesis, the shorter than average 156 cm Atsushi Ootani, is romantically interested in her friend, she decides to team up with him. After all, she also has feelings for his friend. Unluckily, however, their respective crushes fall for each other instead. Determined to find new love after their recent misfortunes, the pair decide to cheer each other on while maintaining their usual dynamic of constant bickering. \n\nAlthough they continually deny it, Risa and Ootani are more similar than they like to admit: they both have unusual heights, failing grades, identical tastes in food, and a tendency to act extremely childish. Together, they inspire laughter among their peers as a so-called comedic duo. Could the love that these two are looking for be closer than they think?\n\n[Written by MAL Rewrite]\n\n\nIncluded one-shots:\nVolume 12: Hoshi ni Nattemo Aishiteru\nVolume 16: Bokura no Ibasho",
+      "genres": [
+        {
+          "genre": "Award Winning",
+          "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+        },
+        {
+          "genre": "Comedy",
+          "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+        },
+        {
+          "genre": "Drama",
+          "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+        },
+        {
+          "genre": "Romance",
+          "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+        }
+      ],
+      "background": "Lovely★Complex won the 49th Shogakukan Manga Award for shoujo in 2004. The manga was published in English as Love★Com by VIZ Media under the Shojo Beat imprint from July 3, 2007 to March 2, 2010 and was adapted to two drama CDs, a live-action movie and PlayStation 2 game in 2006, and a TV anime series in 2007.",
+      "demographics": [
+        {
+          "id": "C217B404-7691-4090-9775-9E63375EBF5B",
+          "demographic": "Shoujo"
+        }
+      ],
+      "titleEnglish": "Love★Com",
+      "url": "\"https:\/\/myanimelist.net\/manga\/31\/Lovely%E2%98%85Complex\"",
+      "score": 8.33,
+      "id": 31,
+      "themes": [
+        {
+          "theme": "School",
+          "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D"
+        }
+      ],
+      "title": "Lovely★Complex",
+      "authors": [
+        {
+          "firstName": "Aya",
+          "lastName": "Nakahara",
+          "role": "Story & Art",
+          "id": "AA0BC570-3E12-44F9-B28E-10F279E08EBA"
+        }
+      ],
+      "endDate": "2007-08-13T00:00:00Z",
+      "volumes": 17,
+      "chapters": 68,
+      "startDate": "2001-08-13T00:00:00Z"
+    }
+  ],
+  "metadata": {
+    "total": 16876,
+    "per": 10,
+    "page": 1
+  }
+}

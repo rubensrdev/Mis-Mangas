@@ -44,6 +44,10 @@
 		459581222D2A985B007F295F /* OrderByToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459581212D2A985B007F295F /* OrderByToolbar.swift */; };
 		45A0D40F2D42595300C8FC75 /* NoMangasFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A0D40E2D42595300C8FC75 /* NoMangasFoundView.swift */; };
 		45A0D4112D4259A600C8FC75 /* LoadingMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A0D4102D4259A600C8FC75 /* LoadingMoreView.swift */; };
+		45A0D4132D425ED700C8FC75 /* bestMangasPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A0D4122D425ED700C8FC75 /* bestMangasPreview.json */; };
+		45A0D4152D42600700C8FC75 /* mangasByDemographyPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A0D4142D42600700C8FC75 /* mangasByDemographyPreview.json */; };
+		45A0D4172D4260B500C8FC75 /* mangasByGenrePreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A0D4162D4260B500C8FC75 /* mangasByGenrePreview.json */; };
+		45A0D4192D42616A00C8FC75 /* mangasByThemePreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A0D4182D42616A00C8FC75 /* mangasByThemePreview.json */; };
 		45AE9B1D2D1EA76E00B7CC6B /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE9B1C2D1EA76E00B7CC6B /* Genre.swift */; };
 		45AE9B1F2D1EA7E400B7CC6B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE9B1E2D1EA7E400B7CC6B /* Theme.swift */; };
 		45AE9B212D1EA7EF00B7CC6B /* Demographic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE9B202D1EA7EF00B7CC6B /* Demographic.swift */; };
@@ -147,6 +151,10 @@
 		459581212D2A985B007F295F /* OrderByToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByToolbar.swift; sourceTree = "<group>"; };
 		45A0D40E2D42595300C8FC75 /* NoMangasFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMangasFoundView.swift; sourceTree = "<group>"; };
 		45A0D4102D4259A600C8FC75 /* LoadingMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMoreView.swift; sourceTree = "<group>"; };
+		45A0D4122D425ED700C8FC75 /* bestMangasPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bestMangasPreview.json; sourceTree = "<group>"; };
+		45A0D4142D42600700C8FC75 /* mangasByDemographyPreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangasByDemographyPreview.json; sourceTree = "<group>"; };
+		45A0D4162D4260B500C8FC75 /* mangasByGenrePreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangasByGenrePreview.json; sourceTree = "<group>"; };
+		45A0D4182D42616A00C8FC75 /* mangasByThemePreview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangasByThemePreview.json; sourceTree = "<group>"; };
 		45AE9B1C2D1EA76E00B7CC6B /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		45AE9B1E2D1EA7E400B7CC6B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		45AE9B202D1EA7EF00B7CC6B /* Demographic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demographic.swift; sourceTree = "<group>"; };
@@ -249,6 +257,10 @@
 				45F7DA2B2D29463000B17DDD /* collectionPreview.json */,
 				45059F5A2D1EBB7500D75D8E /* mangasPreview.json */,
 				45F70C262D37D39B00082294 /* authorsPreview.json */,
+				45A0D4122D425ED700C8FC75 /* bestMangasPreview.json */,
+				45A0D4142D42600700C8FC75 /* mangasByDemographyPreview.json */,
+				45A0D4162D4260B500C8FC75 /* mangasByGenrePreview.json */,
+				45A0D4182D42616A00C8FC75 /* mangasByThemePreview.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -689,9 +701,13 @@
 			files = (
 				453EF64D2D1ACF23001E6478 /* Preview Assets.xcassets in Resources */,
 				453EF64E2D1ACF23001E6478 /* Assets.xcassets in Resources */,
+				45A0D4192D42616A00C8FC75 /* mangasByThemePreview.json in Resources */,
 				45F7DA2C2D29463000B17DDD /* collectionPreview.json in Resources */,
 				45059F5B2D1EBB7500D75D8E /* mangasPreview.json in Resources */,
+				45A0D4172D4260B500C8FC75 /* mangasByGenrePreview.json in Resources */,
+				45A0D4152D42600700C8FC75 /* mangasByDemographyPreview.json in Resources */,
 				45F70C272D37D39B00082294 /* authorsPreview.json in Resources */,
+				45A0D4132D425ED700C8FC75 /* bestMangasPreview.json in Resources */,
 				45F70C942D3D254C00082294 /* Localizable.xcstrings in Resources */,
 				45F70C8F2D3D1A8900082294 /* animeace.ttf in Resources */,
 			);
