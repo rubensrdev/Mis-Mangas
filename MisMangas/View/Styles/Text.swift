@@ -20,7 +20,7 @@ extension Text {
 	func toastStyle() -> some View {
 		self
 			.padding()
-			.background(Color.primaryDark.opacity(0.8))
+			.background(.primaryBlue.opacity(0.8))
 			.foregroundColor(.primaryWhite)
 			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.padding(.bottom, 20)

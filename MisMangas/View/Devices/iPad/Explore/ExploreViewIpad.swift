@@ -152,6 +152,10 @@ struct ExploreViewIpad: View {
 				}
 				SubmenuExploreView()
 			}
+			AddToCollectionToastView(
+				showToast: myCollectionVM.showToast,
+				mangaNameAdded: myCollectionVM.addedMangaTitle
+			)
 		}
 	}
 }

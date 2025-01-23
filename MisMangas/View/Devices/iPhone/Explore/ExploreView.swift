@@ -39,7 +39,6 @@ struct ExploreView: View {
 									MangaDetailView(manga: manga)
 								})
 							}
-							
 						}
 						.task {
 							await vm.loadForSelectedOption()
@@ -138,6 +137,10 @@ struct ExploreView: View {
 				}
 				SubmenuExploreView()
 			}
+			AddToCollectionToastView(
+				showToast: myCollectionVM.showToast,
+				mangaNameAdded: myCollectionVM.addedMangaTitle
+			)
 		}
 	}
 }

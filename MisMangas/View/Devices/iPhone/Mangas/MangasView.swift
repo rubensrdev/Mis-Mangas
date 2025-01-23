@@ -112,15 +112,10 @@ struct MangasView: View {
 			.task {
 				await vm.loadMangas()
 			}
-			if myCollectionVM.showToast {
-				VStack {
-					Spacer()
-					Text("\(myCollectionVM.addedMangaTitle) has been added to your collection.")
-						.toastStyle()
-						.transition(.move(edge: .bottom).combined(with: .opacity))
-						.animation(.easeInOut(duration: 0.5), value: myCollectionVM.showToast)
-				}
-			}
+			AddToCollectionToastView(
+				showToast: myCollectionVM.showToast,
+				mangaNameAdded: myCollectionVM.addedMangaTitle
+			)
 		}
 	}
 }
