@@ -23,13 +23,10 @@ struct ExploreMangasByView: View {
 		ZStack {
 			Color.primaryWhite
 				.ignoresSafeArea()
-
 			VStack(alignment: .leading) {
-				
 				if exploreVM.mangasForOption.isEmpty {
 					ExploreNoMangasFoundView()
 				} else {
-					
 					if isIPad {
 						
 						ScrollView {
@@ -45,8 +42,6 @@ struct ExploreMangasByView: View {
 							}
 						}
 						.padding()
-						
-						
 					} else {
 						List {
 							ForEach(exploreVM.mangasForOption) { manga in
@@ -68,8 +63,6 @@ struct ExploreMangasByView: View {
 							MangaDetailView(manga: manga)
 						}
 					}
-					
-					
 				}
 			}
 		}
