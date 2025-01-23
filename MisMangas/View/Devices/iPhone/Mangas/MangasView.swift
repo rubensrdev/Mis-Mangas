@@ -110,7 +110,8 @@ struct MangasView: View {
 			}
 			AddToCollectionToastView(
 				showToast: myCollectionVM.showToast,
-				mangaNameAdded: myCollectionVM.addedMangaTitle
+				mangaNameAdded: myCollectionVM.addedMangaTitle,
+				shouldOffset: false
 			)
 		}
 	}

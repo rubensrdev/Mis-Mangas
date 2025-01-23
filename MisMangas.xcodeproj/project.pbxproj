@@ -406,6 +406,7 @@
 		453EF68A2D1DD6B3001E6478 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				45E7E8AB2D4241CA0070CD53 /* AddToCollectionToastView.swift */,
 				45A0D4102D4259A600C8FC75 /* LoadingMoreView.swift */,
 				45A0D40E2D42595300C8FC75 /* NoMangasFoundView.swift */,
 				45F70C412D39386800082294 /* MangaListCachedImageViewIpad.swift */,
@@ -416,7 +417,6 @@
 				45F70C592D399A5C00082294 /* HeaderSectionView.swift */,
 				45F70C8A2D3BC08A00082294 /* MangaRemoveAlert.swift */,
 				45F70C952D3FC17F00082294 /* MangaContextMenu.swift */,
-				45E7E8AB2D4241CA0070CD53 /* AddToCollectionToastView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
