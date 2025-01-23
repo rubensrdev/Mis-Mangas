@@ -28,7 +28,6 @@ struct ExploreMangasByView: View {
 					ExploreNoMangasFoundView()
 				} else {
 					if isIPad {
-						
 						ScrollView {
 							LazyVGrid(columns: gridThreeColumns, spacing: 30) {
 								ForEach(exploreVM.mangasForOption) { manga in
