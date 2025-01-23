@@ -16,7 +16,8 @@ struct ExploreMangasByView: View {
 	
 	let option: ExploreOptions
 	let optionSelected: String
-
+	let gridThreeColumns: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 20), count: 3)
+	
 	var body: some View {
 		@Bindable var exploreVM = exploreVM
 		ZStack {
@@ -24,28 +25,51 @@ struct ExploreMangasByView: View {
 				.ignoresSafeArea()
 
 			VStack(alignment: .leading) {
+				
 				if exploreVM.mangasForOption.isEmpty {
 					ExploreNoMangasFoundView()
 				} else {
-					List {
-						ForEach(exploreVM.mangasForOption) { manga in
-							ExploreMangaRow(manga: manga)
-								.onAppear {
-									Task {
-										await exploreVM.loadMoreMangasIfNeeded(for: manga.id, option, optionSelected)
-									}
+					
+					if isIPad {
+						
+						ScrollView {
+							LazyVGrid(columns: gridThreeColumns, spacing: 30) {
+								ForEach(exploreVM.mangasForOption) { manga in
+									ExploreMangaRowIPad(manga: manga)
+										.onAppear {
+											Task {
+												await exploreVM.loadMoreMangasIfNeeded(for: manga.id, option, optionSelected)
+											}
+										}
 								}
+							}
 						}
-						if exploreVM.isLoadingMangasForOption {
-							ProgressView()
-								.withStyle()
+						.padding()
+						
+						
+					} else {
+						List {
+							ForEach(exploreVM.mangasForOption) { manga in
+								ExploreMangaRow(manga: manga)
+									.onAppear {
+										Task {
+											await exploreVM.loadMoreMangasIfNeeded(for: manga.id, option, optionSelected)
+										}
+									}
+							}
+							if exploreVM.isLoadingMangasForOption {
+								ProgressView()
+									.withStyle()
+							}
+						}
+						.navigationTitle("Mangas for \(optionSelected) in \(option.rawValue.capitalized)")
+						.navigationBarTitleDisplayMode(.inline)
+						.navigationDestination(for: Manga.self) { manga in
+							MangaDetailView(manga: manga)
 						}
 					}
-					.navigationTitle("Mangas for \(optionSelected) in \(option.rawValue.capitalized)")
-					.navigationBarTitleDisplayMode(.inline)
-					.navigationDestination(for: Manga.self) { manga in
-						MangaDetailView(manga: manga)
-					}
+					
+					
 				}
 			}
 		}

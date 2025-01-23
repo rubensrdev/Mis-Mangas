@@ -37,7 +37,7 @@ struct ExploreViewIpad: View {
 								ScrollView {
 									LazyVGrid(columns: gridThreeColumns, spacing: 30) {
 										ForEach(vm.mangas) { manga in
-											BestMangaRowIPad(manga: manga)
+											ExploreMangaRowIPad(manga: manga)
 										}
 									}
 								}
