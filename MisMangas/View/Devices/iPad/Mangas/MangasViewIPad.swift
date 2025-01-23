@@ -42,13 +42,7 @@ struct MangasViewIPad: View {
 							.padding()
 							
 							if vm.isLoadingMore {
-								VStack {
-									ProgressView()
-										.withStyle()
-									Text("Loading more mangas...")
-										.font(.footnote)
-										.foregroundStyle(.secondaryGray)
-								}
+								LoadingMoreView()
 							}
 						}
 						.background(

@@ -39,15 +39,11 @@ struct MangasView: View {
 								}
 							}
 							.padding()
-							
+							if vm.mangas.isEmpty && vm.isSearching {
+								NoMangasFoundView()
+							}
 							if vm.isLoadingMore {
-								VStack {
-									ProgressView()
-										.withStyle()
-									Text("Loading more mangas...")
-										.font(.footnote)
-										.foregroundStyle(.secondaryGray)
-								}
+								LoadingMoreView()
 							}
 						}
 						.background(
