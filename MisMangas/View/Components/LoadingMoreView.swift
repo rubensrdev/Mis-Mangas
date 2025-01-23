@@ -14,6 +14,7 @@ struct LoadingMoreView: View {
 			Text("Loading more mangas...")
 				.font(.footnote)
 				.foregroundStyle(.secondaryGray)
+				.accessibilityHint("Please wait while we load additional mangas")
 		}
 	}
 }

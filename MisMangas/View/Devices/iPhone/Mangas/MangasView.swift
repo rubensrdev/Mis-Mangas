@@ -68,6 +68,8 @@ struct MangasView: View {
 									}
 								}
 								.foregroundStyle(.primaryBlue)
+								.accessibilityLabel("Reset search")
+								.accessibilityHint("Tap to show all mangas again")
 							}
 						}
 						
@@ -83,6 +85,8 @@ struct MangasView: View {
 											.symbolRenderingMode(.palette)
 											.foregroundStyle(.primaryBlue)
 									}
+									.accessibilityLabel("Scroll to top")
+									.accessibilityHint("Tap to scroll back to the top of the list")
 								}
 								Button(action: {
 									vm.showFilters.toggle()
@@ -91,6 +95,8 @@ struct MangasView: View {
 										.symbolRenderingMode(.palette)
 										.foregroundStyle(.primaryBlue)
 								}
+								.accessibilityLabel("Open filters form")
+								.accessibilityHint("Tap to filter mangas by name, author or category")
 							}
 						}
 					}

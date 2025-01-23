@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@ cover image" : {
+
+    },
     "%@ has been added to your collection." : {
       "localizations" : {
         "es" : {
@@ -295,6 +298,9 @@
         }
       }
     },
+    "Context menu for %@" : {
+
+    },
     "Demographics" : {
       "localizations" : {
         "es" : {
@@ -358,6 +364,9 @@
           }
         }
       }
+    },
+    "Explore section" : {
+
     },
     "Filter mangas" : {
       "localizations" : {
@@ -493,6 +502,12 @@
         }
       }
     },
+    "Mangas section" : {
+
+    },
+    "My Collection section" : {
+
+    },
     "My_Collection" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -551,6 +566,9 @@
         }
       }
     },
+    "Open filters form" : {
+
+    },
     "Order by" : {
       "localizations" : {
         "es" : {
@@ -560,6 +578,9 @@
           }
         }
       }
+    },
+    "Please wait while we load additional mangas" : {
+
     },
     "Publication year" : {
       "localizations" : {
@@ -631,6 +652,9 @@
         }
       }
     },
+    "Reset search" : {
+
+    },
     "Score" : {
       "localizations" : {
         "es" : {
@@ -640,6 +664,9 @@
           }
         }
       }
+    },
+    "Scroll to top" : {
+
     },
     "Search" : {
       "localizations" : {
@@ -801,6 +828,33 @@
         }
       }
     },
+    "Tap to explore the best mangas, authors and find by category" : {
+
+    },
+    "Tap to filter mangas by name, author or category" : {
+
+    },
+    "Tap to filter mangas by name, author, or category" : {
+
+    },
+    "Tap to mange your collection of mangas" : {
+
+    },
+    "Tap to open the context menu and add %@ to your collection" : {
+
+    },
+    "Tap to scroll back to the top of the list" : {
+
+    },
+    "Tap to see and filter a list of all mangas" : {
+
+    },
+    "Tap to show all mangas again" : {
+
+    },
+    "Tap to view details about %@" : {
+
+    },
     "Themes" : {
       "localizations" : {
         "es" : {
@@ -854,6 +908,9 @@
           }
         }
       }
+    },
+    "Title: %@" : {
+
     },
     "Update" : {
       "localizations" : {

@@ -17,21 +17,18 @@ struct MangaRowIpad: View {
 		NavigationLink(value: manga) {
 			VStack(spacing: 10) {
 				MangaGridCachedImageViewIPad(url: manga.imageURL)
+					.accessibilityLabel("\(manga.title) cover image")
+					.accessibilityHint("Tap to view details about \(manga.title)")
 				Text(manga.title)
 					.mangaTitleStyle()
+					.accessibilityLabel("Title: \(manga.title)")
 			}
 			.mangaRowStyleIPad()
 		}
 		.contextMenu {
-			if myCollectionVM.isInCollection(manga.id) {
-				Label("I already have it", systemImage: "checkmark.seal.fill")
-			} else {
-				Button {
-					myCollectionVM.addToCollection(manga)
-				} label: {
-					Label("Add to my collection", systemImage: "plus.circle")
-				}
-			}
+			MangaAddToCollectionContextMenu(manga: manga)
+				.accessibilityLabel("Context menu for \(manga.title)")
+				.accessibilityHint("Tap to open the context menu and add \(manga.title) to your collection")
 		}
 		.onAppear {
 			withAnimation(.easeIn(duration: 0.3)) {

@@ -17,13 +17,17 @@ struct MangaRow: View {
 		NavigationLink(value: manga) {
 			VStack {
 				MangaGridCachedImageView(url: manga.imageURL)
+					.accessibilityLabel("\(manga.title) cover image")
 				Text(manga.title)
 					.mangaTitleStyle()
+					.accessibilityLabel("Title: \(manga.title)")
 			}
 			.mangaRowStyle()
 		}
 		.contextMenu {
-			MangaContextMenu(manga: manga)
+			MangaAddToCollectionContextMenu(manga: manga)
+				.accessibilityLabel("Context menu for \(manga.title)")
+				.accessibilityHint("Tap to open the context menu and add \(manga.title) to your collection")
 		}
 		.onAppear {
 			withAnimation(.easeIn(duration: 0.3)) {

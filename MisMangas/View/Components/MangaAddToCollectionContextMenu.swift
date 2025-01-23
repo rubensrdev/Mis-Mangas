@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MangaContextMenu: View {
+struct MangaAddToCollectionContextMenu: View {
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	let manga: Manga
     var body: some View {
@@ -26,6 +26,6 @@ struct MangaContextMenu: View {
 }
 
 #Preview {
-	MangaContextMenu(manga: .preview)
+	MangaAddToCollectionContextMenu(manga: .preview)
 		.environment(MyCollectionViewModel(repository: RepositoryLocalPreview()))
 }

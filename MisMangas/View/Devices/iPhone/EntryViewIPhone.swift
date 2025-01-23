@@ -13,14 +13,20 @@ struct EntryViewIPhone: View {
 			MangasView()
 				.tabItem {
 					Label("Mangas", systemImage: "book.fill")
+						.accessibilityLabel("Mangas section")
+						.accessibilityHint("Tap to see and filter a list of all mangas")
 				}
 			ExploreView()
 				.tabItem {
 					Label("Explore", systemImage: "square.grid.2x2.fill")
+						.accessibilityLabel("Explore section")
+						.accessibilityHint("Tap to explore the best mangas, authors and find by category")
 				}
 			CollectionView()
 				.tabItem {
 					Label("Collection", systemImage: "rectangle.stack.fill")
+						.accessibilityLabel("My Collection section")
+						.accessibilityHint("Tap to mange your collection of mangas")
 				}
 		}
 		.tint(.primaryBlue)

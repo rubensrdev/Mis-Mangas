@@ -65,6 +65,8 @@ struct MangasViewIPad: View {
 									}
 								}
 								.foregroundStyle(.primaryBlue)
+								.accessibilityLabel("Reset search")
+								.accessibilityHint("Tap to show all mangas again")
 							}
 						}
 						ToolbarItem(placement: .topBarTrailing) {
@@ -79,6 +81,8 @@ struct MangasViewIPad: View {
 											.symbolRenderingMode(.palette)
 											.foregroundStyle(.primaryBlue)
 									}
+									.accessibilityLabel("Scroll to top")
+									.accessibilityHint("Tap to scroll back to the top of the list")
 								}
 								Button(action: {
 									vm.showFilters.toggle()
@@ -87,6 +91,8 @@ struct MangasViewIPad: View {
 										.symbolRenderingMode(.palette)
 										.foregroundStyle(.primaryBlue)
 								}
+								.accessibilityLabel("Open filters form")
+								.accessibilityHint("Tap to filter mangas by name, author, or category")
 							}
 						}
 					}
