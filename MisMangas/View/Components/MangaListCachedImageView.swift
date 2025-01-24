@@ -15,8 +15,10 @@ struct MangaListCachedImageView: View {
 			if let image = cachedImage.cachedImage {
 				Image(uiImage: image)
 					.mangaListImgStyle()
+					.accessibilityLabel("Cover image for this manga")
 			} else {
 				ProgressView()
+					.accessibilityLabel("Loading manga cover image")
 			}
 		}
 		.onAppear {
