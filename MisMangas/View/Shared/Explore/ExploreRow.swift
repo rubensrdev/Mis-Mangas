@@ -14,6 +14,8 @@ struct ExploreRow: View {
 			VStack(alignment: .leading) {
 				Text(type)
 					.font(.headline)
+					.accessibilityLabel("Category: \(type)")
+					.accessibilityHint("Tap to explore mangas in the \(type) category")
 			}
 			.padding()
 		}

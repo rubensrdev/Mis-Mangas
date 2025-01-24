@@ -40,6 +40,7 @@ struct CollectionViewIPad: View {
 											MangaGridCachedImageViewIPad(url: manga.manga.imageURL)
 											Text(manga.manga.title)
 												.mangaTitleStyle()
+												.accessibilityLabel("Title: \(manga.manga.title)")
 										}
 										.mangaRowStyleIPad()
 									}
@@ -50,6 +51,8 @@ struct CollectionViewIPad: View {
 											Label("Remove from collection", systemImage: "trash")
 												.symbolRenderingMode(.palette)
 										}
+										.accessibilityLabel("Remove \(manga.manga.title) from collection")
+										.accessibilityHint("Tap to remove \(manga.manga.title) from your collection")
 									}
 								}
 							}
@@ -60,9 +63,13 @@ struct CollectionViewIPad: View {
 				.navigationDestination(for: MangaInCollection.self, destination: { manga in
 					if let index = vm.mangas.firstIndex(where: { $0.id == manga.id }) {
 						MangaInCollectionDetailView(mangaInCollection: $vm.mangas[index])
+							.accessibilityLabel("Details for \(manga.manga.title)")
+							.accessibilityHint("Tap to view and manage details about \(manga.manga.title)")
 					}
 				})
 				.searchable(text: $vm.searchText, prompt: "Search by manga title")
+				.accessibilityLabel("Search field")
+				.accessibilityHint("Enter a manga title to filter your collection")
 				.orderByToolbar(orderOption: $vm.orderOption)
 			}
 			.overlay {

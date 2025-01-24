@@ -15,9 +15,11 @@ struct MyCollectionIsEmptyView: View {
 				.scaledToFit()
 				.frame(width: 100, height: 100)
 				.foregroundStyle(.secondaryGray)
+				.accessibilityHidden(true)
 			Text("Your collection is empty")
 				.font(.headline)
 				.foregroundStyle(.primaryDark)
+				.accessibilityHint("Add mangas to start building your collection")
 			Spacer()
 		}
 	}

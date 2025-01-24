@@ -17,11 +17,13 @@ struct AddToCollectionToastView: View {
 		if showToast {
 			VStack {
 				Spacer()
-				Text("\(mangaNameAdded) has been added to your collection.")
+				Text("\(mangaNameAdded) has been added to your collection")
 					.toastStyle()
 					.transition(.move(edge: .bottom).combined(with: .opacity))
 					.animation(.easeInOut(duration: 0.5), value: showToast)
 					.offset(y: shouldOffset ? -100 : 0)
+					.accessibilityLabel("\(mangaNameAdded) added to your collection")
+					.accessibilityHint("This message will disappear shortly")
 			}
 		}
     }

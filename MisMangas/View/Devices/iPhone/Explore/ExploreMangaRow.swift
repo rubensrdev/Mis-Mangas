@@ -17,8 +17,10 @@ struct ExploreMangaRow: View {
 					Text(manga.title)
 						.font(.headline)
 						.foregroundStyle(.primaryDark)
+						.accessibilityLabel("Title: \(manga.title)")
 					Text(manga.scoreFormatted)
 						.scoreStyle()
+						.accessibilityLabel("Score: \(manga.scoreFormatted)")
 				}
 				.padding(.horizontal)
 			}
@@ -31,6 +33,7 @@ struct ExploreMangaRow: View {
 				}
 				.tint(.gray)
 				.disabled(true)
+				.accessibilityLabel("\(manga.title) is already in your collection")
 			} else {
 				Button {
 					myCollectionVM.addToCollection(manga)
@@ -38,6 +41,8 @@ struct ExploreMangaRow: View {
 					Label("Add to my collection", systemImage: "plus.circle")
 						.symbolRenderingMode(.palette)
 				}
+				.accessibilityLabel("Add \(manga.title) to your collection")
+				.accessibilityHint("Swipe to press the button to add \(manga.title) to your collection")
 				
 			}
 		}

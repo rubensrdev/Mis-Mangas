@@ -37,6 +37,8 @@ struct ExploreView: View {
 								}
 								.navigationDestination(for: Manga.self, destination: { manga in
 									MangaDetailView(manga: manga)
+										.accessibilityLabel("Details for \(manga.title)")
+										.accessibilityHint("Tap to view more information about \(manga.title)")
 								})
 							}
 						}
@@ -84,6 +86,8 @@ struct ExploreView: View {
 								}
 								.navigationDestination(for: String.self) { demography in
 									ExploreMangasByView(option: .demographics, optionSelected: demography)
+										.accessibilityLabel("Mangas for \(demography)")
+										.accessibilityHint("Tap to view wiew mangas for \(demography)")
 								}
 							}
 						}
@@ -106,6 +110,8 @@ struct ExploreView: View {
 								}
 								.navigationDestination(for: String.self) { genre in
 									ExploreMangasByView(option: .genres, optionSelected: genre)
+										.accessibilityLabel("Mangas for \(genre)")
+										.accessibilityHint("Tap to view wiew mangas for \(genre)")
 								}
 							}
 						}
@@ -128,7 +134,10 @@ struct ExploreView: View {
 								}
 								.navigationDestination(for: String.self) { theme in
 									ExploreMangasByView(option: .themes, optionSelected: theme)
+										.accessibilityLabel("Mangas for \(theme)")
+										.accessibilityHint("Tap to view wiew mangas for \(theme)")
 								}
+
 							}
 						}
 						.task {

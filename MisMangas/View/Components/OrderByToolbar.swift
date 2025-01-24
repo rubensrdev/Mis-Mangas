@@ -30,10 +30,14 @@ struct OrderByCollectionToolbar: ViewModifier {
 										option == orderOption ? .primaryBlue : .primaryDark.opacity(0.5)
 									)
 							}
+							.accessibilityLabel("\(option.rawValue)")
+							.accessibilityHint(option == orderOption ? "Currently selected" : "Tap to select this order option")
 						}
 					} label: {
 						Label("Order by", systemImage: "arrow.up.arrow.down")
 							.foregroundStyle(.primaryBlue)
+							.accessibilityLabel("Order by menu")
+							.accessibilityHint("Tap to choose how to order your collection")
 					}
 				}
 			}

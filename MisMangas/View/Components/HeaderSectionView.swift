@@ -20,6 +20,8 @@ struct HeaderSectionView: View {
 					.headerSecSubtitleStyle()
 			}
 			.padding(.vertical, 8)
+			.accessibilityLabel("\(title). \(subtitle)")
+			.accessibilityHint("Header section title and subtitle")
 		}
 	}
 }

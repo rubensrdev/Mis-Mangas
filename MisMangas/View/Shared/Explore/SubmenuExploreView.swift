@@ -24,6 +24,8 @@ struct SubmenuExploreView: View {
 								.clipShape(RoundedRectangle(cornerRadius: 12))
 								.shadow(color: vm.selectedExploreOption == option ? .primaryBlue.opacity(0.5) : .clear, radius: 5, x: 0, y: 5)
 						}
+						.accessibilityLabel("\(option.rawValue) option")
+						.accessibilityHint("Tap to explore categories in the \(option.rawValue) option")
 					}
 				}
 				.padding(.horizontal)

@@ -16,8 +16,10 @@ struct ExploreMangaRowIPad: View {
 				HStack {
 					Text(manga.title)
 						.mangaTitleStyle()
+						.accessibilityLabel("Title: \(manga.title)")
 					Text(manga.scoreFormatted)
 						.scoreStyle()
+						.accessibilityLabel("Score: \(manga.scoreFormatted)")
 				}
 			}
 			.padding()
