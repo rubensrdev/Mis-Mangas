@@ -13,7 +13,10 @@ struct MangaDetailAuthorsView: View {
 			Text("Authors")
 				.font(.title2)
 				.bold()
+				.accessibilityLabel("Authors section")
+				.accessibilityHint("Displays the authors of \(manga.title) and their roles")
 			Text(manga.authorsFormatted)
+				.accessibilityLabel("Authors: \(manga.authorsFormatted)")
 		}
 		.mangaDetailStyle()
 	}

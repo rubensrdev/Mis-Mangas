@@ -17,9 +17,17 @@ struct FilterFormSheetView: View {
 		NavigationStack {
 			Form {
 				FilterByTitleAuthorView(customSearchVM: customSearchVM)
+					.accessibilityLabel("Filter by title or author")
+					.accessibilityHint("Enter a title or author name to filter mangas")
 				FilterByGenresView(customSearchVM: customSearchVM)
+					.accessibilityLabel("Filter by genres")
+					.accessibilityHint("Select one or more genres to filter mangas")
 				FilterByThemeView(customSearchVM: customSearchVM)
+					.accessibilityLabel("Filter by themes")
+					.accessibilityHint("Select one or more themes to filter mangas")
 				FilterByDemographicsView(customSearchVM: customSearchVM)
+					.accessibilityLabel("Filter by demographics")
+					.accessibilityHint("Select one or more demographics to filter mangas")
 				FilterFooterView()
 			}
 			.navigationTitle("Filter Mangas")
@@ -32,6 +40,8 @@ struct FilterFormSheetView: View {
 						Text("Cancel")
 							.foregroundStyle(.red)
 					}
+					.accessibilityLabel("Cancel filtering")
+					.accessibilityHint("Tap to cancel filtering and return to the previous screen")
 				}
 				
 				ToolbarItem(placement: .confirmationAction) {
@@ -47,11 +57,13 @@ struct FilterFormSheetView: View {
 						Text("Search")
 							.foregroundStyle(.primaryBlue)
 					}
-					
+					.accessibilityLabel("Search mangas")
+					.accessibilityHint("Tap to search mangas with the selected filters")
 				}
 			}
 			.alert("Validation Error", isPresented: $customSearchVM.showAlert) {} message: {
 				Text(customSearchVM.errorMessage)
+					.accessibilityHint("An error occurred while validating the filters, check the fields and try again")
 			}
 		}
 	}

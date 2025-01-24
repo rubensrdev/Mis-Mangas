@@ -14,13 +14,18 @@ struct MangaDetailSinopsysView: View {
 			Text("Synopsis")
 				.font(.title2)
 				.bold()
+				.accessibilityLabel("Synopsis section")
 			Group {
 				if expandedSynopsis {
 					Text(manga.synopsisFormatted)
+						.accessibilityLabel("Full synopsis: \(manga.synopsisFormatted)")
+						.accessibilityHint("The complete synopsis is displayed")
 				} else {
 					Text(manga.synopsisFormatted)
 						.lineLimit(5)
 						.truncationMode(.tail)
+						.accessibilityLabel("Synopsis preview: \(manga.synopsisFormatted)")
+						.accessibilityHint("Only the first five lines of the synopsis are displayed. Tap Read More to expand")
 				}
 			}
 			.animation(.easeInOut(duration: 0.5), value: expandedSynopsis)
@@ -34,6 +39,8 @@ struct MangaDetailSinopsysView: View {
 					.foregroundStyle(.primaryBlue)
 			}
 			.buttonStyle(.bordered)
+			.accessibilityLabel(expandedSynopsis ? "Show less synopsis" : "Read more synopsis")
+			.accessibilityHint(expandedSynopsis ? "Tap to collapse the synopsis" : "Tap to expand the synopsis")
 		}
 		.padding()
 	}

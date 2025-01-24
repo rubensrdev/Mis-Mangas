@@ -40,6 +40,8 @@ struct EditingMangaInCollectionSheetView: View {
 						Text("Cancel")
 							.foregroundStyle(.red)
 					}
+					.accessibilityLabel("Cancel update this collection")
+					.accessibilityHint("Tap to cancel the update and return to the detail view")
 				}
 				
 				ToolbarItem(placement: .confirmationAction) {
@@ -54,11 +56,14 @@ struct EditingMangaInCollectionSheetView: View {
 						Text("Update")
 							.foregroundStyle(.primaryBlue)
 					}
+					.accessibilityLabel("Update manga status")
+					.accessibilityHint("Tap to save the updates to your manga collection")
 					
 				}
 			}
 			.alert("Validation Error", isPresented: $vm.showAlert) {} message: {
 				Text(vm.errorMessage)
+					.accessibilityHint("An error occurred while validating the filters, check the fields and try again")
 			}
 		}
     }

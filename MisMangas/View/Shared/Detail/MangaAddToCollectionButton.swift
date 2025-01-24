@@ -20,6 +20,8 @@ struct MangaAddToCollectionButton: View {
 							.fill(.tertiaryGreen)
 					)
 					.foregroundStyle(.primaryWhite)
+					.accessibilityLabel("\(manga.title) is already in your collection")
+					.accessibilityHint("This manga has already been added to your collection")
 			} else {
 				Button {
 					myCollectionVM.addToCollection(manga)
@@ -28,6 +30,8 @@ struct MangaAddToCollectionButton: View {
 				}
 				.buttonStyle(.borderedProminent)
 				.tint(.primaryBlue)
+				accessibilityLabel("Add \(manga.title) to your collection")
+				.accessibilityHint("Tap to add \(manga.title) to your collection")
 			}
 		}
 	}

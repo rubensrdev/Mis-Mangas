@@ -50,7 +50,8 @@ struct MangaInCollectionDetailView: View {
 							.symbolRenderingMode(.palette)
 							.foregroundStyle(.primaryBlue)
 					}
-					
+					.accessibilityLabel("Edit \(mangaInCollection.manga.title) collection")
+					.accessibilityHint("Tap to update the status of \(mangaInCollection.manga.title) in your collection")
 				}
 			}
 			.sheet(isPresented: $vm.showEditingSheet) {

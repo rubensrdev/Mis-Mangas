@@ -16,6 +16,7 @@ struct EditingMangaVolumeSection: View {
 			TextField(textFieldPlaceholder, value: $value, format: .number)
 				.keyboardType(.numberPad)
 				.padding(10)
+				.accessibilityHint("Enter the number of \(title.lowercased())")
 			Text(currentInfo)
 				.font(.footnote)
 				.foregroundStyle(.secondary)
