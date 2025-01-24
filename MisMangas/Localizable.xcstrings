@@ -1,15 +1,89 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ added to your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ añadido a tu colección"
+          }
+        }
+      }
+    },
     "%@ cover image" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ imagen de portada"
+          }
+        }
+      }
+    },
+    "%@ has been added to your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ha sido añadido a tu colección"
+          }
+        }
+      }
     },
     "%@ has been added to your collection." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ se ha añadido a tu colección."
+          }
+        }
+      }
+    },
+    "%@ is already in your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ya está en tu colección"
+          }
+        }
+      }
+    },
+    "%@ option" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ opción"
+          }
+        }
+      }
+    },
+    "%@. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@. %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@. %2$@"
           }
         }
       }
@@ -20,6 +94,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
+          }
+        }
+      }
+    },
+    "Add %@ to your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir %@ a tu colección"
+          }
+        }
+      }
+    },
+    "Add mangas to start building your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añade mangas para comenzar a construir tu colección"
           }
         }
       }
@@ -61,6 +155,16 @@
         }
       }
     },
+    "An error occurred while validating the filters, check the fields and try again" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocurrió un error al validar los filtros, revisa los campos y vuelva a intentarlo"
+          }
+        }
+      }
+    },
     "App Error" : {
       "localizations" : {
         "es" : {
@@ -91,12 +195,32 @@
         }
       }
     },
+    "Author: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autor: %@"
+          }
+        }
+      }
+    },
     "Authors" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Autores"
+          }
+        }
+      }
+    },
+    "Authors section" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de autores"
           }
         }
       }
@@ -131,6 +255,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Autores"
+          }
+        }
+      }
+    },
+    "Authors: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autores: %@"
           }
         }
       }
@@ -256,6 +390,46 @@
         }
       }
     },
+    "Cancel filtering" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar el filtrado"
+          }
+        }
+      }
+    },
+    "Cancel removal" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar eliminación"
+          }
+        }
+      }
+    },
+    "Cancel update this collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar la actualización de esta colección"
+          }
+        }
+      }
+    },
+    "Category: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoría: %@"
+          }
+        }
+      }
+    },
     "Collection" : {
       "localizations" : {
         "es" : {
@@ -267,7 +441,6 @@
       }
     },
     "Collection completed" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -278,7 +451,6 @@
       }
     },
     "Collection not completed" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -298,8 +470,45 @@
         }
       }
     },
+    "Confirm removal" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirma la eliminación"
+          }
+        }
+      }
+    },
     "Context menu for %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menú de contexto para %@"
+          }
+        }
+      }
+    },
+    "Cover image for this manga" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen de portada para este manga"
+          }
+        }
+      }
+    },
+    "Currently selected" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualmente seleccionado"
+          }
+        }
+      }
     },
     "Demographics" : {
       "localizations" : {
@@ -307,6 +516,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demografías"
+          }
+        }
+      }
+    },
+    "Demographics section" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de demografías"
           }
         }
       }
@@ -345,12 +564,82 @@
         }
       }
     },
+    "Demographics: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demografías: %@"
+          }
+        }
+      }
+    },
+    "Details for %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detalles para %@"
+          }
+        }
+      }
+    },
+    "Displays the authors of %@ and their roles" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra los autores de %@ y sus roles "
+          }
+        }
+      }
+    },
+    "Edit %@ collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edita la colección %@"
+          }
+        }
+      }
+    },
     "Edit collection" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Editar colección"
+          }
+        }
+      }
+    },
+    "Enter a manga title to filter your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un título de manga para buscar en  tu colección"
+          }
+        }
+      }
+    },
+    "Enter a title or author name to filter mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un título o nombre de autor para filtrar mangas"
+          }
+        }
+      }
+    },
+    "Enter the number of %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce el número de %@"
           }
         }
       }
@@ -366,7 +655,54 @@
       }
     },
     "Explore section" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de exploración"
+          }
+        }
+      }
+    },
+    "Filter by demographics" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar por demografías"
+          }
+        }
+      }
+    },
+    "Filter by genres" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar por géneros"
+          }
+        }
+      }
+    },
+    "Filter by themes" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar por temas"
+          }
+        }
+      }
+    },
+    "Filter by title or author" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar por título o autor"
+          }
+        }
+      }
     },
     "Filter mangas" : {
       "localizations" : {
@@ -388,12 +724,32 @@
         }
       }
     },
+    "Full synopsis: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toda la sinopsis: %@"
+          }
+        }
+      }
+    },
     "Genres" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Géneros"
+          }
+        }
+      }
+    },
+    "Genres section" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de géneros"
           }
         }
       }
@@ -432,6 +788,26 @@
         }
       }
     },
+    "Genres: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Géneros: %@"
+          }
+        }
+      }
+    },
+    "Header section title and subtitle" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de encabezado con título y subtítulo"
+          }
+        }
+      }
+    },
     "I already have it" : {
       "localizations" : {
         "es" : {
@@ -458,6 +834,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Incluir subcadena de búsqueda"
+          }
+        }
+      }
+    },
+    "Loading manga cover image" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando imagen de portada del manga"
           }
         }
       }
@@ -492,6 +878,16 @@
         }
       }
     },
+    "Mangas for %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mangas para %@"
+          }
+        }
+      }
+    },
     "Mangas for %@ in %@" : {
       "localizations" : {
         "en" : {
@@ -499,14 +895,34 @@
             "state" : "new",
             "value" : "Mangas for %1$@ in %2$@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mangas para %1$@ en %2$@"
+          }
         }
       }
     },
     "Mangas section" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de mangas"
+          }
+        }
+      }
     },
     "My Collection section" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de mi colección"
+          }
+        }
+      }
     },
     "My_Collection" : {
       "extractionState" : "manual",
@@ -542,8 +958,25 @@
         }
       }
     },
+    "No mangas found in your collection or search results." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se han encontrado mangas en tu colección"
+          }
+        }
+      }
+    },
     "No mangas found." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontraron mangas"
+          }
+        }
+      }
     },
     "No mangas found..." : {
       "extractionState" : "stale",
@@ -566,8 +999,25 @@
         }
       }
     },
+    "Only the first five lines of the synopsis are displayed. Tap Read More to expand" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solamente las cinco primeras lineas de la sinopsis son visibles. Pulsa leer más para expandirla."
+          }
+        }
+      }
+    },
     "Open filters form" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir formulario de filtrado"
+          }
+        }
+      }
     },
     "Order by" : {
       "localizations" : {
@@ -579,8 +1029,45 @@
         }
       }
     },
+    "Order by menu" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menú de ordenación"
+          }
+        }
+      }
+    },
     "Please wait while we load additional mangas" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por favor espere mientras se cargan el resto de mangas"
+          }
+        }
+      }
+    },
+    "Progress of the volume you are currently reading" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progreso del volumen que estás leyendo actualmente"
+          }
+        }
+      }
+    },
+    "Progress of volumes you own for this manga" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progreso de volúmenes que posees de este manga"
+          }
+        }
+      }
     },
     "Publication year" : {
       "localizations" : {
@@ -592,12 +1079,32 @@
         }
       }
     },
+    "Publication year: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Año de publicación: %@"
+          }
+        }
+      }
+    },
     "Read More" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leer más"
+          }
+        }
+      }
+    },
+    "Read more synopsis" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leer más sinopsis."
           }
         }
       }
@@ -622,12 +1129,58 @@
         }
       }
     },
+    "Reading volume: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volumen de lectura: %lld"
+          }
+        }
+      }
+    },
+    "Reading volume: %lld out of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reading volume: %1$lld out of %2$lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volumen de lectura: %1$lld de %2$lld"
+          }
+        }
+      }
+    },
     "Remove" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eliminar"
+          }
+        }
+      }
+    },
+    "Remove %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove %@"
+          }
+        }
+      }
+    },
+    "Remove %@ from collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove %@ de la colección"
           }
         }
       }
@@ -653,7 +1206,24 @@
       }
     },
     "Reset search" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resetear búsqueda"
+          }
+        }
+      }
+    },
+    "Role: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rol: %@"
+          }
+        }
+      }
     },
     "Score" : {
       "localizations" : {
@@ -665,8 +1235,25 @@
         }
       }
     },
+    "Score: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puntuación: %@"
+          }
+        }
+      }
+    },
     "Scroll to top" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desplazarse hacia arriba"
+          }
+        }
+      }
     },
     "Search" : {
       "localizations" : {
@@ -684,6 +1271,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buscar por título de manga"
+          }
+        }
+      }
+    },
+    "Search field" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Campo de búsqueda"
+          }
+        }
+      }
+    },
+    "Search mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar mangas"
           }
         }
       }
@@ -758,6 +1365,36 @@
         }
       }
     },
+    "Select one or more demographics to filter mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione uno o más datos demográficos para filtrar mangas"
+          }
+        }
+      }
+    },
+    "Select one or more genres to filter mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione uno o más géneros para filtrar mangas"
+          }
+        }
+      }
+    },
+    "Select one or more themes to filter mangas" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione uno o más temas para filtrar mangas"
+          }
+        }
+      }
+    },
     "Select themes" : {
       "localizations" : {
         "es" : {
@@ -808,12 +1445,52 @@
         }
       }
     },
+    "Show less synopsis" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar menos sinopsis"
+          }
+        }
+      }
+    },
     "Status" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estado"
+          }
+        }
+      }
+    },
+    "Status: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado: %@"
+          }
+        }
+      }
+    },
+    "Status: Unknown" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado: Desconocido"
+          }
+        }
+      }
+    },
+    "Swipe to press the button to add %@ to your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza para presionar el botón y agregar %@ a tu colección"
           }
         }
       }
@@ -828,32 +1505,335 @@
         }
       }
     },
+    "Synopsis preview: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa de la sinopsis: %@"
+          }
+        }
+      }
+    },
+    "Synopsis section" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de sinopsis"
+          }
+        }
+      }
+    },
+    "Tap to add %@ to your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para agregar %@ a tu colección"
+          }
+        }
+      }
+    },
+    "Tap to cancel filtering and return to the previous screen" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para cancelar el filtrado y volver a la pantalla anterior"
+          }
+        }
+      }
+    },
+    "Tap to cancel removing %@ from your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para cancelar la eliminación de %@ de tu colección"
+          }
+        }
+      }
+    },
+    "Tap to cancel the update and return to the detail view" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para cancelar la actualización y volver a la vista de detalles"
+          }
+        }
+      }
+    },
+    "Tap to choose how to order your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para elegir cómo ordenar tu colección"
+          }
+        }
+      }
+    },
+    "Tap to collapse the synopsis" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to collapse the synopsis"
+          }
+        }
+      }
+    },
+    "Tap to expand the synopsis" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para ampliar la sinopsis"
+          }
+        }
+      }
+    },
+    "Tap to explore categories in the %@ option" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para explorar categorías en la opción %@"
+          }
+        }
+      }
+    },
+    "Tap to explore mangas in the %@ category" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para explorar mangas en la categoría %@"
+          }
+        }
+      }
+    },
     "Tap to explore the best mangas, authors and find by category" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para explorar los mejores mangas, autores y buscar por categoría."
+          }
+        }
+      }
     },
     "Tap to filter mangas by name, author or category" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para filtrar mangas por nombre, autor o categoría"
+          }
+        }
+      }
     },
     "Tap to filter mangas by name, author, or category" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para filtrar mangas por nombre, autor o categoría"
+          }
+        }
+      }
     },
     "Tap to mange your collection of mangas" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para administrar tu colección de mangas"
+          }
+        }
+      }
     },
     "Tap to open the context menu and add %@ to your collection" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para abrir el menú contextual y agregar %@ a su colección"
+          }
+        }
+      }
+    },
+    "Tap to remove %@ from your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para eliminar %@ de tu colección"
+          }
+        }
+      }
+    },
+    "Tap to remove this manga from your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulsa para eliminar este manga de tu colección"
+          }
+        }
+      }
+    },
+    "Tap to save the updates to your manga collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para guardar las actualizaciones de tu colección de manga"
+          }
+        }
+      }
     },
     "Tap to scroll back to the top of the list" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para volver a la parte superior de la lista."
+          }
+        }
+      }
+    },
+    "Tap to search mangas with the selected filters" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para buscar mangas con los filtros seleccionados"
+          }
+        }
+      }
     },
     "Tap to see and filter a list of all mangas" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para ver y filtrar una lista de todos los mangas"
+          }
+        }
+      }
+    },
+    "Tap to select this order option" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para seleccionar esta opción de pedido"
+          }
+        }
+      }
     },
     "Tap to show all mangas again" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para mostrar todos los mangas nuevamente"
+          }
+        }
+      }
+    },
+    "Tap to update the status of %@ in your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para actualizar el estado de %@ en tu colección"
+          }
+        }
+      }
+    },
+    "Tap to view and manage details about %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para ver y administrar detalles sobre %@"
+          }
+        }
+      }
     },
     "Tap to view details about %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para ver detalles sobre %@"
+          }
+        }
+      }
+    },
+    "Tap to view mangas for %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para ver mangas de %@"
+          }
+        }
+      }
+    },
+    "Tap to view more information about %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para ver más información sobre %@"
+          }
+        }
+      }
+    },
+    "Tap to view wiew mangas for %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para ver los mangas de wiew para %@"
+          }
+        }
+      }
+    },
+    "The complete synopsis is displayed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se muestra la sinopsis completa"
+          }
+        }
+      }
+    },
+    "The status of this manga is not available" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El estado de este manga no está disponible."
+          }
+        }
+      }
+    },
+    "The total number of volumes is unknown" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se desconoce el número total de volúmenes."
+          }
+        }
+      }
     },
     "Themes" : {
       "localizations" : {
@@ -861,6 +1841,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Temas"
+          }
+        }
+      }
+    },
+    "Themes section" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sección de temas"
           }
         }
       }
@@ -899,6 +1889,46 @@
         }
       }
     },
+    "Themes: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temas: %@"
+          }
+        }
+      }
+    },
+    "This action is disabled because %@ is already added" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta acción está deshabilitada porque %@ ya está agregado"
+          }
+        }
+      }
+    },
+    "This manga has already been added to your collection" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este manga ya ha sido añadido a tu colección"
+          }
+        }
+      }
+    },
+    "This message will disappear shortly" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este mensaje desaparecerá en breve"
+          }
+        }
+      }
+    },
     "Title" : {
       "localizations" : {
         "es" : {
@@ -910,7 +1940,24 @@
       }
     },
     "Title: %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Title: %@"
+          }
+        }
+      }
+    },
+    "Try searching with different criteria or adding mangas to your collection." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intenta buscar con diferentes criterios o añade mangas a tu colección."
+          }
+        }
+      }
     },
     "Update" : {
       "localizations" : {
@@ -918,6 +1965,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actulizar"
+          }
+        }
+      }
+    },
+    "Update manga status" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar el estado del manga"
           }
         }
       }
@@ -972,12 +2029,68 @@
         }
       }
     },
+    "Volumes owned: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volúmenes propios: %lld"
+          }
+        }
+      }
+    },
+    "Volumes owned: %lld out of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Volumes owned: %1$lld out of %2$lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volúmenes propios: %1$lld de %2$lld"
+          }
+        }
+      }
+    },
+    "Volumes: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volúmenes: %@"
+          }
+        }
+      }
+    },
     "You can use these filters freely to fine-tune your search." : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Puede utilizar estos filtros libremente para afinar su búsqueda."
+          }
+        }
+      }
+    },
+    "You have completed collecting all volumes for this manga" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Has completado la recopilación de todos los volúmenes de este manga."
+          }
+        }
+      }
+    },
+    "You have not completed collecting all volumes for this manga" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No has terminado de recopilar todos los volúmenes de este manga."
           }
         }
       }
