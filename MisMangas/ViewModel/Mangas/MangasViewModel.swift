@@ -12,7 +12,7 @@ final class MangasViewModel {
 	let repository: RepositoryRemoteProtocol
 	
 	var response: PaginatedMangaResponse?
-	var mangas: [Manga] = [] 
+	var mangas: [Manga] = []
 	
 	let perPage = 12
 	var page = 1
@@ -47,7 +47,7 @@ final class MangasViewModel {
 				let response = try await repository.searchMangas(with: searchCriteria)
 				self.response = response
 				let filteredMangas = response.items.filter { manga in
-					!mangas.contains { $0.id == manga.id }
+					!mangas.contains { $0.id == manga.id } && manga.isValid
 				}
 				mangas.append(contentsOf: filteredMangas)
 				totalItems = response.metadata.total
@@ -55,16 +55,18 @@ final class MangasViewModel {
 				let response = try await repository.getMangas(page: "\(page)", itemsPerPage: "\(perPage)")
 				self.response = response
 				let filteredMangas = response.items.filter { manga in
-					!mangas.contains { $0.id == manga.id }
+					!mangas.contains { $0.id == manga.id } && manga.isValid
 				}
 				mangas.append(contentsOf: filteredMangas)
 				totalItems = response.metadata.total
 			}
 		} catch let error as NetworkError {
+			print(error)
 			showErrorAlert = true
 			errorMessage = error.errorDescription ?? "An unexpected network error occurred, try refreshing the screen"
 			print(error)
 		} catch {
+			print(error)
 			showErrorAlert = true
 			errorMessage = "An error occurred while loading the manga, try refreshing the screen"
 			print(error)

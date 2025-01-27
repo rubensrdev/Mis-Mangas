@@ -430,6 +430,16 @@
         }
       }
     },
+    "Close" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        }
+      }
+    },
     "Collection" : {
       "localizations" : {
         "es" : {
@@ -985,6 +995,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se encontraron mangas..."
+          }
+        }
+      }
+    },
+    "No option selected" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin opción seleccionada"
           }
         }
       }

@@ -103,4 +103,14 @@ extension Manga {
 	var toMangaInCollection: MangaInCollection {
 		MangaInCollection(id: self.id, manga: self)
 	}
+	
+	var isValid: Bool {
+		!title.isEmpty &&
+		imageURL != nil &&
+		!synopsisFormatted.isEmpty &&
+		!authorsFormatted.isEmpty &&
+		!genresFormatted.isEmpty &&
+		!themesFormatted.isEmpty &&
+		!demographicsFormatted.isEmpty
+	}
 }

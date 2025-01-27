@@ -103,7 +103,11 @@ struct MangasViewIPad: View {
 				.sheet(isPresented: $vm.showFilters) {
 					FilterFormSheetView(customSearchVM: CustomSearchViewModel())
 				}
-				.alert("App Error", isPresented: $vm.showErrorAlert) {} message: {
+				.alert("App Error", isPresented: $vm.showErrorAlert) {
+					Button("Close") {
+						vm.showErrorAlert.toggle()
+					}
+				} message: {
 					Text(vm.errorMessage)
 				}
 			}

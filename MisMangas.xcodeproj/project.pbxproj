@@ -57,6 +57,7 @@
 		45C2540F2D285D5F0015FFA7 /* RepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C2540E2D285D5F0015FFA7 /* RepositoryLocal.swift */; };
 		45C254112D2861D70015FFA7 /* MyCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C254102D2861D70015FFA7 /* MyCollectionViewModel.swift */; };
 		45C254132D286BF60015FFA7 /* RepositoryLocalPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C254122D286BF60015FFA7 /* RepositoryLocalPreview.swift */; };
+		45DCEF212D4806030087F682 /* MangaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DCEF202D4806030087F682 /* MangaState.swift */; };
 		45E1A37C2D23F5980071230E /* CustomSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E1A37B2D23F5980071230E /* CustomSearchViewModel.swift */; };
 		45E1A37E2D2414400071230E /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E1A37D2D2414400071230E /* FilterSelectionView.swift */; };
 		45E1A3842D2418130071230E /* FilterOptionCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E1A3832D2418130071230E /* FilterOptionCases.swift */; };
@@ -164,6 +165,7 @@
 		45C2540E2D285D5F0015FFA7 /* RepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocal.swift; sourceTree = "<group>"; };
 		45C254102D2861D70015FFA7 /* MyCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewModel.swift; sourceTree = "<group>"; };
 		45C254122D286BF60015FFA7 /* RepositoryLocalPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocalPreview.swift; sourceTree = "<group>"; };
+		45DCEF202D4806030087F682 /* MangaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaState.swift; sourceTree = "<group>"; };
 		45E1A37B2D23F5980071230E /* CustomSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchViewModel.swift; sourceTree = "<group>"; };
 		45E1A37D2D2414400071230E /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
 		45E1A3832D2418130071230E /* FilterOptionCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionCases.swift; sourceTree = "<group>"; };
@@ -568,6 +570,7 @@
 				45F70C662D3ADCF700082294 /* MangaDetailInfoView.swift */,
 				45059F6A2D1F1C1600D75D8E /* MangaDetailView.swift */,
 				45F70C632D3ADBA600082294 /* MangadetailImageView.swift */,
+				45DCEF202D4806030087F682 /* MangaState.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				45F70C7D2D3AEA8100082294 /* FilterByGenresView.swift in Sources */,
 				45F70C4E2D398E8C00082294 /* MangaRowIpad.swift in Sources */,
 				453EF68D2D1DD6E6001E6478 /* MangasView.swift in Sources */,
+				45DCEF212D4806030087F682 /* MangaState.swift in Sources */,
 				45059F612D1EBF4800D75D8E /* ImageDownloader.swift in Sources */,
 				45C254132D286BF60015FFA7 /* RepositoryLocalPreview.swift in Sources */,
 				45F70C5E2D3ACA4400082294 /* Vstack.swift in Sources */,

@@ -72,6 +72,10 @@ struct ExploreMangasByView: View {
 			}
 		}
 		.alert("App Error", isPresented: $exploreVM.showErrorAlert) {
+			Button("Close") {
+				exploreVM.showErrorAlert.toggle()
+			}
+		} message: {
 			Text(exploreVM.errorMessage)
 		}
 	}

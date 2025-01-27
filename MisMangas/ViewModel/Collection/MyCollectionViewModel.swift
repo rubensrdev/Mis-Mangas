@@ -40,18 +40,17 @@ final class MyCollectionViewModel {
 		}
 	}
 	
-	var mangas: [MangaInCollection] {
-		didSet {
-			try? repository.saveMangasInCollection(mangas)
-		}
-	}
+	var mangas: [MangaInCollection]
+	var mangasAreLoaded = false
 	
 	init(repository: RepositoryLocalProtocol = RepositoryLocal()) {
 		self.repository = repository
 		do {
 			mangas = try repository.loadMangasInCollection()
+			mangasAreLoaded = true
 		} catch {
 			mangas = []
+			mangasAreLoaded = true
 			errorMessage = "Error loading mangas in collection: \(error)"
 			showErrorAlert = true
 		}
@@ -65,6 +64,7 @@ final class MyCollectionViewModel {
 	func addToCollection(_ manga: Manga) {
 		guard !mangas.contains(where: { $0.id == manga.id }) else { return }
 		mangas.append(manga.toMangaInCollection)
+		saveMangas()
 		addedMangaTitle = manga.title
 		showToast = true
 		Task {
@@ -81,13 +81,29 @@ final class MyCollectionViewModel {
 	
 	func removeFromCollection(_ manga: MangaInCollection) {
 		mangas.removeAll() { $0.id == manga.id }
+		saveMangas()
 		removedMangaTitle = manga.manga.title
 	}
 	
 	func update(_ mangaInCollection: MangaInCollection) {
 		if let index = mangas.firstIndex(where: { $0.id == mangaInCollection.id }) {
 			mangas[index] = mangaInCollection
+			saveMangas()
+			
 		}
 	}
 	
+	func saveMangas() {
+		try? repository.saveMangasInCollection(mangas)
+	}
+	
+	func stateForManga(_ id: Int) -> MangaState {
+			if !mangasAreLoaded {
+				return .loading
+			} else if isInCollection(id) {
+				return .inCollection
+			} else {
+				return .notInCollection
+			}
+		}
 }
