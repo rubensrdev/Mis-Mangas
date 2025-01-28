@@ -848,6 +848,17 @@
         }
       }
     },
+    "Key 1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "key 1"
+          }
+        }
+      }
+    },
     "Loading manga cover image" : {
       "localizations" : {
         "es" : {
@@ -2016,6 +2027,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error de validación"
+          }
+        }
+      }
+    },
+    "Validation_Owned" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You cannot have more volumes than exist"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No puedes tener más volúmenes de los que existen"
+          }
+        }
+      }
+    },
+    "Validation_Reading" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu volumen en lectura debe ser menor o igual al total de volúmenes publicados o a los volúmenes que ya tienes"
+          }
+        }
+      }
+    },
+    "validationReading" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your read volume must be less than or equal to the total of published volumes and volumes you already own"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu volumen en lectura debe ser menor o igual al total de volúmenes publicados o a los volúmenes que ya tienes"
           }
         }
       }

@@ -49,11 +49,11 @@ final class MyCollectionEditViewModel {
 		var errorCount = 0
 		if !validateVolumesOwned() {
 			errorCount += 1
-			errors.append("\(errorCount) - You cannot have more volumes than exist or an amount greater than your current reading volume.\n")
+			errors.append("\(errorCount) - \(String(localized: LocalizedStringResource("Validation_Owned"))).\n")
 		}
 		if !validateReadingVolume() {
 			errorCount += 1
-			errors.append("\(errorCount) - Your read volume must be less than or equal to the total of published volumes and volumes you already own.\n")
+			errors.append("\(errorCount) - \(String(localized: LocalizedStringResource("Validation_Reading"))).\n")
 		}
 		if errorCount > 0 {
 			showAlert.toggle()
