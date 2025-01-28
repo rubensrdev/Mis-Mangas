@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que permite al usuario seleccionar demografías como filtro para buscar mangas.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como una sección dentro de un formulario de filtros. Permite navegar a una vista de selección
+///   para elegir una o más demografías y muestra las demografías seleccionadas en un texto resumido.
 struct FilterByDemographicsView: View {
 	@Bindable var customSearchVM: CustomSearchViewModel
 	var body: some View {

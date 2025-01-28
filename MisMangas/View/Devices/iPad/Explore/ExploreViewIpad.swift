@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/// Vista optimizada para iPad que permite explorar mangas organizados por categorías como los mejores mangas,
+/// autores, demografías, géneros y temáticas.
+///
+/// - Uso:
+///   Muestra un diseño dinámico que se adapta a la categoría seleccionada. Cada sección incluye un encabezado,
+///   cuadrículas o listas personalizadas y opciones de navegación detallada.
 struct ExploreViewIpad: View {
 	
 	@Environment(ExploreViewModel.self) private var vm

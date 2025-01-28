@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension Text {
+	
+	/// Estilo para mostrar títulos de mangas en listas y cuadrículas.
 	func mangaTitleStyle() -> some View {
 		self
 			.font(.headline)
@@ -17,6 +19,7 @@ extension Text {
 			.padding(.horizontal, 5)
 	}
 	
+	/// Estilo para mostrar mensajes en un toast.
 	func toastStyle() -> some View {
 		self
 			.padding()
@@ -26,6 +29,7 @@ extension Text {
 			.padding(.bottom, 20)
 	}
 	
+	/// Estilo para los títulos de las secciones principales.
 	func headerSecTitleStyle() -> some View {
 		self
 			.font(.animeAceFont)
@@ -33,12 +37,14 @@ extension Text {
 			.foregroundStyle(.primaryBlue)
 	}
 	
+	/// Estilo para los subtítulos de las secciones principales.
 	func headerSecSubtitleStyle() -> some View {
 		self
 			.font(.subheadline)
 			.foregroundStyle(.secondary)
 	}
 	
+	/// Estilo para mostrar puntuaciones.
 	func scoreStyle() -> some View {
 		self
 			.font(.subheadline)
@@ -53,6 +59,7 @@ extension Text {
 			.foregroundStyle(.primaryDark)
 	}
 	
+	/// Estilo para mostrar elementos seleccionados en una categoría de filtros.
 	func selectedItemsInCategoryStyle() -> some View {
 		self
 			.lineLimit(2)

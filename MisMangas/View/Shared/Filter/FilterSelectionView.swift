@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista que permite al usuario seleccionar uno o más elementos de una lista como parte de un filtro.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en el contexto de filtros de mangas. Muestra una lista interactiva donde el usuario puede
+///   seleccionar o deseleccionar elementos, y se actualizan dinámicamente en un conjunto (`Set`).
 struct FilterSelectionView: View {
 	
 	@Binding var selectedItems: Set<String>

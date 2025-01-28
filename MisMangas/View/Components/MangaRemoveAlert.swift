@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// Vista que muestra una alerta para confirmar la eliminación de un manga de la colección del usuario.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en vistas de colección. Permite al usuario confirmar o cancelar la eliminación de un manga.
 struct MangaRemoveAlert: View {
 	
 	let mangaTitle: String

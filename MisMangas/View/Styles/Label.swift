@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension Label {
+	
+	/// Estilo para mensajes de elementos no encontrados.
 	func notFoundStyle() -> some View {
 		self
 			.font(.headline)
@@ -18,6 +20,7 @@ extension Label {
 			.padding()
 	}
 	
+	/// Estilo para indicar que la colección está completa.
 	func collectionCompletedStyle() -> some View {
 		self
 			.font(.footnote)
@@ -29,6 +32,7 @@ extension Label {
 			.foregroundStyle(.tertiaryGreen)
 	}
 	
+	/// Estilo para indicar que la colección no está completa.
 	func collectionNotCompletedStyle() -> some View {
 		self
 			.font(.footnote)

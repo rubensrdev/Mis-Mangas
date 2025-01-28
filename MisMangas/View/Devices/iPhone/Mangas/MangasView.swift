@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista que muestra una lista de mangas en formato de cuadrícula, con opciones de búsqueda, filtros y navegación detallada.
+///
+/// - Uso:
+///   Permite explorar y buscar mangas, mostrando los resultados en una cuadrícula adaptable. Incluye opciones de filtrado y
+///   un botón para desplazarse rápidamente al inicio de la lista.
 struct MangasView: View {
 	
 	@Environment(MangasViewModel.self) private var vm

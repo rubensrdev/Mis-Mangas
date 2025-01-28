@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista que muestra un encabezado con un título y un subtítulo para secciones.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como encabezado en diferentes secciones de la aplicación,
+///   proporcionando un diseño consistente para títulos y subtítulos.
 struct HeaderSectionView: View {
 	let title: String
 	let subtitle: String

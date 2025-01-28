@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+
+/// Menú contextual que permite agregar un manga a la colección del usuario o indica que ya está en la colección.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como un menú contextual (`contextMenu`) en las vistas que representan mangas.
 struct MangaAddToCollectionContextMenu: View {
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	let manga: Manga

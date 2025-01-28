@@ -9,6 +9,11 @@ import SwiftUI
 
 import SwiftUI
 
+/// Vista que muestra mangas filtrados por una opción específica (género, temática, demografía.).
+///
+/// - Uso:
+///   Diseñada para presentar mangas filtrados en un diseño optimizado para iPhone o iPad.
+///   Los datos se muestran en una cuadrícula para iPad y en una lista para iPhone.
 struct ExploreMangasByView: View {
 	
 	@Environment(ExploreViewModel.self) private var exploreVM

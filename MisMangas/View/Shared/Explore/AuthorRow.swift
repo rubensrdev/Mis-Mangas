@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que representa una fila con la información de un autor, mostrando su nombre completo y su rol.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en listas dentro de las vistas de exploración, específicamente en la sección de autores.
 struct AuthorRow: View {
 	let author: Author
 	var body: some View {

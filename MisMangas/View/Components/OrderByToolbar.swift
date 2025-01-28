@@ -7,12 +7,21 @@
 
 import SwiftUI
 
+/// Enumeración que define las opciones de ordenación disponibles para la colección.
+///
+/// - Casos:
+///   - `byTitle`: Ordena los mangas por título.
+///   - `byCollectionComplete`: Ordena los mangas según si la colección está completa.
 enum OrderOptions: String, CaseIterable, Identifiable {
 	case byTitle = "By title"
 	case byCollecionComplete = "By collection complete"
 	var id: Self { self }
 }
 
+/// Modificador que agrega un menú de ordenación a la barra de herramientas de la vista.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en vistas de colección, permitiendo al usuario cambiar el criterio de ordenación.
 struct OrderByCollectionToolbar: ViewModifier {
 	@Binding var orderOption: OrderOptions
 	func body(content: Content) -> some View {
@@ -45,6 +54,7 @@ struct OrderByCollectionToolbar: ViewModifier {
 }
 
 extension View {
+	/// Agrega el modificador `orderByToolbar` a cualquier vista.
 	func orderByToolbar(orderOption: Binding<OrderOptions>) -> some View {
 		modifier(OrderByCollectionToolbar(orderOption: orderOption))
 	}

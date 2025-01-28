@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension Image {
+	
+	/// Estilo para imágenes en cuadrículas en iPhone.
 	func mangaGridImgStyle() -> some View {
 		self
 			.resizable()
@@ -17,6 +19,7 @@ extension Image {
 			.shadow(radius: 6)
 	}
 	
+	/// Estilo para imágenes en listas en iPhone.
 	func mangaListImgStyle() -> some View {
 		self
 			.resizable()
@@ -26,6 +29,7 @@ extension Image {
 			.shadow(radius: 6)
 	}
 	
+	/// Estilo para imágenes en cuadrículas en iPad.
 	func mangaGridImgStyleForIPad() -> some View {
 		self
 			.resizable()
@@ -35,6 +39,7 @@ extension Image {
 			.shadow(radius: 6)
 	}
 	
+	/// Estilo para imágenes en listas en iPad.
 	func mangaListImgStyleforIpad() -> some View {
 		self
 			.resizable()

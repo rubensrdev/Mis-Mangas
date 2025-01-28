@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/// Vista que muestra los detalles de un manga específico, incluyendo su portada, información básica, sinopsis,
+/// autores, géneros y temáticas. También permite agregar el manga a la colección del usuario.
+///
+/// - Uso:
+///   Diseñada para ser utilizada dentro de una navegación (`NavigationStack`). Presenta información detallada
+///   de un manga en una disposición vertical con secciones divididas.
 struct MangaDetailView: View {
 	
 	@Environment(\.dismiss) private var dismiss

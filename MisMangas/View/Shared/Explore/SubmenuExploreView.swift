@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que muestra un submenú horizontal con las opciones de exploración disponibles.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en la vista de exploración (`ExploreView`). Permite al usuario cambiar entre las distintas
+///   categorías de exploración, como mangas destacados, autores, géneros, temáticas y demografías.
 struct SubmenuExploreView: View {
 	@Environment(ExploreViewModel.self) private var vm
 	var body: some View {

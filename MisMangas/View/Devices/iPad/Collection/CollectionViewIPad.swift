@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista optimizada para iPad que permite gestionar la colección de mangas del usuario.
+///
+/// - Uso:
+///   Diseñada para explorar, buscar y gestionar mangas en la colección local del usuario.
+///   Incluye una cuadrícula adaptativa, un campo de búsqueda, y un menú contextual para eliminar mangas.
 struct CollectionViewIPad: View {
 	
 	@Environment(MyCollectionViewModel.self) private var vm

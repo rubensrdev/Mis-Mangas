@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Fila que representa un manga en las vistas de exploración, mostrando su imagen, título y puntuación.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en listas dentro de la vista de exploración. Permite navegar al detalle del manga
+///   y agregarlo a la colección del usuario mediante acciones de deslizamiento.
 struct ExploreMangaRow: View {
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	let manga: Manga

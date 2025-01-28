@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que presenta un formulario para filtrar mangas basado en múltiples criterios como título, autor, géneros, temáticas y demografías.
+///
+/// - Uso:
+///   Diseñada para ser presentada como una hoja (`sheet`) desde la vista principal de mangas.
+///   Permite seleccionar diferentes filtros y realizar búsquedas avanzadas.
 struct FilterFormSheetView: View {
 	
 	@Environment(\.dismiss) private var dismiss

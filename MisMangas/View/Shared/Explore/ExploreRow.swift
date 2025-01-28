@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+// Vista que representa una fila de navegación para explorar mangas por una categoría específica.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en listas dentro de las vistas de exploración, específicamente para navegar
+///   a mangas filtrados por una categoría como género, temática o demografía.
 struct ExploreRow: View {
 	let type: String
 	var body: some View {

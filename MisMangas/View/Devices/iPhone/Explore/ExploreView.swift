@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/// Vista que permite explorar mangas organizados por categorías como los mejores mangas, autores, demografías,
+/// géneros y temáticas.
+///
+/// - Uso:
+///   Muestra un diseño dinámico que cambia según la categoría seleccionada. Cada sección incluye un encabezado
+///   y una lista interactiva que permite navegar a vistas detalladas.
 struct ExploreView: View {
 	
 	@Environment(ExploreViewModel.self) private var vm

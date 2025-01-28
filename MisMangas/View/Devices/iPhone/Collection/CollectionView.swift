@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/// Vista que permite al usuario gestionar su colección de mangas, mostrando una cuadrícula de los mangas almacenados,
+/// con opciones para buscar, ordenar y eliminar elementos.
+///
+/// - Uso:
+///   Diseñada para explorar, buscar y gestionar mangas en la colección local del usuario.
+///   Incluye una cuadrícula adaptativa, un campo de búsqueda, y un menú contextual para eliminar mangas.
 struct CollectionView: View {
 	
 	@Environment(MyCollectionViewModel.self) private var vm

@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+
+/// Vista que muestra una imagen de portada de manga adaptada para cuadrículas en iPad, con soporte para caché.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en cuadrículas de mangas en vistas optimizadas para iPad, cargando imágenes de manera
+///   eficiente desde la red y almacenándolas en caché.
+///
+/// - Propiedades:
+///   - `url`: URL de la imagen que se debe mostrar.
+///   - `cachedImage`: ViewModel que gestiona la carga y el almacenamiento en caché de la imagen.
 struct MangaGridCachedImageViewIPad: View {
 	@State var cachedImage = CachedImageViewModel()
 	let url: URL?

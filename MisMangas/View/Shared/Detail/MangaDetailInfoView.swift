@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra información detallada sobre un manga, como su puntuación, estado, año de publicación y número de volúmenes.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de la vista de detalle del manga (`MangaDetailView`).
 struct MangaDetailInfoView: View {
 	let manga: Manga
 	var body: some View {

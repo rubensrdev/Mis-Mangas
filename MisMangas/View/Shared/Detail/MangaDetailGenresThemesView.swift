@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+
+/// Vista que muestra los géneros, temáticas y demografías de un manga.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de la vista de detalle del manga (`MangaDetailView`).
 struct MangaDetailGenresThemesView: View {
 	let manga: Manga
 	var body: some View {

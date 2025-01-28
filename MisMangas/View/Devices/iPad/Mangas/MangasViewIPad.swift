@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista optimizada para iPad que muestra una cuadrícula de mangas con opciones de búsqueda, filtros y navegación detallada.
+///
+/// - Uso:
+///   Permite explorar y buscar mangas, mostrando los resultados en una cuadrícula con más columnas adaptadas a pantallas grandes.
+///   Incluye opciones de filtrado y un botón para desplazarse rápidamente al inicio de la lista.
 struct MangasViewIPad: View {
 	
 	@Environment(MangasViewModel.self) private var vm

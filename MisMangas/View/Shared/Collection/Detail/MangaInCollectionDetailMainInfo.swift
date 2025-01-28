@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra la información principal de un manga dentro de la colección del usuario.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de `MangaInCollectionDetailInfoView`.
 struct MangaInCollectionDetailMainInfo: View {
 	let mangaInCollection: MangaInCollection
 	var body: some View {

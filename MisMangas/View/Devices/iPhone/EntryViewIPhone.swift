@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Vista principal para dispositivos iPhone que utiliza una barra de pestañas (`TabView`) para navegar
+/// entre las secciones principales de la aplicación: Mangas, Explorar y Colección.
 struct EntryViewIPhone: View {
     var body: some View {
 		TabView {

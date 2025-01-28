@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra un mensaje cuando no se encuentran mangas, ya sea en la búsqueda o en la colección del usuario.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en vistas donde los resultados de búsqueda o la colección estén vacíos.
 struct NoMangasFoundView: View {
 	var body: some View {
 		VStack {

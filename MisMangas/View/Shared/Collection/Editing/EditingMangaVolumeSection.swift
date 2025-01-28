@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que representa una sección editable para ingresar valores relacionados con volúmenes de un manga.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en formularios de edición de mangas en la colección del usuario.
 struct EditingMangaVolumeSection: View {
 	let title: String
 	let textFieldPlaceholder: String

@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Fila que representa un manga en las vistas de exploración adaptadas para iPad, mostrando su portada, título y puntuación.
+///
+/// - Uso:
+///   Diseñada para ser utilizada en cuadrículas dentro de las vistas de exploración en iPad. Permite navegar al detalle del manga
+///   y agregarlo a la colección del usuario mediante un menú contextual.
 struct ExploreMangaRowIPad: View {
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	let manga: Manga

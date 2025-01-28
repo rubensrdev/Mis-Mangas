@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension VStack {
+	
+	/// Estilo para filas de mangas en vistas de cuadrículas en iPhone.
 	func mangaRowStyle() -> some View {
 		self
 			.padding()
@@ -17,6 +19,7 @@ extension VStack {
 			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
 	}
 	
+	/// Estilo para filas de mangas en vistas de cuadrículas en iPad.
 	func mangaRowStyleIPad() -> some View {
 		self
 			.padding()
@@ -25,6 +28,7 @@ extension VStack {
 			.shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
 	}
 	
+	/// Estilo para secciones de detalle de mangas.
 	func mangaDetailStyle() -> some View {
 		self
 			.padding()

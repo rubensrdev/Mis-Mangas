@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que representa un manga en un formato de fila dentro de una cuadrícula o lista.
+///
+/// - Uso:
+///   Diseñada para mostrar la portada y el título de un manga, permitiendo navegar a su detalle y agregarlo a la colección
+///   mediante un menú contextual.
 struct MangaRow: View {
 	
 	@Environment(MangasViewModel.self) private var vm

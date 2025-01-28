@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista que permite al usuario editar los volúmenes poseídos y el volumen actual de lectura de un manga en su colección.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como una hoja (`sheet`) en la vista de detalle de un manga.
+///   Proporciona un formulario para actualizar los datos de un manga dentro de la colección.
 struct EditingMangaInCollectionSheetView: View {
 	
 	@Environment(\.dismiss) private var dismiss

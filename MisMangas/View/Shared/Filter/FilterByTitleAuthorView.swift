@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que permite al usuario filtrar mangas por título y nombre del autor.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como una sección dentro de un formulario de filtros. Incluye campos de texto para
+///   ingresar un título, nombre o apellido del autor, y un toggle para habilitar búsquedas por subcadenas.
 struct FilterByTitleAuthorView: View {
 	@Bindable var customSearchVM: CustomSearchViewModel
 	var body: some View {

@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que muestra la imagen de portada y los títulos de un manga.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de la vista de detalle del manga (`MangaDetailView`).
+///   Presenta la imagen de portada del manga y sus títulos, incluyendo el japonés si está disponible.
 struct MangadetailImageView: View {
 	let manga: Manga
 	var body: some View {

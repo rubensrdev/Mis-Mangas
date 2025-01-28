@@ -8,6 +8,10 @@ import SwiftUI
 
 import SwiftUI
 
+/// Botón que permite agregar un manga a la colección del usuario o muestra su estado actual en la colección.
+///
+/// - Uso:
+///   Diseñado para ser utilizado en la vista de detalle del manga (`MangaDetailView`).
 struct MangaAddToCollectionButton: View {
 	@Environment(MyCollectionViewModel.self) private var myCollectionVM
 	let manga: Manga

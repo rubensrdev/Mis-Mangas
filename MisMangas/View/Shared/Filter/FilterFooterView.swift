@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra un pie de formulario en la sección de filtros para proporcionar información adicional al usuario.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como el pie de una sección dentro del formulario de filtros, ofreciendo instrucciones o mensajes contextuales.
 struct FilterFooterView: View {
 	var body: some View {
 		Section {
@@ -20,5 +24,5 @@ struct FilterFooterView: View {
 }
 
 #Preview {
-	
+	FilterFooterView()
 }

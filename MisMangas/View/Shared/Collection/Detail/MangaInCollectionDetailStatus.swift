@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+/// Vista que muestra el estado del manga en la colección del usuario, incluyendo el progreso de volúmenes poseídos
+/// y el volumen que está leyendo actualmente.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de la vista de detalle del manga en la colección (`MangaInCollectionDetailView`).
 struct MangaInCollectionDetailStatus: View {
 	let mangaInCollection: MangaInCollection
 	var body: some View {

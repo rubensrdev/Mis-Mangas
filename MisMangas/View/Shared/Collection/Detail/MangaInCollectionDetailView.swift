@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// Vista que muestra los detalles de un manga dentro de la colección del usuario, incluyendo su estado y opciones para editar.
+///
+/// - Uso:
+///   Diseñada para mostrar información detallada sobre un manga que ya pertenece a la colección del usuario.
+///   Permite editar el estado del manga, como los volúmenes poseídos y el volumen en lectura.
 struct MangaInCollectionDetailView: View {
 	
 	@Environment(\.dismiss) private var dismiss

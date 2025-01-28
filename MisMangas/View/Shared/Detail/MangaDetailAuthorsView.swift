@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra la lista de autores de un manga, junto con sus roles.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de la vista de detalle del manga (`MangaDetailView`).
 struct MangaDetailAuthorsView: View {
 	let manga: Manga
 	var body: some View {

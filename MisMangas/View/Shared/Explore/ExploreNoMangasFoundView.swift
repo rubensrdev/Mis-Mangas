@@ -6,6 +6,12 @@
 //
 import SwiftUI
 
+
+/// Vista que muestra un mensaje cuando no se encuentran mangas en la categoría seleccionada.
+///
+/// - Uso:
+///   Diseñada para ser utilizada dentro de las vistas de exploración (`ExploreMangasByView`) como un estado vacío,
+///   indicando que no hay mangas disponibles para los filtros o categorías seleccionadas.
 struct ExploreNoMangasFoundView: View {
 	@Environment(ExploreViewModel.self) private var exploreVM
 	var body: some View {

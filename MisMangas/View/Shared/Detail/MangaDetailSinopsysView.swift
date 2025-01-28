@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra la sinopsis de un manga, con la capacidad de expandir o contraer el contenido.
+///
+/// - Uso:
+///   Diseñada para ser utilizada como parte de la vista de detalle del manga (`MangaDetailView`).
 struct MangaDetailSinopsysView: View {
 	let manga: Manga
 	@Binding var expandedSynopsis: Bool

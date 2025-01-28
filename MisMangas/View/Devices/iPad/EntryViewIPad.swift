@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+
+/// Vista principal para iPad que utiliza una barra de pestañas (`TabView`) para navegar
+/// entre las secciones principales de la aplicación: Mangas, Explorar y Colección.
+///
+/// - Uso:
+///   Presenta una interfaz optimizada para pantallas grandes, con vistas específicas para iPad en cada sección.
 struct EntryViewIPad: View {
     var body: some View {
 		TabView {

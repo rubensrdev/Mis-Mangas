@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+/// Vista que muestra un indicador de carga mientras se están cargando más mangas.
+///
+/// - Uso:
+///   Diseñada para ser utilizada al final de listas o cuadrículas, indicando que se están cargando más resultados.
 struct LoadingMoreView: View {
 	var body: some View {
 		VStack {
