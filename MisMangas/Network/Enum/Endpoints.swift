@@ -7,7 +7,19 @@
 
 import Foundation
 
-/// Representa los endpoints disponibles para interactuar con la API.
+/// Enumeración que define los diferentes endpoints disponibles en la API para interactuar con los datos de mangas.
+///
+/// - Casos:
+///  - `listMangas`: Endpoint para listar mangas con paginación.
+///  - `listBestMangas`: Endpoint para listar los mangas mejor valorados.
+///  - `listAuthors`: Endpoint para listar todos los autores.
+///  - `listDemographics`: Endpoint para listar todas las demografías.
+///  - `listGenres`: Endpoint para listar todos los géneros.
+///  - `listThemes`: Endpoint para listar todas las temáticas.
+///  - `searchMangas`: Endpoint para realizar búsquedas avanzadas de mangas.
+///  - `listMangaByDemographic`: Endpoint para listar mangas por demografía.
+///  - `listMangaByGenre`: Endpoint para listar mangas por género.
+///  - `listMangaByTheme`: Endpoint para listar mangas por temática.
 enum Endpoints: String {
 	case listMangas = "/list/mangas"
 	case listBestMangas = "/list/bestMangas"
@@ -22,7 +34,7 @@ enum Endpoints: String {
 }
 
 extension Endpoints {
-	/// retorna el valor asociado al caso de forma más legible
+	/// Devuelve el valor asociado al caso de forma más legible
 	var path: String {
 		self.rawValue
 	}

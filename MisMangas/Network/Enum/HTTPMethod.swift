@@ -7,19 +7,23 @@
 
 import Foundation
 
-/// Definición de una lista de métodos HTTP comunes que se utilizan para interactuar con API REST
+
+/// Enumeración que define los métodos HTTP comunes utilizados en solicitudes a la API.
+///
+/// - Casos:
+///  - `post`: Método HTTP para enviar datos al servidor.
+///  - `get`: Método HTTP para recuperar datos del servidor.
+///  - `delete`: Método HTTP para eliminar datos en el servidor.
+///  - `put`: Método HTTP para actualizar datos existentes en el servidor.
 enum HTTPMethod: String {
-	/// Para enviar datos al servidor
 	case post = "POST"
-	/// Para solicitar datos al servidor
 	case get = "GET"
-	/// Para eliminar datos del servidor
 	case delete = "DELETE"
-	/// Para actualizar datos existentes
 	case put = "PUT"
 }
 
 extension HTTPMethod {
+	/// Devuelve el valor asociado al caso de forma más legible
 	var method: String {
 		self.rawValue
 	}
