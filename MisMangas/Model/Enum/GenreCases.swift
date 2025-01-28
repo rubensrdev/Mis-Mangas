@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Enumeración que representa los diferentes géneros disponibles para los mangas.
 enum GenreCases: String, CaseIterable, Identifiable, Codable {
 	case action = "Action"
 	case adventure = "Adventure"

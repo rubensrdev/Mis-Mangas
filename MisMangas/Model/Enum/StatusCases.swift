@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// Enumeración que representa los diferentes estados en los que puede encontrarse un manga.
+/// - Casos:
+///   - `finished`: El manga ha terminado su publicación.
+///   - `currently_publishing`: El manga se encuentra en publicación actualmente.
+///   - `on_hiatus`: El manga está en pausa.
 enum StatusCases: String, CaseIterable, Identifiable, Codable {
 	
 	case finished = "finished"
@@ -15,6 +20,7 @@ enum StatusCases: String, CaseIterable, Identifiable, Codable {
 	
 	var id: Self { self }
 	
+	/// Devuelve un valor de texto legible para mostrar en la interfaz de usuario.
 	var displayValue: String {
 		switch self {
 			case .finished: return "Finished"

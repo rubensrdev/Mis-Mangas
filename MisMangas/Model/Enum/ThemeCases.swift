@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Enumeración que representa las diferentes temáticas disponibles para los mangas.
 enum ThemeCases: String, CaseIterable, Identifiable, Codable {
 	case gore = "Gore"
 	case military = "Military"

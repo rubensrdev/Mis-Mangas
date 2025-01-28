@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Enumeración que representa las diferentes demografías disponibles para los mangas.
 enum DemographicCases: String, CaseIterable, Identifiable, Codable {
 	case seinen = "Seinen"
 	case shounen = "Shounen"
