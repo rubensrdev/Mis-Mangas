@@ -7,42 +7,87 @@
 
 import Foundation
 
+
+
+/// ViewModel que gestiona la lógica de la vista "Explore", permitiendo al usuario explorar mangas por categorías como autores,
+/// demografías, géneros, temáticas y mangas mejor valorados.
+///
+/// - Uso:
+///   Este ViewModel maneja la carga de datos, la paginación, y el estado de los elementos seleccionados en la vista de exploración.
 @Observable
 final class ExploreViewModel {
+	
+	/// Repositorio remoto utilizado para obtener los datos de exploración.
 	let repository: RepositoryRemoteProtocol
 	
+	/// Lista de mangas actualmente cargados.
 	var mangas: [Manga] = []
+	
+	/// Lista de autores cargados.
 	var authors: [Author] = []
+	
+	/// Lista de demografías cargadas
 	var demographics: [String] = []
+	
+	/// Lista de géneros cargados.
 	var genres: [String] = []
+	
+	/// Lista de temáticas cargadas.
 	var themes: [String] = []
 	
+	/// Número de elementos por página.
 	let perPage = 100
+	
+	/// Página actual para la paginación.
 	var page = 1
 	
+	/// Indica si se debe mostrar una alerta de error.
 	var showErrorAlert = false
+	
+	/// Mensaje de error que se muestra en caso de fallo.
 	var errorMessage = ""
 	
-	var allAuthors: [Author] = [] // Lista completa de autores cargados desde el servidor
+	/// Lista completa de autores cargados desde el servidor.
+	var allAuthors: [Author] = []
+	
+	/// Número de autores simulados por página.
 	var authorSimulatedPerPage = 40
+	
+	/// Página actual para la simulación de autores.
 	var authorSimulatedPage = 1
+	
+	/// Número total de autores disponibles.
 	var totalAuthors = 0
+	
+	/// Indica si se están cargando más autores.
 	var isLoadingMoreAuthors = false
 	
+	/// Opción de exploración seleccionada actualmente.
 	var selectedExploreOption: ExploreOptions = .bestMangas
 	
+	/// Número total de mangas disponibles en la consulta actual.
 	private var totalItems = 0
 	
+	/// Lista de mangas filtrados según la opción seleccionada.
 	var mangasForOption: [Manga] = []
+	
+	/// Indica si se están cargando mangas para la opción seleccionada.
 	var isLoadingMangasForOption = false
+	
+	/// Página actual para la opción seleccionada.
 	var pageForOption = 1
+	
+	/// Número de elementos por página para la opción seleccionada.
 	var perPageForOption = 40
+	
+	/// Número total de mangas disponibles para la opción seleccionada.
 	var totalItemsForOption = 0
 	
 	init(repository: RepositoryRemoteProtocol = RepositoryRemote()) {
 		self.repository = repository
 	}
 	
+	/// Carga la lista completa de autores desde el repositorio remoto.
 	@MainActor
 	func loadAuthors() async {
 		guard allAuthors.isEmpty else { return }
@@ -57,12 +102,14 @@ final class ExploreViewModel {
 		}
 	}
 	
+	/// Verifica si se necesitan cargar más autores y los carga si es necesario.
 	@MainActor
 	func checkAndLoadMoreAuthors(current: Author) {
 		guard current == authors.last else { return }
 		loadMoreAuthors()
 	}
 	
+	/// Carga más autores desde la lista completa simulada.
 	@MainActor
 	func loadMoreAuthors() {
 		guard !isLoadingMoreAuthors, authors.count < totalAuthors else { return }
@@ -73,10 +120,12 @@ final class ExploreViewModel {
 		isLoadingMoreAuthors = false
 	}
 	
+	/// Cambia la opción seleccionada en la vista de exploración.
 	func changeSelectedOption(to option: ExploreOptions) {
 		selectedExploreOption = option
 	}
 	
+	/// Carga los datos relacionados con la opción seleccionada.
 	@MainActor
 	func loadForSelectedOption() async {
 		do {
@@ -125,6 +174,7 @@ final class ExploreViewModel {
 		}
 	}
 	
+	/// Realiza una búsqueda de mangas para la opción seleccionada.
 	@MainActor
 	func searchMangasFor(_ option: ExploreOptions, _ selected: String, _ page: String, _ perPage: String) async throws -> PaginatedMangaResponse? {
 		do {
@@ -145,6 +195,7 @@ final class ExploreViewModel {
 		}
 	}
 	
+	/// Resetea el estado relacionado con la opción seleccionada.
 	func resetStateForOption() {
 		mangasForOption.removeAll()
 		isLoadingMangasForOption = false
@@ -152,6 +203,7 @@ final class ExploreViewModel {
 		totalItemsForOption = 0
 	}
 
+	/// Carga mangas para la opción seleccionada con los filtros especificados.
 	@MainActor
 	func loadMangasForSelectedOption(_ option: ExploreOptions, selected: String) async {
 		if pageForOption == 1 {
@@ -176,10 +228,12 @@ final class ExploreViewModel {
 		isLoadingMangasForOption = false
 	}
 	
+	/// Verifica si es necesario cargar más mangas para la opción seleccionada y los carga si es necesario.
 	private func hasMorePages() -> Bool {
 		mangasForOption.count < totalItemsForOption
 	}
 	
+	/// Determina si hay más páginas disponibles para la opción seleccionada.
 	@MainActor
 	func loadMoreMangasIfNeeded(for id: Int, _ option: ExploreOptions, _ selected: String) async {
 		guard !isLoadingMangasForOption, mangasForOption.last?.id == id, mangasForOption.count < totalItemsForOption, hasMorePages() else { return }
