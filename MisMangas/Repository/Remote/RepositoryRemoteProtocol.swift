@@ -7,6 +7,14 @@
 
 import Foundation
 
+/// Protocolo que define las operaciones necesarias para interactuar con un repositorio remoto de mangas.
+///
+/// - Conformidades:
+///   - `Sendable`: Permite que las implementaciones sean utilizadas en entornos concurrentes de forma segura.
+///
+/// - Métodos:
+///   - Operaciones para obtener datos paginados, filtrados o específicos de mangas, autores, demografías, temáticas y géneros.
+///   - Método para realizar búsquedas avanzadas con criterios personalizados.
 protocol RepositoryRemoteProtocol: Sendable {
 	func getMangas(page: String, itemsPerPage: String) async throws-> PaginatedMangaResponse
 	func getMangasByThemes(_ theme: String, page: String, itemsPerPage: String) async throws -> PaginatedMangaResponse
