@@ -52,4 +52,11 @@ extension Text {
 			)
 			.foregroundStyle(.primaryDark)
 	}
+	
+	func selectedItemsInCategoryStyle() -> some View {
+		self
+			.lineLimit(2)
+			.font(.footnote)
+			.foregroundStyle(.secondary)
+	}
 }

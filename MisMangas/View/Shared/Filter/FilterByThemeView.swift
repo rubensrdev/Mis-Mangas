@@ -16,9 +16,7 @@ struct FilterByThemeView: View {
 			HStack {
 				Text("Selected themes:")
 				Text(customSearchVM.searchThemesInSelection)
-					.lineLimit(2)
-					.font(.footnote)
-					.foregroundStyle(.secondary)
+					.selectedItemsInCategoryStyle()
 			}
 			.font(.footnote)
 		} header: {

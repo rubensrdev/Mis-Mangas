@@ -16,9 +16,7 @@ struct FilterByGenresView: View {
 			HStack {
 				Text("Selected genres:")
 				Text(customSearchVM.searchGenresInSelection)
-					.lineLimit(2)
-					.font(.footnote)
-					.foregroundStyle(.secondary)
+					.selectedItemsInCategoryStyle()
 			}
 			.font(.footnote)
 		} header: {
