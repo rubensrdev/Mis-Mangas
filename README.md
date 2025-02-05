@@ -29,7 +29,7 @@
 
 - **Swift 6** y **SwiftUI**
 - **Clean Architecture con MVVM**
-- Concurrencia estricta con `async/await`
+- **Concurrencia estricta con `async/await`**
 - **Persistencia local**
 - **Diseño adaptativo** para iPhone y iPad
 
