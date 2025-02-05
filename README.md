@@ -1,6 +1,6 @@
-# Mis Mangas 📚
+# Manga Master 📚
 
-**Mis Mangas** es mi proyecto más destacado, desarrollado como parte del **Swift Developer Program 2024**. Esta aplicación iOS te permite explorar un catálogo de más de 64.000 mangas, organizarlos en tu colección personal y llevar un seguimiento detallado de tu lectura.
+**Manga Master** es mi proyecto más destacado, desarrollado como parte del **Swift Developer Program 2024**. Esta aplicación iOS te permite explorar un catálogo de más de 64.000 mangas, organizarlos en tu colección personal y llevar un seguimiento detallado de tu lectura.
 
 ## 📌 Características principales
 
